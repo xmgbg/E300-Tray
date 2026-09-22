@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/Create_a_jacking_task"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:textStyle="bold"/>
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etTaskName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/Please_enter_a_name_for_the_task"
+            android:maxLines="1"
+            android:imeOptions="actionDone"/>
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etJackLoopCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:hint="@string/jack_loop_count_hint"
+            android:inputType="numberSigned"
+            android:maxLines="1"
+            android:text="1"
+            android:imeOptions="actionDone"/>
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="12dp"
+        android:text="@string/create"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:backgroundTint="#2196F3"
+        android:textColor="#FFFFFF"/>
+
+</LinearLayout>

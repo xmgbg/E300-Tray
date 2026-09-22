@@ -1,0 +1,1351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Ezhan</string>
+    <string name="back_button">Back</string>
+    <string name="battery_status">Battery Status</string>
+    <string name="select_prompt_hint">Please select prompt</string>
+
+    <string name="robot_number">202604181619</string>
+    <string name="device_number">E300-Pro</string>
+    <string name="charging">Charging</string>
+    <string name="language_setting">Language Settings</string>
+    <string name="select_language">Select language</string>
+    <string name="distance">Identification distance range is between -3 to -0.5, 0.5 to 3</string>
+    <string name="distance_valid">Identification distance must be a valid number</string>
+    <string name="recognition_distance">Recognition Distance</string>
+
+    <string name="track_settings_with_current">Navigation Mode Selection (Currently: %s)</string>
+    <string name="track_settings">Track Settings</string>
+    <string name="virtual_track">Fixed Path Mode</string>
+    <string name="virtual_orbit_one_way_navigation">One-way Virtual Track Navigation</string>
+    <string name="free_path_track">Free Path Mode</string>
+
+    <string name="obstacle_time">Obstacle Time</string>
+    <string name="obstacle_time_unit">S（0 Immediately bypass obstacle，-1 Do not bypass obstacle）</string>
+    <string name="confirm_virtual_track_message">Are you sure you want to enable the fixed path navigation mode? This mode will navigate according to the preset fixed path.</string>
+    <string name="confirm_free_path_message">Are you sure you want to enable the free path track mode? This mode allows free navigation to the target point.</string>
+    <string name="virtual_track_started">Fixed path mode has been started</string>
+    <string name="free_path_started">Free path mode started</string>
+    <string name="already_in_mode">Already in this mode</string>
+    <string name="switching_to_mode">Switching to %s</string>
+    <string name="switched_to_mode">Switched to %s</string>
+    <string name="switch_cancelled">Switch cancelled</string>
+    <string name="orbit_mode_manager_unavailable">Orbit mode manager is unavailable</string>
+    <!-- QR -->
+    <string name="qr_scan">Scan QR code to visit website:\n %s</string>
+
+    <!-- Map Url -->
+    <string name="map_url">http://192.0.2.10:9999/#/pages/deploy/map?language=en_US</string>
+    <string name="robot_run_url">http://192.0.2.10:9999/#/pages/log/log</string>
+    <string name="shelf_url">http://192.0.2.10:9999/#/pages/other/shelf?language=en_US</string>
+
+    <!-- Basic Settings Fragment -->
+    <string name="volume_setting">Volume Settings</string>
+    <string name="speed_control">Speed Control(m/s)</string>
+    <string name="parameter_configuration">Delivery Configuration</string>
+    <string name="delivery_stay">Delivery Dwell Time(s)</string>
+    <string name="low_power_operation">Low Power Operation</string>
+    <string name="idle_charge">Idle Charge</string>
+    <string name="auto_charge_start_time">Start Time</string>
+    <string name="auto_charge_end_time">End Time</string>
+    <string name="idle_charge_wait_time">Idle Over</string>
+    <string name="time_unit_minutes">min</string>
+    <string name="idle_charge_wait_range_error">Idle charge wait time must be 1-1440 minutes</string>
+    <string name="idle_return_home">Idle Return to Standby</string>
+    <string name="idle_return_wait_time">Return to Standby Wait</string>
+    <string name="idle_return_wait_range_error">Return to standby wait time must be 1-86400 seconds</string>
+    <string name="jack_stay_duration_range_error">Stay duration must be 0-86400 seconds</string>
+    <string name="battery_management_settings">Battery Management</string>
+    <string name="battery_threshold_settings">Battery Thresholds</string>
+    <string name="battery_critical_level">Critical (%)</string>
+    <string name="battery_min_work_level">Min Working (%)</string>
+    <string name="battery_idle_level">Idle Charge Upper (%)</string>
+    <string name="battery_full_level">Full Charge (%)</string>
+    <string name="full_charge_return_home">Return to Standby When Full</string>
+    <string name="battery_idle_level_hint">When idle charge is on, battery must be at or above min working level and below idle charge upper limit (e.g. min 20%, upper 60% → 20%–59%)</string>
+    <string name="battery_full_level_hint">When enabled, reaching the full charge threshold while charging will automatically return the robot to the park point</string>
+    <string name="auto_charge_hint">When enabled, the robot will automatically return to the charging dock when battery falls below the "Minimum Working Battery" threshold</string>
+    <string name="battery_threshold_order_error">Thresholds must satisfy: critical ≤ min working ≤ idle charge upper ≤ full charge</string>
+    <string name="return_to_dock_charging">Low-battery Auto Charge</string>
+    <string name="pause_wait">Pause Wait Time</string>
+    <string name="language_configuration">Language Configuration</string>
+    <string name="current_language">Current Language</string>
+    <string name="delivery_configuration">Charge Configuration</string>
+    <string name="visual_inspection">Visual Inspection</string>
+    <string name="lift_mode">Lift Mode</string>
+    <string name="password_verification">Password Verification</string>
+    <string name="off">Off</string>
+    <string name="on">On</string>
+    <string name="password_hint">Password must be 4-digit integer</string>
+    <string name="reset_default_settings">Reset default settings</string>
+    <string name="save_settings">Save settings</string>
+    <string name="config_file_settings">Config File</string>
+    <string name="auto_load_config">Auto Load</string>
+    <string name="load_config_now">Load Config</string>
+    <string name="save_config_now">Save Config</string>
+    <string name="edit_config">Edit Config</string>
+    <string name="edit_config_title">Edit Config File</string>
+    <string name="config_json_invalid">Invalid JSON format, please check</string>
+    <string name="config_edit_saved">Config saved and applied</string>
+    <string name="config_loaded">Config loaded and applied</string>
+    <string name="config_load_failed">Config load failed</string>
+
+    <!-- Dialog Text -->
+    <string name="modify_settings">Modify Settings</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+    <string name="reset_confirm_title">Confirm reset to default settings?</string>
+    <string name="reset_confirm_message">Configurations will be reset to default settings</string>
+    <string name="password_error">Password must be 4-digit integer</string>
+    <string name="settings_saved">Settings Saved</string>
+    <!-- Device Settings Screen New Strings -->
+    <string name="title_device_settings">Device Settings</string>
+    <string name="device_serial_number">Device Serial Number</string>
+    <string name="device_machine_number">Device Machine Number</string>
+    <string name="app_version_number">APP Version Number</string>
+    <string name="exit_app">Exit APP</string>
+    <string name="startup_broadcast">Startup Broadcast:</string>
+    <!-- App Slogan -->
+    <string name="app_slogan">Unmanned Transport, Smart Future</string>
+
+    <!-- System Status Related -->
+    <string name="pose_probability_unknown">Confidence Level: Unknown</string>
+    <string name="system_status">System Status</string>
+    <string name="nav_status_unknown">Navigation Status: Unknown</string>
+    <string name="error_status_unknown">Error: Unknown</string>
+    <string name="current_position_default">Position: X:0 Y:0 T:0</string>
+    <string name="current_time">Current Time</string>
+
+    <!-- Function Modes -->
+    <string name="delivery_mode">Delivery Mode</string>
+    <string name="jack_mode">Lift Mode</string>
+    <string name="cruise_mode">Cruise Mode</string>
+
+    <!-- Operation Buttons -->
+    <string name="return_to_charge">Return to charge location</string>
+    <string name="return_to_home">Return to park location</string>
+    <string name="system_settings">System Settings</string>
+    <!-- Delivery Button -->
+    <string name="delivery_button">Delivery Task</string>
+    <!-- Lift Button -->
+    <string name="jack_button">Lift Task</string>
+    <!-- Cruise Button -->
+    <string name="cruise_button">Cruise Task</string>
+    <!-- Return to Charger Button -->
+    <string name="return_charge">Return to charge location</string>
+    <!-- Return to Parking Point Button -->
+    <string name="return_home">Return to park location</string>
+    <!-- Settings Button -->
+    <string name="settings">Settings</string>
+    <string name="pose_probability">Confidence Level: %d%%</string>
+    <string name="nav_status">Navigation Status: %s</string>
+    <string name="error_status">Error: %s</string>
+    <string name="navigation_status">Returning to park location</string>
+    <string name="company_name">Ezhan</string>
+    <!-- Date and Time Format -->
+    <string name="date_pattern">yyyy-MM-dd</string>
+
+    <!-- Navigation Status Text -->
+    <string name="nav_status_running">Navigation Status: Running</string>
+    <string name="nav_status_completed">Navigation Status: Completed</string>
+    <string name="nav_status_failed">Navigation Status: Failed</string>
+    <string name="nav_status_idle">Navigation Status: Idle</string>
+
+    <!-- Error Status -->
+    <string name="error_status_none">Error: None</string>
+    <string name="date_format">yyyy-MM-dd</string>
+    <string name="time_format">HH:mm:ss</string>
+
+    <!-- Current Position -->
+    <string name="current_position">Position: X:%1$.2f Y:%2$.2f T:%3$.2f</string>
+
+    <!-- Buttons and Prompts -->
+    <string name="resume_task_with_time">Next %1$ds</string>
+    <string name="confirm_with_time">OK %1$ds</string>
+    <string name="task_canceled">Task canceled</string>
+    <string name="task_resumed">Task resumed</string>
+    <string name="task_completed_message">Returned to park location</string>
+    <string name="starting_charge">Returning to charge location</string>
+    <string name="navigation_failed">Navigation command failed</string>
+    <string name="no_home_position">Home location not set</string>
+    <string name="returning_to_home">Returning to home location</string>
+    <string name="start_to_home">I am going home</string>
+    <string name="operation_success">Operation successful</string>
+    <string name="operation_error">Error: %1$s</string>
+    <string name="network_error">Network error: %1$s</string>
+    <string name="wifi_strength">%1$d/4</string>
+    <string name="battery_percent">%1$d%%</string>
+
+    <!-- Music Playback Status -->
+    <string name="music_preparing">Preparing music</string>
+    <string name="music_started">Music started</string>
+    <string name="music_paused">Music paused</string>
+    <string name="music_completed">Music playback completed</string>
+    <string name="music_error">Music playback failed: %1$s</string>
+    <string name="error_code_1001">Battery level low</string>
+    <string name="error_code_1002">Navigation path blocked</string>
+    <string name="error_code_1003">Sensor malfunction</string>
+    <string name="unknown_error">Unknown error</string>
+    <string name="start_task">Start task</string>
+    <string name="cancel_task">Cancel task</string>
+    <string name="precharge_point">Precharge Point</string>
+    <string name="relocalize_point">Relocalize Point</string>
+
+    <!-- General Messages -->
+    <string name="operation_error_format">Error: %s</string>
+    <string name="network_error_format">Network error: %s</string>
+    <string name="stop_gif_error">Error stopping GIF</string>
+    <string name="show_pause_dialog_failed">Failed to show pause dialog</string>
+    <string name="no_position_data">No position data available</string>
+    <string name="no_station_selected">No location selected</string>
+    <string name="selected_prefix">Selected: </string>
+    <string name="select_at_least_one_station">Please select at least one location</string>
+    <string name="start_task_prefix">Start task to: </string>
+    <string name="start_task_with_station_count">Start task with %d locations</string>
+    <string name="selected_stations_cleared">Selected locations cleared</string>
+    <string name="navigating_to_station">Navigating to location [%d/%d]: %s</string>
+    <string name="navigating_to_task_point">Navigating to task location: %s</string>
+    <string name="navigating">Navigating…</string>
+    <string name="arrived_at_station">Arrived at location: %s</string>
+    <string name="status_fetch_failed">Failed to fetch status</string>
+    <string name="no_running_task">No running task</string>
+    <string name="select_target_station_first">Please select a target location first</string>
+    <string name="select_only_one_destination_point">Please select only one destination location</string>
+    <string name="set_destination_point">Set destination location: %s</string>
+    <string name="arrived_final_station">Arrived at final location: %s\n</string>
+    <string name="arrived_at_park_point">Arrived at standby point</string>
+    <string name="arrived_at_station_continue">Arrived at location: %s\nContinue to next location?</string>
+    <string name="task_location_empty">Task location list is empty</string>
+    <string name="task_already_running">A task is already running</string>
+    <string name="point_location_tab">Work Locations</string>
+    <string name="fixed_location_tab">Special Locations</string>
+    <string name="add_location">Add location</string>
+    <string name="sort_location">Sort locations</string>
+    <string name="fetch_location_from_map">Download location</string>
+    <string name="upload_location">Upload location</string>
+    <!-- Location Settings Related -->
+    <string name="add_new_location">Add new location</string>
+    <string name="input_location_name">Enter location name</string>
+    <string name="add_success">Added successfully: %s</string>
+    <string name="sync_map_position_success">Map position synchronized</string>
+    <string name="Unable_to_operate_in_a_current_map_or_floor">Unable to operate in a non-current map or floor</string>
+    <string name="position_updated">Position updated</string>
+    <string name="confirm_delete">Confirm delete</string>
+    <string name="delete_location_prompt">Are you sure delete location %s?</string>
+    <string name="delete">Delete</string>
+    <string name="delete_success">Location deleted</string>
+    <string name="sort_by_id">Sort by ID</string>
+    <string name="sort_by_name">Sort by Name</string>
+    <string name="ok">OK</string>
+
+    <!-- Location Format -->
+    <string name="location_id_format">ID:%d</string>
+    <string name="location_name_format">Name:%s</string>
+    <string name="location_x_format">X:%.3f</string>
+    <string name="location_y_format">Y:%.3f</string>
+    <string name="location_yaw_format">Yaw:%.3f</string>
+    <string name="Create_a_task">Create a task</string>
+    <string name="cruise_name">Cruise Task</string>
+    <!-- Special Position Points -->
+    <string name="charge_point">Charge Location</string>
+    <string name="park_point">Park Location</string>
+    <string name="Position_setting">Position</string>
+    <string name="Language_settings">Voice</string>
+    <string name="Basic_setup">Setup</string>
+    <string name="Regarding_the_equipment">About APP</string>
+    <string name="Setting_interface">Settings Interface</string>
+    <string name="Retrieve_again">Retrieve again</string>
+    <string name="Mission_accomplished">Task Completed</string>
+    <string name="task_name_hint">Task Name:</string>
+    <string name="input_task_name">Please enter a task name</string>
+    <string name="default_stay">Default Stay:</string>
+    <string name="seconds">seconds</string>
+    <string name="cruise_times">Cruise Times:</string>
+    <string name="normal_mode">Normal</string>
+    <string name="auto_mode">Auto</string>
+    <string name="start_time">Start Time</string>
+    <string name="save_route">Save route</string>
+    <string name="update_task" translatable="false">Update route</string>
+
+    <string name="start_cruise">Start cruise</string>
+    <string name="visual_model">Visual Model</string>
+    <string name="times">times</string>
+    <string name="infinite_loop">Infinite loop</string>
+    <string name="cruise_count_value_format">%1$d</string>
+    <string name="delete_task_prompt">Are you sure delete the cruise task \"%1$s\"?</string>
+    <string name="task_deleted">Task deleted</string>
+    <string name="route_saved">Route saved</string>
+    <string name="select_task_first">Please select a task</string>
+    <string name="task_data_error">Task data error</string>
+    <string name="task_not_exist">Task does not exist</string>
+    <string name="task_scheduled">Cruise task scheduled to start at %1$s</string>
+    <string name="low_confidence">Confidence level too low (&lt;40%), unable to perform cruise task</string>
+    <string name="charging_task_failed">Robot is charging, current task execution failed</string>
+    <string name="scheduled_task_set">Scheduled task set, will start at the set start time</string>
+    <string name="start_cruise_task">Starting cruise task</string>
+    <string name="task_terminated">Cruise task terminated</string>
+    <string name="task_completed">Cruise task completed \nTotal locations: %1$d\nLoops: %2$d</string>
+    <string name="confirm_task_completion">Task completion confirmed</string>
+    <string name="navigation_normal_description">Navigating to destination: %s</string>
+    <string name="navigation_wait_description">Navigating to floor %1$s wait point</string>
+    <string name="navigation_ride_description">Navigating to floor %1$s ride point</string>
+    <string name="calling_elevator_description">Calling elevator to floor %s</string>
+    <string name="waiting_elevator_description">Waiting for elevator to floor %s</string>
+    <string name="opening_door_description">Opening door</string>
+    <string name="closing_door_description">Closing door</string>
+    <string name="changing_map_description">Changing map to floor %s</string>
+    <string name="checking_access_description">Checking access</string>
+    <string name="task_name_exists">Task name already exists,please enter a new one</string>
+    <string name="navigation_park_description">Navigating to park point</string>
+    <string name="navigation_charge_description">Navigating to charge point</string>
+    <string name="navigation_precharge_description">Navigating to precharge point</string>
+    <string name="target_location_prefix">Target location: %s</string>
+
+    <string name="initializing">initializing</string>
+    <string name="welcome_use">welcome to use</string>
+
+    <!-- Navigation Status -->
+    <string name="preparing_cruise">🟡 Preparing to start cruise task…</string>
+    <string name="cruise_started">Cruise task started</string>
+    <string name="loop_start_format">🔄 Starting cycle %1$d</string>
+    <string name="loop_completed_format">Cycle %1$d completed, starting next cycle</string>
+    <string name="arrived_at_station_format">✅ Arrived at location: %1$s\n%2$d/%3$d (Cycle: %4$d/%5$d)</string>
+    <string name="navigating_to_station_format">➔ Navigating to: %1$s</string>
+    <string name="progress_format">Current progress: %1$d/%2$d (Cycle: %3$d/%4$d)\nHeading to: %5$s</string>
+    <string name="staying_format">✅ Arrived at location: %1$s\nStaying…%2$d seconds</string>
+    <string name="resuming_format">\nProgress: %2$d/%3$d (Cycle: %4$d/%5$s)</string>
+    <string name="emergency_stop">Emergency stop triggered</string>
+    <string name="collision_occurred">Collision occurred, please recover</string>
+    <string name="pedestrian_alert">Pedestrian collision avoidance</string>
+    <string name="arrival_announcement">Arrival announcement</string>
+    <string name="select_auto_mode_first">Please select the auto-cruise mode</string>
+    <string name="no_visual_prompts_available">No visual prompts available</string>
+    <string name="system_not_ready">System not ready, please try again later</string>
+    <string name="waiting_robot_status">Waiting for robot status update…</string>
+    <string name="station_data_error">Location data error: %s</string>
+    <string name="station_not_exist">Location does not exist: %s</string>
+    <string name="default_task_name_format">CRUISE-%s</string>
+    <string name="task_params_format">Mode: %1$s%2$s | Stay: %3$ds | Cycles: %4$s | Locations: %5$d</string>
+    <string name="select_start_time_first">Please select a start time</string>
+    <string name="start_executing_cruise_task">Starting cruise task execution</string>
+    <string name="connection_to_controller_failed">Connection to controller failed</string>
+    <string name="connection_restored">Connection to controller restored</string>
+
+    <!-- Other -->
+    <string name="time_picker_title">Select start time</string>
+    <string name="minute_format">%02d</string>
+    <string name="auto_mode_active">Auto</string>
+    <string name="normal_mode_active">Normal</string>
+    <string name="scheduled_time_format">%02d:%02d</string>
+    <string name="task_name_duplicate">Task name already exists</string>
+    <string name="task_list_empty">Task list is empty, cannot proceed</string>
+    <string name="confirm_delete_title">Confirm deletion</string>
+    <string name="confirm_delete_message">Are you sure delete this task?</string>
+    <string name="robot_paused_title">Robot paused</string>
+    <string name="select_operation">Select operation</string>
+    <string name="resume">Resume</string>
+    <string name="Create_a_jacking_task">Create a lift task</string>
+    <string name="jack_loop_count_hint">Cycles (-1 infinite)</string>
+    <string name="invalid_jack_loop_count">Cycles must be -1 or a positive integer</string>
+    <string name="jack_loop_format">Cycles: %1$s</string>
+    <string name="Please_enter_a_name_for_the_task">Please enter a name for the task</string>
+    <string name="create">Create</string>
+    <string name="Custom_tasks">Custom Tasks</string>
+    <string name="Save_the_route">Save route</string>
+    <string name="operation_type">Operation Type:</string>
+    <string name="stay_duration">Stay Duration:</string>
+    <string name="duration_hint">Seconds</string>
+    <string name="point_name_default">Point 1</string>
+    <string name="Lifting">Recognizing lifting</string>
+    <string name="Put_down">Recognizing lowering</string>
+    <string name="lift_up">Lifting up</string>
+    <string name="lift_down">Lifting down</string>
+    <string name="Go_out">Go out pod</string>
+    <string name="None">Move</string>
+    <string name="JackLoad">Jack load</string>
+    <string name="JackUnload">Jack unload</string>
+    <string name="Forward">Move forward</string>
+    <string name="Backward">Move backward</string>
+    <string name="RecognizeEntry">Recognize entry</string>
+    <string name="edit">Edit</string>
+    <string name="Start">Start</string>
+    <string name="Lifting5">Moving Task</string>
+    <string name="Confirm_deletion">Are you sure delete this operation?</string>
+    <string name="en">English (en)</string>
+    <string name="zh">Chinese (zh)</string>
+    <string name="zh_HK">Traditional Chinese(hk)</string>
+    <string name="ja">Japanese (ja)</string>
+    <string name="ko">Korean (ko)</string>
+    <string name="vi">Vietnamese(VI)</string>
+    <string name="id">Indonesian (id)</string>
+    <!-- Voice Settings Interface Additions -->
+    <string name="departure_broadcast">Departure Broadcast:</string>
+    <string name="position_lost">Position Lost:</string>
+    <string name="lead_start">Lead Start:</string>
+    <string name="lead_arrival">Lead Arrival:</string>
+    <string name="low_battery">Low Battery:</string>
+    <string name="obstacle_alert">Obstacle Alert:</string>
+    <string name="operation_error_prompt">Operation Error Prompt:</string>
+    <string name="charge_complete">Charge Complete:</string>
+    <string name="return_arrival">Return Arrival:</string>
+    <string name="task_interrupted">Task Interrupted:</string>
+    <string name="lead_departure">Lead Departure:</string>
+    <string name="cruise_departure">Cruise Departure:</string>
+    <string name="cruise_arrival">Cruise Arrival:</string>
+    <string name="go_charging">Proceed to Charging:</string>
+
+    <!-- Default Voice Text -->
+    <string name="default_departure_text">Starting delivery task</string>
+    <string name="default_arrival_text">Arrived at the location</string>
+    <string name="default_lost_text">I am lost, please guide me back to the charge location</string>
+    <string name="default_lead_start_text">Lead navigation started, please follow closely</string>
+    <string name="default_lead_arrive_text">I have arrived at your location</string>
+    <string name="default_low_power_text">Battery level is too low, please charge promptly</string>
+    <string name="default_obstacle_text">Obstacle detected ahead, please be cautious</string>
+    <string name="default_task_done_text">Task completed, thank you for using</string>
+    <string name="default_op_error_text">Operation error, please try again</string>
+    <string name="default_charge_done_text">Charging complete, ready to work</string>
+    <string name="default_return_arrive_text">I am back, any further tasks?</string>
+    <string name="default_task_break_text">Task interrupted</string>
+    <string name="default_lead_go_text">Please follow me</string>
+    <string name="default_cruise_go_text">I am on my way, please make way</string>
+    <string name="default_cruise_arrive_text">I have arrived, please proceed promptly</string>
+    <string name="default_pedestrian_text">Operation in progress, please give way</string>
+    <string name="default_go_charge_text">I am heading to charge</string>
+    <string name="task">Task Completed:</string>
+    <string name="arrival">Arrival Announcement:</string>
+    <string name="default_navigation_error_text">Please avoid</string>
+    <string name="default_robot_error_text">Robot error occurred, please handle it promptly</string>
+    <string name="default_emergency_stop_text">Emergency stop is triggered</string>
+    <string name="default_collision_alert_text">The robot has collided, please recover</string>
+    <string name="default_position_not_found_text">This point does not exist, please add the point</string>
+    <string name="default_low_confidence_error_text">Low confidence level, task execution failed!</string>
+    <string name="default_charging_task_error_text">Robot is charging, task execution failed!</string>
+    <string name="default_going_to_point_text">Robot is heading to the target location</string>
+    <string name="default_returning_home_text">Robot is returning to the park location</string>
+    <string name="low_confidence_navigation">Confidence level is too low (＜40%), unable to return home</string>
+    <string name="park_failed">park failed, check park position</string>
+    <string name="charge_failed">charge failed, check charge position</string>
+    <string name="charge_missing">charge point missing, please set up now</string>
+    <string name="invalid_elevator_task">task failed, not allowed from inside elevator</string>
+    <string name="elevator_empty">task failed, elevator is empty</string>
+    <string name="map_incorrect">task failed, target positions not on map</string>
+    <!-- New password error prompt -->
+    <string name="password_incorrect">Incorrect password, please try again</string>
+
+    <!-- New system unavailable prompt -->
+    <string name="current_unavailable">Currently unavailable</string>
+    <string name="going_to_point">Robot is heading to the target location</string>
+    <string name="no_changes_detected">No changes made</string>
+    <string name="task_paused">Task Paused</string>
+    <string name="end_task">End</string>
+    <string name="end_task_with_time">End (%1$ds)</string>
+    <string name="resume_task">Resume</string>
+    <string name="dialog_button_cancel">Cancel</string>
+    <string name="arrival_station_title">Arrived at location</string>
+    <string name="dialog_button_continue">Proceed</string>
+    <string name="please_enter_your_password">Please enter your password</string>
+    <!-- Cruise task dialog related strings -->
+    <string name="cruise_task_info_title">Cruise Task Information</string>
+    <string name="close_button_desc">Close</string>
+    <string name="task_name_label">Task Name: </string>
+    <string name="current_station_placeholder">Arrived at location: Preparing...</string>
+    <string name="next_station_placeholder">Next location: Preparing...</string>
+    <string name="Get_the_link">Get the link</string>
+    <string name="error_code_10000">Collision avoidance</string>
+    <string name="error_code_10001">Emergency stop pressed</string>
+    <string name="error_code_10002">Bumper contact</string>
+    <string name="error_code_10003">Soft emergency stop pressed</string>
+    <string name="error_code_10010">Automatic charging failed</string>
+    <string name="error_code_10020">Route deviation</string>
+    <string name="error_code_10030">Bumper triggered</string>
+    <string name="error_code_10040">Odometry lost</string>
+    <string name="error_code_10050">Navigation laser lost</string>
+    <string name="error_code_10051">Navigation laser frequency too low</string>
+    <string name="error_code_10052">Navigation laser data delay too large</string>
+    <string name="error_code_10060">Route controller timeout</string>
+    <string name="error_code_10070">Communication with controller failed (table delay too large)</string>
+    <string name="error_code_10080">Excessive error during navigation</string>
+    <string name="error_code_10090">Invalid automatic control speed</string>
+    <string name="error_code_10100">Excessive error at task endpoint</string>
+    <string name="error_code_10110">Localization confidence too low</string>
+    <string name="error_code_10111">Localization may not be started</string>
+    <string name="error_code_10112">Localization data timeout</string>
+    <string name="error_code_10113">Route locked (task paused)</string>
+    <string name="error_code_10130">Map switching in progress</string>
+    <string name="error_code_10131">Map switching failed</string>
+    <string name="error_code_20000">Route acceptance blocked by running script</string>
+    <string name="error_code_20001">Route acceptance blocked by auto-charging</string>
+    <string name="error_code_20002">Route acceptance blocked by no localization</string>
+    <string name="error_code_20003">Route acceptance blocked by identical route</string>
+    <string name="error_code_20004">Route acceptance blocked by different map</string>
+    <string name="error_code_20005">Route acceptance blocked by manual mode</string>
+    <string name="error_code_20006">Route acceptance blocked by ongoing action</string>
+    <string name="error_code_20007">Route acceptance blocked by script wait setting</string>
+    <string name="error_code_20008">Route acceptance blocked by low localization confidence</string>
+    <string name="error_code_20009">Route acceptance blocked by unfinished previous route</string>
+    <string name="error_code_20010">Route acceptance blocked by critically low battery</string>
+    <string name="error_code_20011">Route acceptance blocked by startup wait</string>
+    <string name="error_code_20100">Route execution by name blocked by running script</string>
+    <string name="error_code_20101">Route execution by name blocked by missing route file</string>
+    <string name="error_code_20102">Route execution by name blocked by route not found</string>
+    <string name="error_code_20103">Route execution by name blocked by empty route</string>
+    <string name="error_code_20104">Route execution by name blocked by different map name</string>
+    <string name="error_code_20105">Route execution by name blocked by not at starting point</string>
+    <string name="error_code_20106">Route execution by name blocked by low battery</string>
+    <string name="error_code_20107">Route execution by name blocked by unfinished previous task</string>
+    <string name="error_code_20108">Route execution by name blocked by low confidence</string>
+    <string name="error_code_20109">Route execution by name blocked by no localization</string>
+    <string name="error_code_20200">Unlock event blocked by map switching</string>
+    <string name="error_code_20201">Unlock event blocked by script running</string>
+    <string name="error_code_60001">Received clear route command, stopping</string>
+    <string name="error_code_60002">Received route task pause command</string>
+    <string name="error_code_60003">Auto-navigation route planning failed, no valid route to target</string>
+    <string name="error_code_60004">Global path planning input failed, abandoning target task</string>
+    <string name="error_code_60005">Robot oscillating, stopping and entering recovery mode</string>
+    <string name="error_code_60006">No valid control output, likely due to trajectory collision avoidance</string>
+    <string name="error_code_60007">Robot still oscillating after recovery mode, stopping</string>
+    <string name="error_code_60008">Line following control output failed, stopping</string>
+    <string name="error_code_60009">In clearing mode, updating obstacle map, stopping</string>
+    <string name="error_code_60010">Received auto-navigation task in non-auto-navigation state, abandoning task</string>
+    <string name="error_code_60011">Line following: forward speed output but max forward speed limit is 0, stopping</string>
+    <string name="error_code_60012">Line following: backward speed output but max backward speed limit is 0, stopping</string>
+    <string name="error_code_60013">Line following: rotation speed output but max forward/backward speed limit is 0, stopping</string>
+    <string name="error_code_60014">Line following: max real-time speed limit is 0, stopping</string>
+    <string name="error_code_60015">Line following: rotation speed output but max forward/backward speed limit is 0, stopping</string>
+    <string name="error_code_60105">Steerable drive wheels exceeded differential model during auto-navigation, stopping</string>
+    <string name="error_code_60200">Sensor data timeout, stopping</string>
+    <string name="error_code_60301">In pallet recognition task: not yet stably identified legs or planned approach route</string>
+    <string name="navigation_status_completed">Navigation status: Completed</string>
+    <string name="fetch_location_confirmation_title">Obtain location confirmation</string>
+    <string name="fetch_location_confirmation_message">Are you sure to obtain the location from the map？</string>
+    <string name="upload_location_confirmation_title">Upload confirmation</string>
+    <string name="upload_location_confirmation_message">Are you sure upload all locations？</string>
+    <string name="password_dialog_title">Enter Password</string>
+    <string name="delete_button">×</string>
+    <string name="confirm_button">ok</string>
+    <string name="password_input_hint">____</string>
+    <string name="card_swipe_verify">RFID Verify</string>
+    <string name="password_error_toast">Password must be 4 digits</string>
+    <string name="settings_saved_toast">Settings saved</string>
+    <string name="Shelf_setup">Shelf</string>
+    <string name="Map_settings">Map</string>
+    <string name="emergency_stop1">Emergency stop alarm:</string>
+    <string name="collision_alert">Collision alert:</string>
+    <string name="navigation_error">Navigation error:</string>
+    <string name="default_point_name">Point %d</string>
+    <string name="confirm_reset_title">Confirm Reset to Default Settings?</string>
+    <string name="confirm_reset_message">All custom settings will be cleared</string>
+    <string name="default_speed_format">%.1f</string>
+    <string name="error_positive_number">Please enter a non-negative number</string>
+    <string name="error_invalid_number">Invalid number format</string>
+    <string name="range_error_format">Please enter a value between %d and %d</string>
+    <string name="start_lifting_task">Start the lifting task</string>
+    <string name="descending">Going down</string>
+    <string name="ascending">Going up</string>
+
+    <string name="task_queued">Task has been added to queue (#%2$d)</string>
+    <string name="queued_task_list">Queued Task List</string>
+    <string name="queued_task_count">Queued Task Count: %d</string>
+    <string name="cancel_queued_task">Cancel</string>
+    <string name="no_queued_tasks">No queued tasks</string>
+
+    <!-- WebService related strings -->
+    <string name="web_title">Ezhan Robot Control Terminal</string>
+    <string name="robot_status_title">Robot Status</string>
+    <string name="status_running">Running Status</string>
+    <string name="status_battery">Battery Level</string>
+    <string name="status_emergency">Emergency Stop Status</string>
+    <string name="status_target">Target Point</string>
+    <string name="status_confidence">Confidence</string>
+    <string name="status_position">Position</string>
+    <string name="status_operation">Current Operation</string>
+    <string name="status_alert">Alert</string>
+    <string name="select_station_hint">-- Select Target Station --</string>
+    <string name="select_jack_task_hint">-- Select Lifting Task --</string>
+    <string name="btn_confirm">Confirm</string>
+    <string name="btn_park">To Park</string>
+    <string name="btn_charge">To Charge</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_pause">Pause</string>
+    <string name="btn_resume">Resume</string>
+    <string name="error_no_target">Please select a target station</string>
+    <string name="error_task_running">Robot is executing a task, task dispatch failed</string>
+    <string name="battery_too_low_for_task">Battery too low to execute task (%d%%)</string>
+    <string name="no_error">No Error</string>
+    <string name="unknown">Unknown</string>
+    <string name="no_target">No Target</string>
+    <string name="unknown_position">Position Unknown</string>
+    <string name="no_operation">No Operation</string>
+    <string name="target_prefix">Target Point: </string>
+    <string name="web_service_started">Web service started, port: %d</string>
+    <string name="web_service_start_failed">Web service start failed: all ports are occupied</string>
+    <string name="error_application_context_null">Application context is null</string>
+    <string name="error_parse_post_params">Failed to parse POST parameters</string>
+    <string name="log_status_update">Scheduled status update</string>
+    <string name="log_params_received">Received parameters: </string>
+    <string name="log_cancel_navigation">Canceling current navigation</string>
+    <string name="log_pause_navigation">Pausing current navigation</string>
+    <string name="log_resume_navigation">Resuming current navigation</string>
+    <string name="operation_navigating_to">Navigating to waypoint... </string>
+    <string name="operation_executing_task">Executing transport task ..</string>
+    <string name="operation_charging">Heading to charging point...</string>
+    <string name="operation_parking">Heading to parking point...</string>
+    <string name="operation_canceling">Canceling navigation...</string>
+    <string name="operation_canceled">Task canceled</string>
+    <string name="operation_completed">Task completed</string>
+    <string name="operation_pausing">Pausing navigation...</string>
+    <string name="operation_paused">Task paused</string>
+    <string name="operation_resuming">Resuming navigation...</string>
+    <string name="operation_resumed">Task resumed</string>
+    <string name="error_select_task">Please select a task to execute</string>
+    <string name="log_navigating_to_station">Starting navigation to station: %s</string>
+    <string name="log_navigating_home">Starting navigation to parking point</string>
+    <string name="log_navigating_charge">Starting navigation to charging point</string>
+    <string name="task_delivery_completed">Transport task completed</string>
+    <string name="log_going_to_point">Heading to point: %s</string>
+    <string name="log_execute_lift">Executing lift operation at point: %s</string>
+    <string name="log_execute_lower">Executing lower operation at point: %s</string>
+    <string name="log_execute_leave">Executing leave operation at point: %s</string>
+    <string name="warn_port_conflict">Note: Actual port used is %2$d (default port %1$d is occupied)</string>
+    <string name="error_port_occupied">Port %d is occupied: %s</string>
+    <string name="error_all_ports_occupied">Unable to start Web service, ports %d to %d are all occupied</string>
+    <string name="error_task_send_failed">Task dispatch failed, task paused</string>
+    <string name="warn_task_retry">Task dispatch failed, preparing to retry (%d/3)</string>
+    <string name="state_paused">Paused</string>
+    <string name="state_canceled">Canceled</string>
+    <string name="status_normal">Normal</string>
+    <string name="emergency_activated">Emergency stop activated</string>
+    <string name="error_blocked">Robot is blocked</string>
+    <string name="error_emergency_stop">Emergency stop triggered during operation, please handle promptly</string>
+    <string name="error_collision">Collision detected during operation, please handle promptly</string>
+    <string name="alert_select_station">Please select a target station</string>
+    <string name="alert_select_task">Please select a task</string>
+    <string name="log_command_sent">Command sent</string>
+    <string name="error_send_command">Failed to send command</string>
+    <string name="log_form_submitted">Form submitted successfully</string>
+    <string name="error_form_submit">Form submission failed</string>
+    <string name="error_network_response">Network response is abnormal</string>
+    <string name="error_fetch_status">Failed to fetch status</string>
+    <string name="error_get_string_resource">Error getting string resource</string>
+    <string name="state_idle">Idle</string>
+    <string name="state_running">Running</string>
+    <string name="state_failed">Failed</string>
+    <string name="server_request_error">Server error processing request</string>
+    <string name="error_request_processing">Error processing request</string>
+    <string name="state_completed">Completed</string>
+    <string name="tts_instance_set">TTS instance set</string>
+    <string name="error_tts_null">Attempted to set a null TTS instance</string>
+    <string name="elevator_wait_point">Wait Point</string>
+    <string name="elevator_ride_point">Boarding Point</string>
+    <string name="elevator_robot_config">Robot Configuration</string>
+    <string name="elevator_control">Elevator Control</string>
+    <string name="add_wait_point">Add Wait Point</string>
+    <string name="add_ride_point">Add Boarding Point</string>
+    <string name="elevator_id">Elevator ID</string>
+    <string name="elevator_name">Elevator Name</string>
+    <string name="lora_channel">LoRa Channel</string>
+    <string name="lora_address">LoRa Address</string>
+    <string name="call_elevator">Call Elevator</string>
+    <string name="elevator_floor">Floor</string>
+    <string name="open_elevator">Open</string>
+    <string name="close_elevator">Close</string>
+    <string name="elevator_id_hint">Enter elevator ID</string>
+    <string name="elevator_name_hint">Enter elevator name</string>
+    <string name="lora_channel_hint">Enter channel (1-64)</string>
+    <string name="lora_address_hint">Enter address (0-255)</string>
+    <string name="select_floor">Select Floor</string>
+    <string name="floor_prefix">Floor %d</string>
+    <string name="save_config">Save Configuration</string>
+    <string name="config_saved">Configuration saved</string>
+    <string name="invalid_channel">Channel must be 1-64</string>
+    <string name="invalid_address">Address must be 0-255</string>
+    <string name="module_settings">Module Settings</string>
+    <string name="music_select">Run Music Selection</string>
+    <string name="input_wait_point_name">Enter wait point name</string>
+    <string name="add_points">Add Points</string>
+    <string name="lora_config">LoRa Device Configuration</string>
+    <string name="robot_lora_config">Robot LoRa Configuration</string>
+    <string name="elevator_lora_config">Elevator LoRa Configuration</string>
+    <string name="elevator_address_hint">Elevator Address</string>
+    <string name="floor_settings">Floor Settings</string>
+    <string name="min_floor_hint">Starting floor</string>
+    <string name="max_floor_hint">Ending floor</string>
+    <string name="update_floors">Update</string>
+    <string name="ground_floor">G</string>
+    <string name="basement_prefix">B%d</string>
+    <string name="no_data_image_desc">no_data_image_desc</string>
+    <string name="floor_hint">Enter floor</string>
+    <string name="id_hint">Enter ID</string>
+    <string name="number_hint">Enter number</string>
+    <string name="get_floor_failed">Failed to retrieve current floor, Ensure map name suffix contains Floor ID</string>
+    <string name="floor_incorrect">Add failed: Current floor(%d) does not match target floor(%d)</string>
+    <string name="avoidance_settings_title">Avoidance</string>
+    <string name="area_settings_title">Area</string>
+    <string name="robot_config_title">Robot Configuration</string>
+    <string name="add_area">Add Area</string>
+    <string name="robot_name_hint">Robot Name</string>
+    <string name="robot_address_hint">Robot Address</string>
+    <string name="save_robot">Save Robot</string>
+    <string name="saved_robots_title">Saved Robots</string>
+    <string name="area_type_hint">Select Area Type</string>
+    <string name="area_id_hint">Area ID</string>
+    <string name="area_range_hint">Area Range (x1,y1;x2,y2;...)</string>
+    <string name="error_invalid_range">Please enter a valid area range</string>
+    <string name="error_name_required">Please enter a name</string>
+    <string name="error_address_required">Please enter an address</string>
+
+    <string name="add_elevator">Add Elevator</string>
+    <string name="sort_elevators">Sort Elevators</string>
+    <string name="wait_point">Waiting Point</string>
+    <string name="ride_point">Boarding Point</string>
+    <string name="update">Update Location</string>
+    <string name="add_robot">Add Robot</string>
+    <string name="elevator">Elevator Settings</string>
+    <string name="map_prefix">Map Prefix</string>
+    <string name="floor_level">Floor</string>
+    <string name="current_map">Current Map: %s</string>
+    <string name="floor_title">Floor %d</string>
+    <string name="current_map1">Current Map:</string>
+    <string name="floor_title1">Current Floor: </string>
+    <string name="robot_loading">Loading robot, please wait…</string>
+    <string name="command_sequence_failed">Command execution failed</string>
+    <string name="dialog_button_continue_with_time">Next %1$ds</string>
+    <string name="elevator_info_format">Elevator (Address: %d  Channel: %d)</string>
+    <string name="update_position">Update Position</string>
+    <string name="elevator_settings">Elevator</string>
+
+    <string name="open_door">Open Door</string>
+    <string name="close_door">Close Door</string>
+    <string name="clear_occupy">Clear Occupancy</string>
+    <string name="call_floor">Call Floor</string>
+    <string name="add_floor">Add</string>
+    <string name="save">Save</string>
+
+    <!-- Prompts & Errors -->
+    <string name="error_floors_must_be_positive">Floor count must be greater than 0</string>
+    <string name="error_alias_empty">Alias cannot be empty</string>
+    <string name="error_channel_range">Channel must be between 1–125</string>
+    <string name="error_address_range">Address must be between 0–255</string>
+    <string name="error_button_count_zero">The number of buttons cannot be 0</string>
+    <string name="error_button_count_max">The number of buttons cannot exceed 20</string>
+
+    <!-- Operation Feedback -->
+    <string name="clear_occupy_success">Occupancy cleared successfully</string>
+    <string name="clear_occupy_error">Failed to clear occupancy</string>
+    <string name="open_door_success">Door opened successfully</string>
+    <string name="open_door_error">Failed to open door</string>
+    <string name="close_door_success">Door closed successfully</string>
+    <string name="close_door_error">Failed to close door</string>
+    <string name="going_to_floor">Going to floor…</string>
+    <string name="call_floor_success">Command sent to floor %d: %s</string>
+    <string name="call_floor_error">Failed to go to floor: %s</string>
+
+    <!-- Confirmation Dialogs -->
+    <string name="confirm_delete_elevator_message">Delete this elevator configuration?</string>
+    <string name="confirm_delete_floor_message">Delete this floor?</string>
+    <string name="confirm_delete_map_areas_message">Delete all %2$d areas of %1$s?</string>
+    <string name="map_areas_deleted">Deleted all areas of %s</string>
+    <string name="confirm_delete_area_message">Delete area %s?</string>
+    <string name="area_deleted">Deleted area %s</string>
+
+    <!-- Area Statistics -->
+    <string name="total_areas_format">Total %d areas</string>
+    <string name="door_control_count">Door: %d</string>
+    <string name="info_count">Info: %d</string>
+    <string name="traffic_count">Traffic: %d</string>
+
+    <!-- Format Strings -->
+    <string name="floor_prefix_format">Floor %d</string>
+    <string name="position_display_format">X:%.2f Y:%.2f T:%.2f</string>
+    <string name="new_floor_default_name">New Floor</string>
+
+    <!-- Coordinate Display -->
+    <string name="position_x_format">X:%.2f</string>
+    <string name="position_y_format">Y:%.2f</string>
+    <string name="position_yaw_format">T:%.2f</string>
+
+    <!-- Input Hints -->
+    <string name="alias_hint">Alias</string>
+    <string name="address_hint">Address</string>
+    <string name="channel_hint">Channel</string>
+    <string name="floors_hint">Floor Count</string>
+
+    <!-- Dialog Titles -->
+    <string name="add_elevator_dialog_title">Add New Elevator</string>
+    <string name="elevator_control_dialog_title">Elevator Control</string>
+    <string name="elevator_settings_dialog_title">Elevator Settings</string>
+
+    <string name="Call_settings_dialog_title">Call</string>
+    <string name="history_dialog_title">History</string>
+    <string name="robot_run_dialog_title">Robot Log</string>
+
+    <string name="call_box_settings_title">Call Box Settings</string>
+    <string name="add_call_box">Add Call Box</string>
+    <string name="button_count">Button Count</string>
+    <string name="name">Name</string>
+    <string name="button_config">Button Configuration</string>
+    <string name="station_binding">Station Binding</string>
+    <string name="select_station">Select Station</string>
+    <string name="select_task">Select Task</string>
+    <string name="add_new">Add</string>
+
+    <string name="no_data">No Data</string>
+    <string name="current_map_label">current map</string>
+    <string name="current_floor_label">current floor</string>
+
+    <string name="cancel_task_title">cancel task</string>
+    <string name="cancel_task_message">confirm cancel task</string>
+
+    <string name="error_fill_complete_info">Please fill in all required information</string>
+    <string name="not_configured">Not configured</string>
+    <string name="no_available_stations">No station data available</string>
+    <string name="task_selection_box_desc">Task selection box</string>
+
+    <string name="button_default_name_format">Button %d</string>
+    <string name="call_box_info_format">(Channel: %d | Address: %d | Buttons: %d)</string>
+    <string name="floor_title_separator">--- Floor %d ---</string>
+
+    <string name="confirm_delete_call_box_message">Delete this call box?</string>
+    <string name="confirm_delete_button_message">Delete this button?</string>
+
+    <string name="cruise_task_prefix">Cruise: </string>
+    <string name="jack_task_prefix">Lift: </string>
+    <string name="label_station">Station:</string>
+    <string name="label_task">Task:</string>
+    <string name="label_config">Configuration</string>
+    <string name="label_start_time">Start Time</string>
+    <string name="label_end_time">End Time</string>
+    <string name="label_task_type">Task Type</string>
+    <string name="action_query">Query</string>
+    <string name="select_date_title">Select Date</string>
+    <string name="clear_records_title">Clear Records</string>
+    <string name="clear_records_message">Delete all history records?</string>
+    <string name="no_matching_records">No matching task records found</string>
+    <string name="error_date_parsing">Date parsing error</string>
+
+    <string name="error_date_range_exceeds">Interval cannot exceed 30 days</string>
+    <string name="error_end_time_exceeds_current">End time cannot exceed current time</string>
+    <string name="error_start_after_end">Start time cannot be later than end time</string>
+
+    <string name="all_tasks">All</string>
+    <string name="cruise_task">Cruise Task</string>
+    <string name="jack_task">Jack Task</string>
+    <string name="delivery_task">Delivery Task</string>
+    <string name="charge_task">Charge Task</string>
+    <string name="parking_task">Parking Task</string>
+    <string name="stop_charge_task">Stop Charge Task</string>
+    <string name="call_task">Call Task</string>
+    <string name="unknown_task">Unknown Task</string>
+
+    <string-array name="task_types">
+        <item>@string/all_tasks</item>
+        <item>@string/cruise_task</item>
+        <item>@string/jack_task</item>
+        <item>@string/delivery_task</item>
+        <item>@string/charge_task</item>
+        <item>@string/parking_task</item>
+    </string-array>
+    <string name="create_time_format">Created: %s</string>
+    <string name="duration_format">Duration: %s</string>
+    <string name="add_failed_duplicate_name">Add failed, a station with the same name already exists: %s</string>
+    <string name="add_failed_duplicate_callbox_name">Add failed, a call box with the same name already exists: %s</string>
+    <string name="manual_charging_error">Manual charging in progress; task cannot be executed</string>
+
+    <string name="refresh">Refresh</string>
+    <string name="refreshed">Refreshed</string>
+
+    <string name="current_building_label">Current Building</string>
+    <string name="building_prefix_format">Building %s</string>
+    <string name="cannot_get_current_position">cannot get current position</string>
+
+    <!-- Building related strings -->
+    <string name="default_building_name">Main Building</string>
+    <string name="default_building_short">Main</string>
+    <string name="building_name_format">Building %s</string>
+    <string name="floor_title_with_building">%s - Floor %d</string>
+    <string name="basement_title_with_building">%s - Basement %d</string>
+
+    <string name="transition_point">Transition Point</string>
+    <string name="confirm_switch_orbit_mode">Confirm switch orbit mode</string>
+
+    <string name="cannot_add_point_wrong_floor">Cannot add point on floor %s. Robot is currently on floor %s</string>
+    <string name="cannot_update_point_wrong_floor">Cannot update point on floor %s. Robot is currently on floor %s</string>
+    <string name="cannot_delete_point_wrong_floor">Cannot delete point on floor %s. Robot is currently on floor %s</string>
+
+    <string name="cannot_add_point_wrong_building">Cannot add point in building %s Robot is currently in building %s</string>
+    <string name="cannot_update_point_wrong_building">Cannot update point in building %s Robot is currently in building %s</string>
+    <string name="cannot_delete_point_wrong_building">Cannot delete point in building %s Robot is currently in building %s</string>
+
+    <string name="reset">reset</string>
+
+    <string name="pharmacy_point">Pharmacy</string>
+    <string name="pivas_point">Pivas </string>
+
+    <string name="relocalize_confirmation_title">Confirm Relocalization</string>
+    <string name="relocalize_confirmation_message">Do you want to relocalize the robot to point "%s"?</string>
+    <string name="cannot_relocalize_wrong_floor">Cannot relocalize: Robot is on floor %s, but the relocalize point is on floor %s</string>
+    <string name="cannot_relocalize_wrong_building">Cannot relocalize: Robot is in building %s, but the relocalize point is in building %s</string>
+    <string name="relocalize_success">Relocalization command sent successfully</string>
+    <string name="relocalize_failed">Relocalization failed: %s</string>
+
+    <string name="websocket_not_connected">WebSocket not connected</string>
+    <string name="reset_coordinates_title">Confirm Reset Coordinates</string>
+    <string name="reset_coordinates_message">Confirm if reset "%s" coordinates to (0, 0, 0)？</string>
+    <string name="coordinates_reset">Coordinates Reset</string>
+    <string name="cannot_reset_point_wrong_floor">Reset failed：robot current floor %s，but reset floor %s</string>
+    <string name="cannot_reset_point_wrong_building">Reset failed：robot current building %s，but reset building %s</string>
+
+    <string name="preride_point">Preride Point</string>
+
+    <string name="Door_lock_settings">Door Lock Settings</string>
+    <string name="door_lock_1">Door Lock 1</string>
+    <string name="door_lock_2">Door Lock 2</string>
+    <string name="door_lock_3">Door Lock 3</string>
+    <string name="door_lock_4">Door Lock 4</string>
+    <string name="door_lock_status_label">Status:</string>
+    <string name="door_lock_status_open">Open</string>
+    <string name="door_lock_status_closed">Closed</string>
+    <string name="door_lock_status_unknown">Unknown</string>
+    <string name="door_lock_hint">Tip: Turning on the switch sends an unlock command. Locking must be done manually.</string>
+    <string name="door_lock_init_failed">Door lock communication initialization failed</string>
+    <string name="door_lock_not_initialized">Door lock communication is not initialized</string>
+    <string name="door_lock1_unlock_success">Door Lock 1 unlock command sent</string>
+    <string name="door_lock1_unlock_failed">Door Lock 1 unlock failed</string>
+    <string name="door_lock2_unlock_success">Door Lock 2 unlock command sent</string>
+    <string name="door_lock2_unlock_failed">Door Lock 2 unlock failed</string>
+    <string name="door_lock4_unlock_success">Door Lock 2 unlock command sent</string>
+    <string name="door_lock4_unlock_failed">Door Lock 2 unlock failed</string>
+    <string name="door_lock3_unlock_success">Door Lock 3 unlock command sent</string>
+    <string name="door_lock3_unlock_failed">Door Lock 3 unlock failed</string>
+    <string name="door_lock_close_manual_hint">Please lock it manually</string>
+    <string name="rfid_management_title">RFID Management</string>
+    <string name="rfid_search_hint">Search RFID serial number or user ID</string>
+    <string name="rfid_filter_all_users">All Users</string>
+    <string name="rfid_filter_all_types">All Types</string>
+    <string name="rfid_filter_all_statuses">All Statuses</string>
+    <string name="rfid_card_type_operation">Operation Card</string>
+    <string name="rfid_card_type_management">Management Card</string>
+    <string name="rfid_status_normal">Normal</string>
+    <string name="rfid_status_lost_disabled">Lost/Disabled</string>
+    <string name="rfid_add_card_title">Add RFID Card</string>
+    <string name="rfid_edit_card_title">Edit RFID Card Information</string>
+    <string name="rfid_serial_label">RFID Serial Number</string>
+    <string name="rfid_user_id_label">User ID</string>
+    <string name="rfid_card_type_label">Card Type</string>
+    <string name="rfid_status_label">Status</string>
+    <string name="rfid_read_button">Read RFID</string>
+    <string name="rfid_error_title">Error</string>
+    <string name="rfid_success_title">Success</string>
+    <string name="rfid_required_error">RFID serial number and user ID cannot be empty</string>
+    <string name="rfid_add_success">RFID card added successfully</string>
+    <string name="rfid_duplicate_error">RFID serial number already exists</string>
+    <string name="rfid_edit_success">RFID card information updated successfully</string>
+    <string name="rfid_confirm_delete_message">Delete RFID card %1$s?</string>
+    <string name="rfid_delete_success">RFID card deleted successfully</string>
+    <string name="rfid_delete_not_found">Delete failed, RFID card does not exist</string>
+    <string name="select_task_type">Select task type</string>
+    <string name="task_type_station">Station call</string>
+    <string name="task_type_task">Task execution</string>
+    <string name="no_available_tasks">No available tasks</string>
+    <string name="task_type">Task Type</string>
+
+    <string name="feature_visibility_configuration">Feature Visibility Configuration</string>
+    <string name="user_management">User Management</string>
+    <string name="rfid_management">RFID Management</string>
+    <string name="unknown_map">Unknown map</string>
+    <string name="current_location_building_floor">%1$s Building, Floor %2$s</string>
+    <string name="current_location_map_station">%1$s, %2$s</string>
+    <string name="current_location_map">%1$s</string>
+    <string name="home_current_location_map_station">Location: %1$s, %2$s</string>
+    <string name="home_current_location_map">Location: %1$s</string>
+    <string name="robot_communication_settings">Robot Communication Settings</string>
+    <string name="robot_id">Robot ID</string>
+    <string name="queued_task_cooldown">Queued task cooldown</string>
+    <string name="time_unit_seconds">seconds</string>
+    <string name="queued_task_cooldown_range_error">Queued task cooldown cannot be less than 5 seconds</string>
+    <string name="no_warnings">No alarm information!</string>
+
+    <!-- Mapping Rules Floating Tip -->
+    <string name="map_rules_title">Mapping Rules</string>
+    <string name="map_rules_tip_content">1. When saving a map, the map name must include both a building number and a floor number.\n\n2. Building and floor numbers start from 1. Do not use 0.\n\n3. The building number is written in the map name between the map prefix and the floor number, in this format:\n\n   {mapPrefix}{buildingNumber}_{floorNumber}\n\n   Example: office1_3\n   means map prefix office, building 1, floor 3.\n\n   Single-building maps must also include the building number, e.g. office1_2, not office_2.\n\nTip: Drag this box to reposition. Tap the close button to collapse to a dot.</string>
+
+    <!-- Elevator Operation Guide Floating Tip -->
+    <string name="elevator_tip_title">Elevator Operation Guide</string>
+    <string name="station_edit_name_title">Edit Station Name</string>
+    <string name="station_name_cannot_be_empty">Station name cannot be empty</string>
+    <string name="station_name_updated">Station name updated</string>
+
+    <!-- MapViewModel related -->
+    <string name="map_cannot_get_current_position">Cannot get current position</string>
+    <string name="map_no_points_to_delete">No points to delete</string>
+    <string name="map_building_not_found">Building not found</string>
+    <string name="map_no_points_on_floor">No points on this floor</string>
+    <string name="map_point_not_found_by_name">Point "%1$s" not found</string>
+    <string name="map_point_deleted">Point deleted: %1$s</string>
+    <string name="map_point_delete_failed">Failed to delete point</string>
+    <string name="map_invalid_map_name">Invalid map name</string>
+    <string name="map_no_points_to_upload">No points to upload</string>
+    <string name="map_syncing_points">Syncing %1$d points across %2$d floors...</string>
+    <string name="map_cannot_get_server_data">Cannot get server data: %1$s</string>
+    <string name="map_upload_failed">Upload failed: %1$s</string>
+    <string name="map_downloading_points">Downloading map points...</string>
+    <string name="map_no_floor_data_for_map">No floor data found for map "%1$s"</string>
+    <string name="map_get_map_list_failed">Failed to get map list: %1$s</string>
+
+    <string name="elevator_tip_content">[Add/Delete Floors]\n1. Newly added floors default to \"New Floor\"; please rename with meaningful names immediately.\n2. Deleting a floor will also remove its wait point, preride point, ride point, and transition point.\n3. After adding/deleting, check that floor numbers are consecutive to avoid gaps (e.g., 1→3 missing floor 2).\n\n[Building Tab Switching]\n4. Save current changes before switching building tabs (tap the Save button in the dialog).\n5. Newly created floors without coordinates may be lost when switching buildings.\n6. Custom floor aliases may be reset to default names after switching.\n\n[Upload/Download Points]\n7. Upload and download sync all point data (including elevator points).\n8. Downloading may overwrite locally customized floor aliases and numbers.\n9. Confirm that elevator configurations are saved before uploading/downloading.\n10. After downloading, check that the elevator floor list is complete and numbers are correct.\n\n[Delete Elevator]\n11. Deleting an elevator will remove all its floors and points.\n12. Other elevators on the same floor are not affected.\n13. This action is irreversible; please verify carefully in the confirmation dialog.\n\nTip: Drag this box to reposition. Tap the close button to collapse to a dot.</string>
+
+    <!-- Basic validation messages -->
+    <string name="basic_robot_id_range_0_255">Robot ID must be 0-255</string>
+    <string name="basic_please_enter_valid_robot_id">Please enter a valid robot ID</string>
+    <string name="basic_lora_address_range_0_65535">LoRa address must be 0-65535</string>
+    <string name="basic_please_enter_valid_lora_address">Please enter a valid LoRa address</string>
+    <string name="basic_obstacle_time_range">Obstacle time must be -1 to 600</string>
+    <string name="basic_please_enter_valid_obstacle_time">Please enter a valid obstacle time</string>
+    <string name="basic_no_mp3_files">No MP3 music files available</string>
+    <string name="basic_password_must_be_4_digits">Password must be 4 digits</string>
+
+    <!-- Delivery battery messages -->
+    <string name="delivery_battery_too_low_backpack">Battery too low (%1$d%%) to execute backpack task</string>
+
+    <!-- Base navigation battery messages -->
+    <string name="base_battery_too_low_for_task">Battery too low (%1$d%%) to execute task</string>
+
+    <!-- Cruise messages -->
+    <string name="cruise_loading_task">Loading task...</string>
+
+    <!-- Device settings messages -->
+    <string name="device_start_web_service_first">Please start the Web service first</string>
+
+    <!-- Task history messages -->
+    <string name="task_history_task_cancelled">Task cancelled</string>
+
+    <!-- Elevator Fragment -->
+    <string name="elevator_download_map_first">Please download map data first</string>
+    <string name="elevator_no_building_data">No data for current building</string>
+    <string name="elevator_no_floor_data_download_first">No floor data available, please download map points first</string>
+    <string name="elevator_added_with_floors">Elevator added with %1$d floors</string>
+    <string name="elevator_processing">Processing...</string>
+    <string name="elevator_wait_point_updated">Wait point updated</string>
+    <string name="elevator_cannot_get_position">Cannot get current position</string>
+    <string name="elevator_ride_point_updated">Ride point updated</string>
+    <string name="elevator_transition_point_updated">Transition point updated</string>
+
+    <!-- Avoidance Settings - Toast Messages -->
+    <string name="avoidance_ws_connect_failed">WebSocket connection failed: %1$s</string>
+    <string name="avoidance_ws_not_connected_retrying">WebSocket not connected, retrying...</string>
+    <string name="avoidance_data_parse_error">Data parse error</string>
+    <string name="avoidance_image_process_error">Image processing error: %1$s</string>
+    <string name="avoidance_need_3_points">At least 3 points needed to form an area</string>
+    <string name="avoidance_area_info_incomplete">Area information incomplete</string>
+    <string name="avoidance_area_saved">Area saved</string>
+    <string name="avoidance_save_failed_retry">Save failed, please try again</string>
+    <string name="avoidance_draw_cancelled">Area drawing cancelled</string>
+    <string name="avoidance_ws_connected">WebSocket connection established</string>
+    <string name="avoidance_ws_connection_closed">WebSocket connection closed</string>
+    <string name="avoidance_ws_error">WebSocket error: %1$s</string>
+    <string name="avoidance_fill_area_type_and_id">Please fill in area type and ID</string>
+    <string name="avoidance_fill_complete_info">Please fill in complete information</string>
+    <string name="avoidance_address_range_0_255">Address must be between 0-255</string>
+    <string name="avoidance_address_must_be_number">Address must be a number</string>
+    <string name="avoidance_robot_added">Robot added</string>
+    <string name="avoidance_area_deleted">Area deleted</string>
+    <string name="avoidance_robot_deleted">Robot deleted</string>
+    <string name="avoidance_delete_area_confirm">Are you sure to delete this area?</string>
+    <string name="avoidance_delete_robot_confirm">Are you sure to delete this robot?</string>
+    <string name="avoidance_save_drawing">Save Drawing</string>
+    <string name="avoidance_cancel_drawing">Cancel Drawing</string>
+
+    <!-- MapAreaFragment -->
+    <string name="maparea_ws_not_connected_connecting">WebSocket not connected, attempting to connect...</string>
+    <string name="maparea_ws_connect_failed">WebSocket connection failed, please check network</string>
+    <string name="maparea_ws_client_not_init">WebSocket client not initialized, initializing...</string>
+    <string name="maparea_ws_init_failed">WebSocket initialization failed, please check network</string>
+    <string name="maparea_ws_not_connected_connect_first">WebSocket not connected, please connect first</string>
+    <string name="maparea_loading_map_data">Loading map data...</string>
+    <string name="maparea_get_map_data_failed">Failed to get map data: %1$s</string>
+    <string name="maparea_data_store_not_init">Data storage not initialized</string>
+    <string name="maparea_load_failed">Load failed: %1$s</string>
+    <string name="maparea_traffic_robot_list_title">Traffic Robot List (Shared Globally)</string>
+    <string name="maparea_traffic_robot_list_hint">All traffic areas share this list; configure it once</string>
+    <string name="traffic_robot_item_label">Robot</string>
+    <string name="maparea_robots_saved">%1$d robots saved</string>
+    <string name="maparea_ws_not_connected">WebSocket not connected</string>
+    <string name="maparea_map_name_empty">Current map name is empty</string>
+    <string name="maparea_syncing_controller_area">Syncing controller area...</string>
+    <string name="maparea_sync_failed">Sync failed: %1$s</string>
+    <string name="maparea_no_available_maps">No available maps</string>
+    <string name="maparea_get_map_list_failed">Failed to get map list: %1$s</string>
+    <string name="maparea_select_map">Select Map</string>
+    <string name="maparea_add_map_item_failed">Failed to add map item</string>
+    <string name="maparea_load_map_image_failed">Failed to load map image</string>
+    <string name="maparea_polygon_needs_3_vertices">Polygon needs at least 3 vertices</string>
+    <string name="maparea_no_undo_operations">No operations to undo</string>
+    <string name="maparea_no_redo_operations">No operations to redo</string>
+    <string name="maparea_area_edit">Area Edit</string>
+    <string name="maparea_draw_mode_instruction">Draw mode: tap on map to add polygon vertices</string>
+    <string name="maparea_save_success">Save successful</string>
+    <string name="maparea_area_detail">Area Details</string>
+    <string name="maparea_cannot_get_robot_position">Cannot get robot current position</string>
+
+    <!-- User Management -->
+    <string name="user_add_user_title">Add User</string>
+    <string name="user_edit_user_title">Edit User</string>
+    <string name="user_error">Error</string>
+    <string name="user_success">Success</string>
+    <string name="user_fields_required">User ID, name, and password cannot be empty</string>
+    <string name="user_add_success">User added successfully</string>
+    <string name="user_id_exists">User ID already exists</string>
+    <string name="user_edit_success">User information updated successfully</string>
+    <string name="user_confirm_delete">Confirm Delete</string>
+    <string name="user_confirm_delete_message">Are you sure you want to delete user %1$s?</string>
+    <string name="user_delete_success">User deleted successfully</string>
+    <string name="user_delete_failed_not_exist">Delete failed, user does not exist</string>
+    <string name="user_type_operator">Operator</string>
+    <string name="user_type_admin">Administrator</string>
+    <string name="user_type_super_admin">Super Admin</string>
+
+    <string-array name="user_type_array">
+        <item>@string/user_type_operator</item>
+        <item>@string/user_type_admin</item>
+        <item>@string/user_type_super_admin</item>
+    </string-array>
+
+    <!-- Camera -->
+    <string name="camera_not_ready">Camera not ready</string>
+    <string name="camera_cannot_access">Cannot access camera</string>
+    <string name="camera_open_failed">Failed to open camera</string>
+    <string name="camera_photo_saved">Photo saved: %1$s</string>
+    <string name="camera_permission_required">Camera permission required</string>
+    <string name="camera_error">Camera error: %1$d</string>
+    <string name="camera_config_failed">Configuration failed</string>
+    <string name="camera_capture_config_failed">Capture configuration failed</string>
+
+    <!-- QR Code -->
+    <string name="qr_web_service_not_started">Web service not started</string>
+    <string name="qr_generation_failed">QR code generation failed</string>
+
+    <!-- RFID -->
+    <string name="rfid_invalid_card">Invalid RFID card</string>
+    <string name="rfid_list_empty">RFID list is empty</string>
+    <string name="rfid_system_not_init">RFID system not initialized</string>
+    <string name="rfid_data_format_error">RFID data format error</string>
+    <string name="rfid_timeout_retry">Card scan timeout, please retry</string>
+    <string name="rfid_init_failed">RFID initialization failed</string>
+
+    <!-- MapViewModel remaining strings -->
+    <string name="map_point_added">Point added: %1$s (X:%2$s, Y:%3$s)</string>
+    <string name="map_upload_all_success">All map points synced successfully</string>
+    <string name="map_upload_completed_with_failures">Map points sync completed, %1$d failed</string>
+    <string name="map_download_floors_no_points">Found %1$d floors, but no point data</string>
+    <string name="map_download_no_points_on_map">No point data on this map</string>
+    <string name="map_download_success">Downloaded %1$d points across %2$d buildings and %3$d floors</string>
+
+    <!-- MapAreaFragment remaining strings -->
+    <string name="maparea_sync_completed">Sync completed: %1$d areas</string>
+    <string name="maparea_close">Close</string>
+
+    <!-- ElevatorFragment remaining strings -->
+    <string name="elevator_coordinate_reset">%1$s coordinates reset to 0</string>
+
+    <!-- CustomCameraActivity remaining strings -->
+    <string name="camera_upload_success">Upload successful!</string>
+    <string name="camera_upload_failed_http">Upload failed: HTTP %1$d - %2$s</string>
+    <string name="camera_upload_exception">Upload exception: %1$s</string>
+
+    <!-- TaskExecutor strings -->
+    <string name="task_executor_battery_too_low">Battery too low (%1$d%%, status: %2$s), rejecting new task</string>
+    <string name="task_executor_unknown">Unknown</string>
+    <string name="task_executor_task_not_found">No matching task found</string>
+    <string name="task_executor_unsupported_task_type">Unsupported task type: %1$s</string>
+    <string name="task_executor_start_failed">Start failed: %1$s</string>
+    <string name="task_executor_cruise">Cruise</string>
+    <string name="task_executor_jack">Jack</string>
+    <string name="task_executor_backpack">Backpack</string>
+    <string name="task_executor_homepage">Homepage</string>
+    <string name="task_executor_park_charge_call">Park/Charge/Call</string>
+
+    <!-- Area Detail Dialog -->
+    <string name="area_detail_name_label">Area Name</string>
+    <string name="area_detail_type_label">Area Type</string>
+    <string name="area_detail_channel_label">Channel</string>
+    <string name="area_detail_address_label">Address</string>
+    <string name="area_detail_expand_label">Area Expansion (m, positive=larger/early trigger, negative=smaller/late trigger)</string>
+    <string name="area_detail_traffic_hint">Traffic Area: Configure other participating robots via the \"Traffic Robot List\" button on the main interface</string>
+    <string name="area_type_door_control">Door Control Area</string>
+    <string name="area_type_info">Info Area</string>
+    <string name="area_type_traffic">Traffic Area</string>
+    <string name="area_default_name">Area%1$d</string>
+    <string name="area_default_channel">Channel1</string>
+    <string name="area_default_address">Address1</string>
+    <string name="area_lora_byte_range_error">Channel must be an integer between 0 and 255</string>
+
+    <string-array name="area_type_display_values">
+        <item>@string/area_type_door_control</item>
+        <item>@string/area_type_info</item>
+        <item>@string/area_type_traffic</item>
+    </string-array>
+    <string name="area_list_info_format">Type: %1$s | Channel: %2$s | Address: %3$s</string>
+    <string name="area_robot_in_area">Robot in: %1$s map, %2$s area (type: %3$s)</string>
+    <string name="area_robot_not_in_any">Robot in %1$s map, but not in any defined area</string>
+    <string name="area_origin_label">Origin</string>
+    <string name="area_type_display_door">Door Control</string>
+    <string name="area_type_display_info">Info</string>
+    <string name="area_type_display_traffic">Traffic</string>
+    <string name="area_add_map">Add Map</string>
+    <string name="area_check_robot_area">Check Robot Area</string>
+    <string name="area_add_area">Add Area</string>
+    <string name="area_undo">Undo</string>
+    <string name="area_redo">Redo</string>
+    <string name="area_list_title">Area List</string>
+    <string name="area_sync_controller">Sync Controller Area</string>
+    <string name="area_traffic_robot_list">Traffic Robot List</string>
+    <string name="area_edit_area">Edit Area</string>
+    <string name="area_map_name_placeholder">Map Name</string>
+    <string name="area_name_placeholder">Area Name</string>
+    <string name="area_info_placeholder">Type: -- | Channel: -- | Address: --</string>
+    <string name="task_running_status_toggle_success">Task execution status switched successfully</string>
+
+    <!-- i18n runtime fixes -->
+    <string name="pause_command_received">Pause command received</string>
+    <string name="resume_command_received">Resume command received</string>
+    <string name="navigation_resumed">Navigation resumed</string>
+    <string name="task_cancelled_toast">Task cancelled</string>
+    <string name="auto_task_disabled">This auto task is disabled</string>
+    <string name="task_updated">Task updated</string>
+    <string name="auto_task_cancelled">Auto task cancelled</string>
+    <string name="auto_task_time_conflict">An auto cruise task with the same time already exists, please select a different time</string>
+    <string name="auto_task_status_toggle">%1$s auto task %2$s</string>
+    <string name="status_enabled">enabled</string>
+    <string name="status_disabled">disabled</string>
+    <string name="swipe_card_prompt">Please swipe card...</string>
+    <string name="no_charge_point_use_floor">No charge point on current floor, using floor %1$d charge point</string>
+    <string name="no_park_point_use_floor">No park point on current floor, using floor %1$d park point</string>
+    <string name="no_charge_point_go_floor">No charge point on current floor, going to floor %1$d to charge</string>
+    <string name="door_lock_comm_lost">Communication lost</string>
+    <string name="elevator_cannot_update_other_building">Cannot update elevator points of another building in the current building</string>
+    <string name="elevator_update_point_on_floor">Please update this floor\'s point on floor %1$d (current floor: %2$d)</string>
+    <string name="elevator_cannot_control_other_building">Cannot control this elevator from another building</string>
+    <string name="task_record_status_completed">Completed</string>
+    <string name="task_record_status_failed">Failed</string>
+    <string name="task_record_status_cancelled">Cancelled</string>
+    <string name="task_record_status_running">Running</string>
+    <string name="user_type_unknown">Unknown</string>
+    <string name="user_id_label">User ID:</string>
+    <string name="user_name_label">Name:</string>
+    <string name="user_department_label">Department:</string>
+    <string name="user_floor_label">Floor:</string>
+    <string name="user_password_label">Password:</string>
+    <string name="user_type_label">User Type:</string>
+    <string name="user_id_hint">Enter user ID</string>
+    <string name="user_name_hint">Enter name</string>
+    <string name="user_department_hint">Enter department</string>
+    <string name="user_floor_hint">Enter floor</string>
+    <string name="user_password_hint">Enter password</string>
+    <string name="prompt_name_label">Prompt name</string>
+    <string name="prompt_name_hint">Enter prompt name</string>
+    <string name="prompt_content_label">Prompt content</string>
+    <string name="prompt_content_hint">Enter prompt content</string>
+    <string name="point_name_hint">Point name</string>
+    <string name="station_name_hint">Enter station name</string>
+    <string name="button_config_station_hint">Station</string>
+    <string name="button_config_task_hint">Task</string>
+    <string name="take_photo">Take photo</string>
+    <string name="toast_message_preview">Message</string>
+    <string name="tts_install_title">Install Chinese voice pack</string>
+    <string name="tts_install_message">Your device needs Chinese voice data installed to use voice features.</string>
+    <string name="tts_install_now">Install now</string>
+    <string name="user_department_preview">Department</string>
+    <string name="user_floor_preview">Floor 1</string>
+
+    <!-- Missing strings for en -->
+    <string name="add_failed_standby_point_reserved">Cannot add a station named \"Park Location\"</string>
+    <string name="all">All</string>
+    <string name="app_initializing">Initializing, please wait</string>
+    <string name="app_welcome">Welcome</string>
+    <string name="arrived_at_station_continue_with_next">Arrived at %1$s\nContinue to %2$s?</string>
+    <string name="auto_task_set_as">Set as auto task</string>
+    <string name="basic_cloud_ip_invalid">Invalid IP address format</string>
+    <string name="basic_cloud_port_invalid">Please enter a valid port number (1-65535)</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_confirm">Confirm</string>
+    <string name="clear_records_confirmation">Are you sure you want to clear all history records?</string>
+    <string name="cloud_connection_settings">Cloud Connection</string>
+    <string name="cloud_ip">Cloud IP</string>
+    <string name="cloud_ip_hint">Enter cloud IP</string>
+    <string name="cloud_port">Cloud Port</string>
+    <string name="cloud_port_hint">Enter cloud port</string>
+    <string name="command_send_error">Error sending command</string>
+    <string name="command_send_failed">Failed to send command</string>
+    <string name="current_music">Current Music</string>
+    <string name="current_position_only_station">Current position: %s</string>
+    <string name="current_position_with_station">Current position: (%.2f, %.2f, %.2f) - %s</string>
+    <string name="date_range_error">Time range cannot exceed 30 days</string>
+    <string name="destination_point">Destination Point</string>
+    <string name="dialog_add_marker_title">Add Station</string>
+    <string name="dialog_marker_name_hint">Enter station name</string>
+    <string name="elevator_display_format">(ID: %s, Address: %d, Channel: %d)</string>
+    <string name="end_time_error">End time cannot exceed current time</string>
+    <string name="error_map_name_unavailable">Cannot get current map name</string>
+    <string name="error_marker_name_empty">Station name cannot be empty</string>
+    <string name="error_position_unavailable">Cannot get current position</string>
+    <string name="hidden_settings">Hidden Settings</string>
+    <string name="home_point">Return to origin</string>
+    <string name="location_index_format">%d</string>
+    <string name="map_unknown">Current map: Unknown</string>
+    <string name="music_options">Music Options</string>
+    <string name="navigating_to">Navigating to: %s</string>
+    <string name="no_charging_point_in_map">No charging point in the current map, please set it up now</string>
+    <string name="obstacle_avoidance_time">Fixed path obstacle time (-1~99)</string>
+    <string name="operation_executing_cruise_task">Executing cruise task</string>
+    <string name="please_reset">Robot software emergency stop triggered, please reset</string>
+    <string name="positions_updated">Points synced with map</string>
+    <string name="repeat_mode_disabled">Repeat mode disabled</string>
+    <string name="repeat_mode_enabled">Repeat mode enabled</string>
+    <string name="repeat_task">Repeat</string>
+    <string name="repeating_task">Repeating</string>
+    <string name="run_distance_default">Distance traveled: 0.00 m</string>
+    <string name="run_distance_format">Distance traveled: %s</string>
+    <string name="run_distance_format_km">Distance traveled: %.2f km</string>
+    <string name="run_distance_format_m">Distance traveled: %.2f m</string>
+    <string name="running_time_label">Running Time</string>
+    <string name="select_cruise_task_hint">Please select a cruise task</string>
+    <string name="shelf_settings_tab">Shelf Settings</string>
+    <string name="special_point_1">Switch to floor 4 map</string>
+    <string name="special_point_2">Switch to floor 5 map</string>
+    <string name="Start_charge">Start Charging</string>
+    <string name="start_end_error">Start time cannot be later than end time</string>
+    <string name="start_return_home">Start returning to park location</string>
+    <string name="state_charging">Charging</string>
+    <string name="stations_not_exist">Task contains invalid locations</string>
+    <string name="status_canceled">Canceled</string>
+    <string name="status_completed">Completed</string>
+    <string name="status_failed">Failed</string>
+    <string name="status_runnings">Running</string>
+    <string name="task_count">Count</string>
+    <string name="task_count_format">Times: %d</string>
+    <string name="task_end_time">End</string>
+    <string name="task_name_prefix">Delivery task-&gt;</string>
+    <string name="task_name_prefix1">Return to charge station-&gt;</string>
+    <string name="task_name_prefix2">Return to park location-&gt;</string>
+    <string name="task_start_time">Start</string>
+    <string name="task_status">Task Status: %s</string>
+    <string name="task_type_charge">Charge Task</string>
+    <string name="task_type_cruise">Cruise Task</string>
+    <string name="task_type_delivery">Delivery Task</string>
+    <string name="task_type_jack">Jack Task</string>
+    <string name="task_type_parking">Parking Task</string>
+    <string name="task_type_unknown">Unknown Task</string>
+    <string name="unsafe_to_start_task">Robot is too close to the charging pile</string>
+
+    <!-- Remaining legacy non-translatable strings -->
+    <string name="bg_status_tag">Status label background</string>
+    <string name="edit_task">Edit task</string>
+    <string name="HistoryNews_settings">History</string>
+    <string name="logo_name">Ezhan</string>
+    <string name="no_history_data">No history records</string>
+    <string name="Robot_run_settings">Run log</string>
+    <string name="search">Query</string>
+    <string name="select_date">Select date</string>
+    <string name="select_type">Task type</string>
+</resources>

@@ -1,0 +1,156 @@
+{
+  "basicSettings": {
+    "volumeLevel": 6,
+    "speed": 0.4,
+    "deliveryWaitDuration": 30,
+    "queuedTaskCooldown": 6,
+    "lowPower": 20,
+    "recognizeDistance": 1.0,
+    "obstacleTime": 0,
+    "runningMusic": "wa"
+  },
+
+  "chargeSettings": {
+    "autoChargeEnabled": false,
+    "idleChargeEnabled": true,
+    "autoChargeStartMinute": 0,
+    "autoChargeEndMinute": 0,
+    "idleChargeWaitMinutes": 10
+  },
+
+  "orbitSettings": {
+    "virtualOrbitMode": true,
+    "virtualOrbitOneWay": false
+  },
+
+  "communicationSettings": {
+    "robotId": 1,
+    "loraChannel": 0,
+    "loraAddress": 0
+  },
+
+  "languageSettings": {
+    "language": "zh",
+    "languageChanged": false
+  },
+
+  "moduleVisibility": {
+    "jackModuleEnabled": true,
+    "shelfModuleEnabled": true,
+    "elevatorModuleEnabled": true,
+    "callBoxModuleEnabled": true,
+    "mapAreaModuleEnabled": true,
+    "avoidanceModuleEnabled": true
+  },
+
+  "passwordSettings": {
+    "usePassword": false,
+    "password": "0000"
+  },
+
+  "visualCruiseEnabled": false,
+
+  "elevatorConfigs": [
+    {
+      "id": "1",
+      "channel": 1,
+      "address": 1,
+      "buildingId": "default",
+      "floors": [
+        {
+          "id": "floor-1",
+          "alias": "1F",
+          "floor": 1,
+          "waitPoint": {
+            "id": 0, "name": "", "posX": 0.0, "posY": 0.0, "yaw": 0.0, "type": 3,
+            "floor": "1", "mapName": "", "taskType": 0, "isDefaultPoint": false,
+            "isVirtualOrbit": false, "recognizeDistance": 1.0, "doorId": 0, "stayDuration": 0
+          },
+          "preridePoint": {
+            "id": 0, "name": "", "posX": 0.0, "posY": 0.0, "yaw": 0.0, "type": 2,
+            "floor": "1", "mapName": "", "taskType": 0, "isDefaultPoint": false,
+            "isVirtualOrbit": false, "recognizeDistance": 1.0, "doorId": 0, "stayDuration": 0
+          },
+          "ridePoint": {
+            "id": 0, "name": "", "posX": 0.0, "posY": 0.0, "yaw": 0.0, "type": 4,
+            "floor": "1", "mapName": "", "taskType": 0, "isDefaultPoint": false,
+            "isVirtualOrbit": false, "recognizeDistance": 1.0, "doorId": 0, "stayDuration": 0
+          },
+          "transitionPoint": {
+            "id": 0, "name": "", "posX": 0.0, "posY": 0.0, "yaw": 0.0, "type": 14,
+            "floor": "1", "mapName": "", "taskType": 0, "isDefaultPoint": false,
+            "isVirtualOrbit": false, "recognizeDistance": 1.0, "doorId": 0, "stayDuration": 0
+          },
+          "buildingId": "default"
+        }
+      ]
+    }
+  ],
+
+  "callBoxConfigs": [
+    {
+      "id": "callbox-001",
+      "name": "CallBox-1",
+      "channel": 1,
+      "address": 1,
+      "buttons": [
+        {
+          "id": "btn-001",
+          "name": "Button1",
+          "position": "",
+          "task": "",
+          "buttonByteId": 1
+        }
+      ]
+    }
+  ],
+
+  "mapAreaConfigs": [
+    {
+      "name": "Area-1",
+      "type": "traffic",
+      "channel": "1",
+      "address": "1",
+      "mapName": "",
+      "polygonPoints": [0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0],
+      "resolution": 0.05,
+      "mapOriginX": 0.0,
+      "mapOriginY": 0.0,
+      "mapOriginZ": 0.0,
+      "expand": 0.0,
+      "otherRobots": []
+    }
+  ],
+
+  "positionMap": {},
+  "cruiseTaskMap": {},
+  "jackTaskMap": {},
+  "currentMapPoints": {},
+  "autoLoadConfigOnStartup": false,
+
+  "taskRecordRetentionDays": 30,
+
+  "voicePrompts": {
+    "voicePromptLanguage": "",
+    "voicePromptList": {
+      "departure_broadcast": "开始配送任务",
+      "arrival": "已经到达站点",
+      "position_lost": "我好像迷路了，请把我推回充电桩",
+      "low_battery": "电量不足，请及时充电",
+      "obstacle_alert": "前方有障碍物，请小心",
+      "task_completed": "任务已完成，感谢使用",
+      "operation_error_prompt": "操作错误，请检查网络并再次启动",
+      "charge_complete": "充电已完成，可以开始工作",
+      "return_arrival": "我回来了，还有什么事情吩咐吗",
+      "task_interrupted": "任务中断了",
+      "lead_departure": "请跟我来吧",
+      "cruise_departure": "我出发了，请让让我",
+      "cruise_arrival": "我已经到达了，请尽快",
+      "pedestrian_alert": "运行中",
+      "go_charging": "我要去充电了",
+      "emergency_stop1": "机器人急停被触发",
+      "collision_alert": "机器人发生碰撞,请恢复",
+      "navigation_error": "请避让"
+    }
+  }
+}

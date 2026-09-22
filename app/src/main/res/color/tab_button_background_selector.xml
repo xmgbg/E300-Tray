@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 选中/激活状态 -->
+    <item android:color="@color/tab_button_background_selected"
+        android:state_selected="true"/>
+    <item android:color="@color/tab_button_background_selected"
+        android:state_checked="true"/>
+
+    <!-- 默认状态 -->
+    <item android:color="@color/tab_button_background"/>
+</selector>

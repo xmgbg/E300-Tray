@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="station_btn_width_size">150dp</dimen>
+    <dimen name="station_btn__height_size">60dp</dimen>
+    <dimen name="task_item_spacing">16dp</dimen>
+    <dimen name="station_button_spacing">8dp</dimen>
+    <dimen name="operation_item_spacing">8dp</dimen>
+</resources>

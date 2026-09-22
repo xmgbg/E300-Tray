@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/app_background_color"
+    tools:context=".ui.CruiseActivity">
+
+    <!-- 顶部标题栏 -->
+    <ImageButton
+        android:id="@+id/btnBack"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:adjustViewBounds="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="@string/back_button"
+        android:elevation="10dp"
+        android:padding="0dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_return"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/cruise_mode"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="@color/time_text_color"
+        android:layout_marginStart="0dp"
+        app:layout_constraintStart_toEndOf="@id/btnBack"
+        app:layout_constraintTop_toTopOf="@id/btnBack"
+        app:layout_constraintBottom_toBottomOf="@id/btnBack"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <!-- 中间内容区 -->
+    <LinearLayout
+        android:id="@+id/contentArea"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@id/btnBack"
+        app:layout_constraintBottom_toTopOf="@id/bottomButtons"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
+
+        <!-- 水平排列的内容区域 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <!-- 左侧任务信息卡片 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="#1B233A"
+                android:layout_marginEnd="16dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- 背景图片容器 - 限制大小和位置 -->
+                    <LinearLayout
+                        android:id="@+id/noDataContainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal">
+                        <ImageView
+                            android:id="@+id/ivNoDataBackground"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_nodata"
+                            android:scaleType="centerInside"
+                            android:adjustViewBounds="true"
+                            android:layout_gravity="center"
+                            android:maxWidth="200dp"
+                            android:maxHeight="200dp" />
+                        <TextView
+                            android:id="@+id/tvNoData"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/no_data"
+                            android:textStyle="italic"
+                            android:textSize="22dp"
+                            android:layout_marginTop="8dp"
+                            android:textColor="#519DDAFF"/>
+                    </LinearLayout>
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fillViewport="true"
+                        android:scrollbars="vertical"
+                        android:fadeScrollbars="false"
+                        android:overScrollMode="always">
+
+                        <LinearLayout
+                            android:id="@+id/taskListContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+
+                            <RadioGroup
+                                android:id="@+id/taskRadioGroup"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+                            </RadioGroup>
+                        </LinearLayout>
+                    </ScrollView>
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 右侧内容区 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <!-- 站点选择区域 -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_rounded_shadow"
+                    android:layout_marginBottom="20dp">
+
+                    <!-- 背景图片容器 - 限制大小和位置 -->
+                    <LinearLayout
+                        android:id="@+id/noDataContainer1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:gravity="center_horizontal">
+                        <ImageView
+                            android:id="@+id/ivNoDataBackground1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_nodata"
+                            android:scaleType="centerInside"
+                            android:adjustViewBounds="true"
+                            android:layout_gravity="center"
+                            android:maxWidth="200dp"
+                            android:maxHeight="200dp" />
+                        <TextView
+                            android:id="@+id/tvNoData1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/no_data"
+                            android:textStyle="italic"
+                            android:textSize="22dp"
+                            android:layout_marginTop="8dp"
+                            android:textColor="#519DDAFF"/>
+                    </LinearLayout>
+
+                    <!-- 站点滚动区域 -->
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fillViewport="true"
+                        android:scrollbars="vertical">
+
+                        <LinearLayout
+                            android:id="@+id/stationContainer"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="8dp">
+                            <!-- 各楼层站点将通过代码动态添加 -->
+                        </LinearLayout>
+                    </ScrollView>
+                </FrameLayout>
+
+                <!-- 任务配置区 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/task_name_hint"
+                        android:textColor="#B0B8D1"
+                        android:textSize="18sp"
+                        android:layout_marginTop="8dp"/>
+
+                    <EditText
+                        android:id="@+id/taskInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:hint="@string/input_task_name"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="#B0B8D1"
+                        android:backgroundTint="#232A3D"
+                        android:singleLine="true"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+
+                <!-- 停留时间和循环次数 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/default_stay"
+                        android:textColor="#B0B8D1"
+                        android:textSize="18sp"/>
+
+                    <EditText
+                        android:id="@+id/defaultStayValue"
+                        android:layout_width="48dp"
+                        android:layout_height="40dp"
+                        android:inputType="number"
+                        android:text="10"
+                        android:layout_gravity="center"
+                        android:textColor="@android:color/white"
+                        android:textColorHint="#B0B8D1"
+                        android:backgroundTint="#232A3D"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/seconds"
+                        android:textColor="#B0B8D1"
+                        android:textSize="13sp"
+                        android:layout_marginStart="8dp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cruise_times"
+                        android:textColor="#B0B8D1"
+                        android:textSize="18sp"
+                        android:layout_marginStart="20dp"/>
+
+                    <EditText
+                        android:id="@+id/cruiseCountValue"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@android:color/white"
+                        android:textSize="15sp"
+                        android:backgroundTint="#232A3D"
+                        android:inputType="numberSigned"
+                        android:maxLength="3"
+                        android:singleLine="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/times"
+                        android:textColor="#B0B8D1"
+                        android:textSize="13sp"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+
+                <!-- 模式选择 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/radioNormal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="42dp"
+                            android:text="@string/normal_mode"
+                            android:background="@drawable/bg_mode_button"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:layout_margin="4dp"
+                            style="@style/BaseButtonStyle"/>
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:id="@+id/radioAuto"
+                            android:layout_width="wrap_content"
+                            android:layout_height="42dp"
+                            android:text="@string/auto_mode"
+                            android:background="@drawable/bg_mode_button"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:layout_margin="4dp"
+                            style="@style/BaseButtonStyle"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/btnStartTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="42dp"
+                            android:text="@string/start_time"
+                            android:background="@drawable/bg_mode_button"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:layout_margin="4dp"/>
+
+                        <Spinner
+                            android:id="@+id/promptSpinner"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_weight="1.5"
+                            android:background="@drawable/bg_mode_button"
+                            android:prompt="@string/select_prompt_hint"
+                            android:spinnerMode="dropdown"
+                            android:textColor="@color/white"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 底部操作按钮 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:elevation="8dp"
+                    android:gravity="bottom"
+                    android:layout_marginTop="28dp">
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnSaveRoute"
+                        android:layout_width="0dp"
+                        android:layout_height="54dp"
+                        android:layout_weight="1"
+                        android:text="@string/save_route"
+                        android:background="@drawable/button_rounded_bg"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:drawableLeft="@drawable/ic_cruise_save"
+                        android:paddingLeft="20dp"
+                        style="@style/BaseButtonStyle"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnStartCruise"
+                        android:layout_width="0dp"
+                        android:layout_height="54dp"
+                        android:layout_weight="1"
+                        android:text="@string/start_cruise"
+                        android:textStyle="bold"
+                        android:background="@drawable/button_rounded_bg"
+                        android:textColor="@android:color/white"
+                        android:textSize="20sp"
+                        android:drawableLeft="@drawable/ic_cruise_navigation"
+                        android:paddingLeft="20dp"
+                        android:layout_marginLeft="16dp"
+                        style="@style/BaseButtonStyle"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 底部按钮区域 -->
+    <LinearLayout
+        android:id="@+id/bottomButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+    </LinearLayout>
+
+    <!-- GIF覆盖层 -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/gifView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:elevation="10dp"
+            android:scaleType="centerCrop"/>
+
+        <TextView
+            android:id="@+id/tvNavigationStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="64sp"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="200dp"
+            android:padding="16dp"
+            android:elevation="11dp"
+            android:visibility="gone"/>
+
+        <!-- 操作按钮层（如果需要保持在视频上方） -->
+        <LinearLayout
+            android:id="@+id/overlay_buttons"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            tools:ignore="MissingConstraints">
+        </LinearLayout>
+    </FrameLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

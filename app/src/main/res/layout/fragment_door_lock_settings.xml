@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <!-- 标题 -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Door_lock_settings"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_color"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="32dp" />
+
+    <!-- 门锁2控制卡片 -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/gray_300">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- 门锁名称 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/door_lock_2"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_color"
+                android:layout_marginBottom="16dp" />
+
+            <!-- 状态显示 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/door_lock_status_label"
+                    android:textSize="18sp"
+                    android:textColor="@color/gray_600" />
+
+                <TextView
+                    android:id="@+id/tvLock2Status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/door_lock_status_closed"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/gray_600" />
+            </LinearLayout>
+
+            <!-- 控制按钮 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnLock2Open"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:text="@string/door_lock_status_open"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/btn_primary"
+                    android:layout_marginEnd="8dp"
+                    android:drawableStart="@drawable/ic_lock_open"
+                    android:drawablePadding="8dp" />
+
+                <Button
+                    android:id="@+id/btnLock2Close"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:text="@string/door_lock_status_closed"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/btn_secondary"
+                    android:layout_marginStart="8dp"
+                    android:drawableStart="@drawable/ic_lock"
+                    android:drawablePadding="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- 门锁3控制卡片 -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/gray_300">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- 门锁名称 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/door_lock_3"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_color"
+                android:layout_marginBottom="16dp" />
+
+            <!-- 状态显示 -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/door_lock_status_label"
+                    android:textSize="18sp"
+                    android:textColor="@color/gray_600" />
+
+                <TextView
+                    android:id="@+id/tvLock3Status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/door_lock_status_closed"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/gray_600" />
+            </LinearLayout>
+
+            <!-- 控制按钮 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnLock3Open"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:text="@string/door_lock_status_open"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/btn_primary"
+                    android:layout_marginEnd="8dp"
+                    android:drawableStart="@drawable/ic_lock_open"
+                    android:drawablePadding="8dp" />
+
+                <Button
+                    android:id="@+id/btnLock3Close"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="8dp"
+                    android:text="@string/door_lock_status_closed"
+                    android:textSize="18sp"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/btn_secondary"
+                    android:drawableStart="@drawable/ic_lock"
+                    android:drawablePadding="8dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- 提示信息 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/door_lock_hint"
+        android:textSize="16sp"
+        android:textColor="@color/gray_500"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp" />
+
+</LinearLayout>

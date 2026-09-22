@@ -1,0 +1,1321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ezhan</string>
+    <string name="back_button">戻る</string>
+    <string name="battery_status">バッテリーステータス</string>
+    <string name="select_prompt_hint">ビジュアルプロンプトを選択</string>
+
+    <string name="robot_number">202604181619</string>
+    <string name="device_number">E300-Pro</string>
+    <string name="charging">充電中</string>
+    <string name="language_setting">言語設定</string>
+    <string name="select_language">言語を選択</string>
+    <string name="distance">識別距離の範囲は-3から-0.5、0.5から3の間です</string>
+    <string name="distance_valid">識別距離は有効な数字でなければなりません</string>
+    <string name="recognition_distance">認識距離</string>
+
+    <string name="track_settings_with_current">ナビゲーションモード選択（現在：%s）</string>
+    <string name="track_settings">トラック設定</string>
+    <string name="virtual_track">固定パスモード</string>
+    <string name="virtual_orbit_one_way_navigation">仮想軌道一方向ナビゲーション</string>
+    <string name="free_path_track">自由パスモード</string>
+    <string name="obstacle_time">障害物回避時間</string>
+    <string name="obstacle_time_unit">秒（0ですぐに障害物を回避、-1で障害物を回避しない）</string>
+    <string name="confirm_virtual_track_message">固定パスナビゲーションモードを有効にしますか？このモードは、事前に設定された固定パスに従ってナビゲーションを行います。</string>
+    <string name="confirm_free_path_message">自由パストラックモードを有効にしますか？このモードでは、目標点まで自由にナビゲーションすることができます。</string>
+    <string name="virtual_track_started">固定パスモードを開始しました</string>
+    <string name="free_path_started">自由経路モードが開始されました</string>
+    <string name="already_in_mode">すでにこのモードになっています</string>
+    <string name="switching_to_mode">%sに切り替え中</string>
+    <string name="switched_to_mode">%sに切り替えました</string>
+    <string name="switch_cancelled">切り替えをキャンセルしました</string>
+    <string name="orbit_mode_manager_unavailable">軌道モードマネージャーが利用できません</string>
+    <!-- QR -->
+    <string name="qr_scan">QRコードをスキャンしてアクセス:\n %s</string>
+
+    <!-- Map Url -->
+    <string name="map_url">http://192.0.2.10:9999/#/pages/deploy/map?language=rby</string>
+    <string name="robot_run_url">http://192.0.2.10:9999/#/pages/log/log</string>
+    <string name="shelf_url">http://192.0.2.10:9999/#/pages/other/shelf?language=rby</string>
+    <!-- 基本設定フラグメント -->
+    <string name="volume_setting">音量設定</string>
+    <string name="speed_control">速度制御(m/s)</string>
+    <string name="parameter_configuration">配送設定です</string>
+    <string name="delivery_stay">配送滞在時間(s)です</string>
+    <string name="low_power_operation">低電力運行</string>
+    <string name="idle_charge">アイドル充電</string>
+    <string name="auto_charge_start_time">開始時間</string>
+    <string name="auto_charge_end_time">終了時間</string>
+    <string name="idle_charge_wait_time">アイドル超過</string>
+    <string name="time_unit_minutes">分</string>
+    <string name="idle_charge_wait_range_error">アイドル充電待機時間は1〜1440分の範囲である必要があります</string>
+    <string name="idle_return_home">アイドル時待機点復帰</string>
+    <string name="idle_return_wait_time">待機点復帰待機</string>
+    <string name="idle_return_wait_range_error">待機点復帰待機時間は1〜86400秒の範囲である必要があります</string>
+    <string name="jack_stay_duration_range_error">停留時間は0〜86400秒の範囲である必要があります</string>
+    <string name="battery_management_settings">バッテリー管理設定</string>
+    <string name="battery_threshold_settings">バッテリー閾値</string>
+    <string name="battery_critical_level">極低電量(%)</string>
+    <string name="battery_min_work_level">最低作業電量(%)</string>
+    <string name="battery_idle_level">アイドル充電上限(%)</string>
+    <string name="battery_full_level">満充電判定(%)</string>
+    <string name="full_charge_return_home">満充電後待機点復帰</string>
+    <string name="battery_idle_level_hint">アイドル充電有効時、バッテリーは「最低作業電量」以上かつ「アイドル充電上限」未満である必要があります（例：最低20%、上限60% → 20%〜59%で発動）</string>
+    <string name="battery_full_level_hint">「満充電後待機点復帰」を有効にすると、充電中に「満充電判定」に達した際に自動的に待機点へ戻ります</string>
+    <string name="battery_threshold_order_error">バッテリー閾値は次を満たす必要があります：極低 ≤ 最低作業 ≤ アイドル充電上限 ≤ 満充電判定</string>
+    <string name="pause_wait">一時停止待機</string>
+    <string name="language_configuration">言語設定</string>
+    <string name="current_language">現在の言語</string>
+    <string name="delivery_configuration">充電設定です</string>
+    <string name="return_to_dock_charging">ドックに戻って充電</string>
+    <string name="visual_inspection">視覚検査</string>
+    <string name="lift_mode">リフトモード</string>
+    <string name="password_verification">パスワード認証</string>
+    <string name="off">閉鎖されました</string>
+    <string name="on">開きました</string>
+    <string name="password_hint">パスワードを入力してください。4桁の整数のみサポートします</string>
+    <string name="reset_default_settings">デフォルト設定を復元</string>
+    <string name="save_settings">設定を保存</string>
+
+    <!-- ダイアログテキスト -->
+    <string name="modify_settings">設定を変更</string>
+    <string name="confirm">確認</string>
+    <string name="cancel">キャンセル</string>
+    <string name="reset_confirm_title">デフォルト設定を復元しますか？</string>
+    <string name="reset_confirm_message">すべてのカスタム設定が削除されます</string>
+    <string name="password_error">パスワードは4桁の数字でなければなりません</string>
+    <string name="settings_saved">設定が保存されました</string>
+    <!-- デバイス設定画面新規文字列 -->
+    <string name="title_device_settings">デバイス設定</string>
+    <string name="device_serial_number">デバイスシリアル番号</string>
+    <string name="device_machine_number">デバイスマシン番号</string>
+    <string name="app_version_number">APPバージョン番号</string>
+    <string name="exit_app">アプリを終了する</string>
+    <string name="startup_broadcast">起動時のアナウンス：</string>
+    <!-- アプリスローガン -->
+    <string name="app_slogan">無人運搬、スマートな未来</string>
+
+    <!-- システムステータス関連 -->
+    <string name="pose_probability_unknown">位置信頼度: 不明</string>
+    <string name="system_status">システムステータス</string>
+    <string name="nav_status_unknown">ナビゲーションステータス: 不明</string>
+    <string name="error_status_unknown">エラーステータス: 不明</string>
+    <string name="current_position_default">位置: X:%1$.2f Y:%2$.2f T:%3$.2f</string>
+    <string name="current_time">現在の時間</string>
+
+    <!-- 機能モード -->
+    <string name="delivery_mode">配送モード</string>
+    <string name="jack_mode">リフトモード</string>
+    <string name="cruise_mode">クルーズモード</string>
+
+    <!-- 操作ボタン -->
+    <string name="return_to_charge">充電に戻る</string>
+    <string name="return_to_home">駐車場に戻る</string>
+    <string name="system_settings">システム設定</string>
+    <!-- 配送ボタン -->
+    <string name="delivery_button">配送タスク</string>
+    <!-- リフトボタン -->
+    <string name="jack_button">リフトタスク</string>
+    <!-- クルーズボタン -->
+    <string name="cruise_button">クルーズタスク</string>
+    <!-- 充電に戻るボタン -->
+    <string name="return_charge">充電に戻る</string>
+    <!-- 駐車場に戻るボタン -->
+    <string name="return_home">駐車場に戻る</string>
+    <!-- 設定ボタン -->
+    <string name="settings">設定</string>
+    <string name="pose_probability">位置信頼度: %d%%</string>
+    <string name="nav_status">ナビゲーションステータス: %s</string>
+    <string name="error_status">エラーステータス: %s</string>
+    <string name="navigation_status">駐車場に戻る过程中</string>
+    <string name="company_name">壹站智汇</string>
+    <!-- 日付と时间の形式 -->
+    <string name="date_pattern">yyyy年MM月dd日</string>
+
+    <!-- ナビゲーションステータステキスト -->
+    <string name="nav_status_running">ナビゲーションステータス: 実行中</string>
+    <string name="nav_status_completed">ナビゲーションステータス: 完了</string>
+    <string name="nav_status_failed">ナビゲーションステータス: 失败</string>
+    <string name="nav_status_idle">ナビゲーションステータス: 待機中</string>
+
+    <!-- エラーステータス -->
+    <string name="error_status_none">エラーステータス: なし</string>
+    <string name="date_format">yyyy年MM月dd日</string>
+    <string name="time_format">HH:mm:ss</string>
+
+    <!-- 現在の位置 -->
+    <string name="current_position">現在の位置: X:%1$.2f Y:%2$.2f Z:%3$.2f</string>
+
+    <!-- ボタンとプロンプト -->
+    <string name="resume_task_with_time">タスクを再開 (%1$ds)</string>
+    <string name="confirm_with_time">確認 (%1$ds)</string>
+    <string name="task_canceled">タスクがキャンセルされました</string>
+    <string name="task_resumed">タスクが再開されました</string>
+    <string name="task_completed_message">駐車場に戻る成功！</string>
+    <string name="starting_charge">充電ドックに戻りを開始...</string>
+    <string name="navigation_failed">ナビゲーションコマンドが失敗しました</string>
+    <string name="no_home_position">ホームポイントが設定されていません</string>
+    <string name="returning_to_home">駐車場に戻る过程中</string>
+    <string name="start_to_home">家に帰ります</string>
+    <string name="operation_success">操作が成功しました</string>
+    <string name="operation_error">エラー: %1$s</string>
+    <string name="network_error">ネットワークエラー: %1$s</string>
+    <string name="wifi_strength">%1$d/4</string>
+    <string name="battery_percent">%1$d%%</string>
+
+    <!-- 音楽再生ステータス -->
+    <string name="music_preparing">音楽を準備中...</string>
+    <string name="music_started">音楽が再生されました</string>
+    <string name="music_paused">音楽が一時停止されました</string>
+    <string name="music_completed">音楽再生が完了しました</string>
+    <string name="music_error">音楽再生に失敗しました: %1$s</string>
+    <string name="error_code_1001">バッテリー残量が少ない</string>
+    <string name="error_code_1002">ナビゲーション経路が遮断されました</string>
+    <string name="error_code_1003">センサー故障</string>
+    <string name="unknown_error">不明なエラー</string>
+    <string name="start_task">タスクを開始</string>
+    <string name="cancel_task">タスクをキャンセル</string>
+    <!-- 一般的なメッセージ -->
+    <string name="operation_error_format">エラー: %s</string>
+    <string name="network_error_format">ネットワークエラー: %s</string>
+    <string name="stop_gif_error">GIFの停止中にエラーが発生しました</string>
+    <string name="show_pause_dialog_failed">一時停止ダイアログの表示に失敗しました</string>
+    <string name="no_position_data">位置データがありません</string>
+    <string name="no_station_selected">ステーションが選択されていません</string>
+    <string name="selected_prefix">選択済み: </string>
+    <string name="select_at_least_one_station">少なくとも1つのステーションを選択してください</string>
+    <string name="start_task_prefix">タスクを開始する: </string>
+    <string name="start_task_with_station_count">%dのステーションでタスクを開始</string>
+    <string name="selected_stations_cleared">選択されたステーションがクリアされました</string>
+    <string name="navigating_to_station">ステーション [%d/%d] に移動中: %s</string>
+    <string name="navigating_to_task_point">タスクポイントに移動中: %s</string>
+    <string name="navigating">ナビゲーション中...</string>
+    <string name="arrived_at_station">ステーションに到着しました: %s</string>
+    <string name="status_fetch_failed">ステータスの取得に失敗しました</string>
+    <string name="no_running_task">実行中のタスクはありません</string>
+    <string name="select_target_station_first">まず目標ステーションを選択してください</string>
+    <string name="select_only_one_destination_point">1つの目的地のみを選択してください</string>
+    <string name="set_destination_point">目的地を設定しました: %s</string>
+    <string name="arrived_final_station">最終ステーションに到着しました: %s\nタスクが完了しました!</string>
+    <string name="arrived_at_park_point">待機ポイントに到着しました</string>
+    <string name="arrived_at_station_continue">ステーションに到着しました: %s\n次のステーションに移動しますか?</string>
+    <string name="task_location_empty">タスクの位置リストが空です</string>
+    <string name="task_already_running">すでにタスクが実行中です</string>
+    <string name="point_location_tab">点位置</string>
+    <string name="fixed_location_tab">固定位置</string>
+    <string name="add_location">位置追加</string>
+    <string name="sort_location">位置ソート</string>
+    <string name="fetch_location_from_map">マップから位置取得</string>
+    <string name="upload_location">位置アップロード</string>
+    <!-- 位置設定関連 -->
+    <string name="add_new_location">新規位置を追加</string>
+    <string name="input_location_name">位置名を入力</string>
+    <string name="add_success">%s を追加しました</string>
+    <string name="sync_map_position_success">マップ位置を同期しました</string>
+    <string name="Unable_to_operate_in_a_current_map_or_floor">現在のマップまたはフロア以外では操作できません</string>
+    <string name="position_updated">位置を更新しました</string>
+    <string name="confirm_delete">削除を確認</string>
+    <string name="delete_location_prompt">%s を削除しますか？</string>
+    <string name="delete">削除</string>
+    <string name="delete_success">位置を削除しました</string>
+    <string name="sort_by_id">IDでソート</string>
+    <string name="sort_by_name">名前でソート</string>
+    <string name="ok">确定</string>
+
+    <!-- 位置フォーマット -->
+    <string name="location_id_format">ID:%d</string>
+    <string name="location_name_format">名称:%s</string>
+    <string name="location_x_format">X:%.3f</string>
+    <string name="location_y_format">Y:%.3f</string>
+    <string name="location_yaw_format">角度:%.3f</string>
+    <string name="Create_a_task">タスクを作成</string>
+    <string name="cruise_name">クルーズタスク</string>
+    <!-- 特殊位置ポイント -->
+    <string name="charge_point">充電ポイント</string>
+    <string name="park_point">ホームポイント</string>
+    <string name="relocalize_point">位置特定ポイント</string>
+    <string name="Position_setting">位置設定</string>
+    <string name="Language_settings">言語設定</string>
+    <string name="Shelf_setup">材料ラック設定</string>
+    <string name="Map_settings">地図設定</string>
+    <string name="Basic_setup">基本設定</string>
+    <string name="Regarding_the_equipment">設備について</string>
+    <string name="Setting_interface">設定インターフェース</string>
+    <string name="Retrieve_again">再取得</string>
+    <string name="Mission_accomplished">任务完了</string>
+    <string name="task_name_hint">タスク名:</string>
+    <string name="input_task_name">タスク名を入力してください！</string>
+    <string name="default_stay">デフォルト停留:</string>
+    <string name="seconds">秒</string>
+    <string name="cruise_times">クルーズ回数:</string>
+    <string name="normal_mode">普通</string>
+    <string name="auto_mode">自動</string>
+    <string name="start_time">開始時間</string>
+    <string name="save_route">ルート保存</string>
+    <string name="start_cruise">クルーズ開始</string>
+    <string name="visual_model">ビジュアルモデル</string>
+    <string name="times">回</string>
+    <string name="infinite_loop">無限ループ</string>
+    <string name="cruise_count_value_format">%1$d回</string>
+    <string name="delete_task_prompt">クルーズタスク「%1$s」を削除しますか？</string>
+    <string name="task_deleted">タスクが削除されました</string>
+    <string name="route_saved">ルートが保存されました</string>
+    <string name="select_task_first">最初にタスクを選択してください</string>
+    <string name="task_data_error">タスクデータエラー</string>
+    <string name="task_not_exist">タスクが存在しません</string>
+    <string name="task_scheduled">クルーズタスクは%1$sにスケジュールされています</string>
+    <string name="low_confidence">位置信頼度が低すぎる（＜40%）、クルーズタスクを実行できません</string>
+    <string name="charging_task_failed">ロボットは充電中です、現在のタスク実行に失敗しました！</string>
+    <string name="scheduled_task_set">スケジュールされたタスクが設定され、予定時間に開始します！</string>
+    <string name="start_cruise_task">クルーズタスクを開始します！</string>
+    <string name="task_terminated">クルーズタスクが終了しました</string>
+    <string name="task_completed">クルーズタスクが完了しました！\n総ステーション数: %1$d\nループ回数: %2$d</string>
+    <string name="confirm_task_completion">タスク完了を確認しました！</string>
+    <string name="task_name_exists">タスク名が既に存在します,再度入力してください</string>
+
+
+    <!-- Navigation Status -->
+    <string name="preparing_cruise">🟡 クルーズタスクの準備中...</string>
+    <string name="cruise_started">クルーズタスクが始動しました</string>
+    <string name="loop_start_format">🔄 %1$d回目のループを開始</string>
+    <string name="loop_completed_format">%1$d回目のループが完了し、次のループを開始します！</string>
+    <string name="arrived_at_station_format">✅ ステーションに到着しました: %1$s\n%2$d/%3$d (ループ: %4$d/%5$d)</string>
+    <string name="navigating_to_station_format">➔ %1$s へ移動中</string>
+    <string name="progress_format">現在の進度: %1$d/%2$d (ループ: %3$d/%4$d)\n%5$s へ向かっています</string>
+    <string name="staying_format">✅ ステーションに到着しました: %1$s\n停留中...%2$d秒</string>
+    <string name="resuming_format">\n進度: %2$d/%3$d (ループ: %4$d/%5$s)</string>
+    <string name="emergency_stop">緊急停止がトリガーされました</string>
+    <string name="collision_occurred">ロボットが衝突しました、回復してください</string>
+    <string name="pedestrian_alert">歩行者衝突回避</string>
+    <string name="arrival_announcement">到着お知らせ</string>
+    <string name="select_auto_mode_first">最初に自動クルーズモードを選択してください</string>
+    <string name="no_visual_prompts_available">利用できる視覚プロンプトがありません!</string>
+    <string name="system_not_ready">システムが準備できていません、しばらくしてから 다시お試しください</string>
+    <string name="waiting_robot_status">ロボットのステータス更新を待機中...</string>
+    <string name="station_data_error">ステーションデータエラー: %s</string>
+    <string name="station_not_exist">ステーションが存在しません: %s</string>
+    <string name="default_task_name_format">CRUISE-%s</string>
+    <string name="task_params_format">モード: %1$s%2$s | 停留: %3$d秒 | ループ: %4$s | ステーション: %5$d個</string>
+    <string name="select_start_time_first">最初に開始時間を選択してください</string>
+    <string name="start_executing_cruise_task">クルーズタスクの実行を開始します！</string>
+
+    <string name="initializing" >初期化中</string>
+    <string name="welcome_use" >ご利用いただきありがとうございます</string>
+
+    <string name="connection_to_controller_failed">コントローラーへの接続に失敗しました</string>
+    <string name="connection_restored">コントローラーへの接続が復旧しました</string>
+    <string name="navigation_normal_description">ポイントへ移動中: %s</string>
+    <string name="navigation_wait_description">階層%1$sの待機ポイントへ移動中</string>
+    <string name="navigation_ride_description">階層%1$sの乗車ポイントへ移動中</string>
+    <string name="calling_elevator_description">エレベーターを%s階に呼び出し中</string>
+    <string name="waiting_elevator_description">エレベーターが%s階に到着するのを待機中</string>
+    <string name="opening_door_description">ドアを開けています</string>
+    <string name="closing_door_description">ドアを閉めています</string>
+    <string name="changing_map_description">マップを%s階に切り替え中</string>
+    <string name="checking_access_description">アクセス権限を確認中</string>
+    <string name="navigation_park_description">駐車ポイントへナビゲート</string>
+    <string name="navigation_charge_description">充電ポイントへナビゲート</string>
+    <string name="navigation_precharge_description">充電前ポイントへナビゲート</string>
+    <string name="target_location_prefix">目標ポイント: %s</string>
+    <string name="precharge_point">充電前ポイント</string>
+    <!-- Other -->
+    <string name="time_picker_title">開始時間を選択</string>
+    <string name="minute_format">%02d</string>
+    <string name="auto_mode_active">自動</string>
+    <string name="normal_mode_active">普通</string>
+    <string name="scheduled_time_format">%02d:%02d</string>
+    <string name="task_name_duplicate">タスク名が既に存在します</string>
+    <string name="task_list_empty">タスクリストが空です、実行できません</string>
+    <string name="confirm_delete_title">削除を確認</string>
+    <string name="confirm_delete_message">このタスクを削除しますか？</string>
+    <string name="robot_paused_title">ロボットの一時停止</string>
+    <string name="select_operation">操作を選択</string>
+    <string name="resume">再開</string>
+    <string name="Create_a_jacking_task">頂昇タスクを作成</string>
+    <string name="Please_enter_a_name_for_the_task">タスクの名前を入力してください</string>
+    <string name="create">作成</string>
+    <string name="Custom_tasks">カスタムタスク</string>
+    <string name="Save_the_route">ルートを保存</string>
+    <string name="operation_type">操作类型：</string>
+    <string name="stay_duration">停留時間：</string>
+    <string name="duration_hint">秒数</string>
+    <string name="point_name_default">点位1</string>
+    <string name="Lifting">認識上昇</string>
+    <string name="Put_down">認識降下</string>
+    <string name="lift_up">リフト上昇</string>
+    <string name="lift_down">リフト下降</string>
+    <string name="Go_out">離れる</string>
+    <string name="None">なし</string>
+    <string name="JackLoad">頂昇して持ち上げる</string>
+    <string name="JackUnload">JackUnload</string>
+    <string name="edit">編集</string>
+    <string name="Start">開始</string>
+    <string name="Lifting5">運搬任務です</string>
+    <string name="Confirm_deletion">この操作を削除しますか？</string>
+    <string name="en">英語 (en)</string>
+    <string name="zh">中国語 (zh)</string>
+    <string name="zh_HK">繁体字中国語(hk)</string>
+    <string name="ja">日本語 (ja)</string>
+    <string name="ko">韓国語 (ko)</string>
+    <string name="vi">ベトナム語 (VI)</string>
+    <string name="id">インドネシア語 (id)</string>
+    <!-- ボイス設定インターフェース追加 -->
+    <string name="departure_broadcast">出発お知らせ：</string>
+    <string name="position_lost">位置喪失：</string>
+    <string name="lead_start">誘導開始：</string>
+    <string name="lead_arrival">誘導到着：</string>
+    <string name="low_battery">バッテリー残量低下：</string>
+    <string name="obstacle_alert">障害物アラート：</string>
+    <string name="operation_error_prompt">操作エラー：</string>
+    <string name="charge_complete">充電完了：</string>
+    <string name="return_arrival">帰還到着：</string>
+    <string name="task_interrupted">タスク中断：</string>
+    <string name="lead_departure">誘導出発：</string>
+    <string name="cruise_departure">クルーズ出発：</string>
+    <string name="cruise_arrival">クルーズ到着：</string>
+    <string name="go_charging">充電に向かう：</string>
+
+    <!-- デフォルトボイステキスト -->
+    <string name="default_departure_text">配達タスクを開始します</string>
+    <string name="default_arrival_text">ステーションに到着しました</string>
+    <string name="default_lost_text">迷子になりました、充電ドックに戻ってください</string>
+    <string name="default_lead_start_text">誘導を開始します、紧紧跟我来</string>
+    <string name="default_lead_arrive_text">您的位置に到着しました</string>
+    <string name="default_low_power_text">バッテリー残量が少なくなっています、充電してください</string>
+    <string name="default_obstacle_text">前方に障害物があります、ご注意ください</string>
+    <string name="default_task_done_text">タスクが完了しました、ご利用ありがとうございました</string>
+    <string name="default_op_error_text">操作エラー、再度お試しください</string>
+    <string name="default_charge_done_text">充電が完了しました、作業を開始できます</string>
+    <string name="default_return_arrive_text">戻ってきました、还有什么任务吗</string>
+    <string name="default_task_break_text">タスクが中断されました</string>
+    <string name="default_lead_go_text">请跟我来</string>
+    <string name="default_cruise_go_text">出発します、让一下道</string>
+    <string name="default_cruise_arrive_text">到着しました、早く来てください</string>
+    <string name="default_pedestrian_text">稼働中です、避けてください</string>
+    <string name="default_go_charge_text">充電に向かいます</string>
+    <string name="task">タスク完了：</string>
+    <string name="arrival">到着お知らせ：</string>
+    <string name="default_navigation_error_text">自動ナビゲーションルートの計画に失敗しました、タスクをキャンセルして再送信してください</string>
+    <string name="default_robot_error_text">ロボットにエラーが発生しました、すぐに処理してください</string>
+    <string name="default_emergency_stop_text">ロボットの緊急停止がトリガーされました</string>
+    <string name="default_collision_alert_text">ロボットが衝突しました、回復してください</string>
+    <string name="default_position_not_found_text">このポイントは存在しません、ポイントを追加してください</string>
+    <string name="default_low_confidence_error_text">位置信頼度が低く、タスクの実行に失敗しました！</string>
+    <string name="default_charging_task_error_text">ロボットは充電中です、タスクの実行に失敗しました！</string>
+    <string name="default_going_to_point_text">ロボットが目標ポイントに向かっています</string>
+    <string name="default_returning_home_text">ロボットが駐車ポイントに戻っています</string>
+    <string name="low_confidence_navigation">位置信頼度が低すぎる (40%未満) で、帰還できません</string>
+    <!-- パスワードエラーの新規プロンプト -->
+    <string name="password_incorrect">パスワードが間違っています、再度お試しください</string>
+
+    <!-- システム利用不可の新規プロンプト -->
+    <string name="current_unavailable">現在ご利用いただけません</string>
+    <string name="going_to_point">ロボットが目標ポイントに向かっています</string>
+    <string name="no_changes_detected">没有更新</string>
+    <string name="task_paused">タスクの一時停止</string>
+    <string name="end_task">終了</string>
+    <string name="resume_task">再開</string>
+    <string name="dialog_button_cancel">キャンセル</string>
+    <string name="arrival_station_title">ステーションに到着</string>
+    <string name="dialog_button_continue">継続</string>
+    <string name="please_enter_your_password">パスワードを入力してください</string>
+    <!-- クルーズタスク ダイアログ関連文字列 -->
+    <string name="cruise_task_info_title">クルーズタスク情報</string>
+    <string name="close_button_desc">閉じる</string>
+    <string name="task_name_label">タスク名: </string>
+    <string name="current_station_placeholder">ステーションに到着: 準備中...</string>
+    <string name="next_station_placeholder">次のステーション: 準備中...</string>
+    <string name="Get_the_link">リンクを取得</string>
+    <string name="error_code_10000">衝突防止</string>
+    <string name="error_code_10001">非常停止ボタン押下</string>
+    <string name="error_code_10002">バンパー接触</string>
+    <string name="error_code_10003">ソフト非常停止ボタン押下</string>
+    <string name="error_code_10010">自動充電失敗</string>
+    <string name="error_code_10020">ルート逸脱</string>
+    <string name="error_code_10030">バンパー・トリガー</string>
+    <string name="error_code_10040">オドメトリーロスト</string>
+    <string name="error_code_10050">ナビゲーション用レーザー喪失</string>
+    <string name="error_code_10051">ナビゲーション用レーザー周波数低すぎ</string>
+    <string name="error_code_10052">ナビゲーション用レーザーデータ遅延過大</string>
+    <string name="error_code_10060">ルートコントローラータイムアウト</string>
+    <string name="error_code_10070">下位レイヤーとの通信失敗（テーブル遅延過大）</string>
+    <string name="error_code_10080">ナビゲーション中誤差過大</string>
+    <string name="error_code_10090">自動制御速度無効</string>
+    <string name="error_code_10100">タスク終了時、終点との誤差過大</string>
+    <string name="error_code_10110">位置推定信頼度低すぎ</string>
+    <string name="error_code_10111">位置推定が起動していない可能性</string>
+    <string name="error_code_10112">位置推定データタイムアウト</string>
+    <string name="error_code_10113">ルートロック（タスク一時停止）</string>
+    <string name="error_code_10130">マップ切替中</string>
+    <string name="error_code_10131">マップ切替失敗</string>
+    <string name="error_code_20000">スクリプト実行中のためルート受信拒否</string>
+    <string name="error_code_20001">自動充電中のためルート受信拒否</string>
+    <string name="error_code_20002">位置推定未開始のためルート受信拒否</string>
+    <string name="error_code_20003">同一ルートのため受信拒否</string>
+    <string name="error_code_20004">マップが異なるためルート受信拒否</string>
+    <string name="error_code_20005">手動モード中のためルート受信拒否</string>
+    <string name="error_code_20006">動作実行中のためルート受信拒否</string>
+    <string name="error_code_20007">スクリプト待機設定のためルート受信拒否</string>
+    <string name="error_code_20008">位置推定信頼度低いためルート受信拒否</string>
+    <string name="error_code_20009">前回ルート未完了のため受信拒否</string>
+    <string name="error_code_20010">バッテリー極端に低いためルート受信拒否</string>
+    <string name="error_code_20011">起動待機中のためルート受信拒否</string>
+    <string name="error_code_20100">スクリプト実行中のためルート名実行拒否</string>
+    <string name="error_code_20101">ルートファイルなしのため実行拒否</string>
+    <string name="error_code_20102">ルート見つからず実行拒否</string>
+    <string name="error_code_20103">ルート空のため実行拒否</string>
+    <string name="error_code_20104">マップ名異なるため実行拒否</string>
+    <string name="error_code_20105">開始位置にいないため実行拒否</string>
+    <string name="error_code_20106">バッテリー低いため実行拒否</string>
+    <string name="error_code_20107">前回タスク未完了のため実行拒否</string>
+    <string name="error_code_20108">信頼度低いため実行拒否</string>
+    <string name="error_code_20109">位置推定なしのため実行拒否</string>
+    <string name="error_code_20200">マップ切替中のためアンロックイベント拒否</string>
+    <string name="error_code_20201">スクリプト実行中のためアンロックイベント拒否</string>
+    <string name="error_code_60001">ルート消去タスク受信、停止</string>
+    <string name="error_code_60002">ルートタスク一時停止命令受信</string>
+    <string name="error_code_60003">自動ナビゲーションルート計画失敗、有効なルート生成不可</string>
+    <string name="error_code_60004">グローバル経路計画入力失敗、目標タスク放棄</string>
+    <string name="error_code_60005">ロボット振動発生、停止しリカバリーモードへ</string>
+    <string name="error_code_60006">有効な制御出力指令なし（軌道衝突防止作動）</string>
+    <string name="error_code_60007">リカバリーモード後も振動継続、停止</string>
+    <string name="error_code_60008">ライン追従制御出力失敗、停止</string>
+    <string name="error_code_60009">クリアリングモード中、障害物マップ更新中、停止</string>
+    <string name="error_code_60010">非自動ナビ状態で自動ナビタスク受信、放棄</string>
+    <string name="error_code_60011">ライン追従：前進速度出力だが最大前進速度制限0、停止</string>
+    <string name="error_code_60012">ライン追従：後退速度出力だが最大後退速度制限0、停止</string>
+    <string name="error_code_60013">ライン追従：旋回速度出力だが最大前進/後退速度制限0、停止</string>
+    <string name="error_code_60014">ライン追従：最大リアルタイム速度制限0、停止</string>
+    <string name="error_code_60015">ライン追従：旋回速度出力だが最大前進/後退速度制限0、停止</string>
+    <string name="error_code_60105">操舵輪自動ナビ時、差動モデル逸脱角度過大、停止</string>
+    <string name="error_code_60200">センサーデータタイムアウト、停止</string>
+    <string name="error_code_60301">パレット認識タスク中：脚部安定認識未完了/接近ルート未計画</string>
+    <string name="navigation_status_completed">ナビゲーションステータス: 完了</string>
+    <string name="fetch_location_confirmation_title">位置情報の取得確認</string>
+    <string name="fetch_location_confirmation_message">マップから位置情報を取得することを確認しますか？</string>
+    <string name="upload_location_confirmation_title">アップロード確認</string>
+    <string name="upload_location_confirmation_message">すべてのポイントをアップロードすることを確認しますか？</string>
+    <string name="card_swipe_verify">RFIDカード認証</string>
+    <string name="password_dialog_title">パスワードを入力</string>
+    <string name="delete_button">削除</string>
+    <string name="confirm_button">確認</string>
+    <string name="password_input_hint">____</string>
+    <string name="password_error_toast">パスワードは4桁の数字でなければなりません</string>
+    <string name="settings_saved_toast">設定が保存されました</string>
+    <string name="emergency_stop1">緊急停止アラーム：</string>
+    <string name="collision_alert">衝突アラーム：</string>
+    <string name="navigation_error">ナビゲーションエラー：</string>
+    <string name="default_point_name">ポイント%d</string>
+    <string name="confirm_reset_title">デフォルト設定にリセットしますか？</string>
+    <string name="confirm_reset_message">すべてのカスタム設定が削除されます</string>
+    <string name="default_speed_format">%.1f</string>
+    <string name="error_positive_number">非負の数値を入力してください</string>
+    <string name="error_invalid_number">無効な数字形式</string>
+    <string name="range_error_format">%dから%dの間の数値を入力してください</string>
+    <string name="start_lifting_task">荷役タスクを開始する</string>
+    <string name="descending">下降中</string>
+    <string name="ascending">上昇中</string>
+    <!-- WebService 関連文字列 -->
+    <string name="web_title">Ezhanロボットコントロールターミナル</string>
+    <string name="robot_status_title">ロボットステータス</string>
+    <string name="status_running">実行ステータス</string>
+    <string name="status_battery">バッテリーレベル</string>
+    <string name="status_emergency">緊急停止ステータス</string>
+    <string name="status_target">ターゲットポイント</string>
+    <string name="status_confidence">信頼度</string>
+    <string name="status_position">位置</string>
+    <string name="status_operation">現在の操作</string>
+    <string name="status_alert">アラート</string>
+    <string name="select_station_hint">-- ターゲットステーションを選択 --</string>
+    <string name="select_jack_task_hint">-- リフトタスクを選択 --</string>
+    <string name="btn_confirm">確認</string>
+    <string name="btn_park">駐車ポイント</string>
+    <string name="btn_charge">充電ポイント</string>
+    <string name="btn_cancel">キャンセル</string>
+    <string name="btn_pause">一時停止</string>
+    <string name="btn_resume">再開</string>
+    <string name="error_no_target">ターゲットステーションを選択してください</string>
+    <string name="error_task_running">ロボットはリフトタスクを実行中です、タスクの割り当てに失敗しました</string>
+    <string name="no_error">エラーなし</string>
+    <string name="unknown">不明</string>
+    <string name="no_target">ターゲットなし</string>
+    <string name="unknown_position">位置不明</string>
+    <string name="no_operation">操作なし</string>
+    <string name="target_prefix">ターゲットポイント: </string>
+    <string name="web_service_started">Webサービスが起動しました、ポート: %d</string>
+    <string name="web_service_start_failed">Webサービスの起動に失敗しました：すべてのポートが使用されています</string>
+    <string name="error_application_context_null">アプリケーションのコンテキストがnullです</string>
+    <string name="error_parse_post_params">POSTパラメーターの解析に失敗しました</string>
+    <string name="log_status_update">定期的なステータス更新</string>
+    <string name="log_params_received">受け取ったパラメーター: </string>
+    <string name="log_cancel_navigation">現在のナビゲーションをキャンセル</string>
+    <string name="log_pause_navigation">現在のナビゲーションを一時停止</string>
+    <string name="log_resume_navigation">現在のナビゲーションを再開</string>
+    <string name="operation_navigating_to"> ポイントへ移動中...</string>
+    <string name="operation_executing_task">輸送タスク %s を実行中...</string>
+    <string name="operation_charging">充電ポイントに向かっています...</string>
+    <string name="operation_parking">駐車ポイントに向かっています...</string>
+    <string name="operation_canceling">ナビゲーションをキャンセルしています...</string>
+    <string name="operation_canceled">タスクがキャンセルされました</string>
+    <string name="operation_pausing">ナビゲーションを一時停止しています...</string>
+    <string name="operation_paused">タスクが一時停止されました</string>
+    <string name="operation_resuming">ナビゲーションを再開しています...</string>
+    <string name="operation_resumed">タスクが再開されました</string>
+    <string name="error_select_task">実行するタスクを選択してください</string>
+    <string name="log_navigating_to_station">ステーション: %s へのナビゲートを開始</string>
+    <string name="log_navigating_home">駐車ポイントへのナビゲートを開始</string>
+    <string name="log_navigating_charge">充電ポイントへのナビゲートを開始</string>
+    <string name="task_delivery_completed">輸送タスクが完了しました</string>
+    <string name="log_going_to_point">ポイント: %s に向かっています</string>
+    <string name="log_execute_lift">ポイント: %s でリフト操作を実行</string>
+    <string name="log_execute_lower">ポイント: %s でローワー操作を実行</string>
+    <string name="log_execute_leave">ポイント: %s でリーブ操作を実行</string>
+    <string name="warn_port_conflict">注意：実際のポートは %2$d （デフォルトポート %1$d が使用中）</string>
+    <string name="error_port_occupied">ポート %d は使用中です：%s</string>
+    <string name="error_all_ports_occupied">Webサービスを開始できません。ポート %d から %d までがすべて使用中です</string>
+    <string name="error_task_send_failed">タスクの送信に失敗しました。タスクは一時停止されました</string>
+    <string name="warn_task_retry">タスクの送信に失敗しました。リトライを準備中 (%d/3)</string>
+    <string name="state_paused">一時停止</string>
+    <string name="state_canceled">キャンセル</string>
+    <string name="status_normal">正常</string>
+    <string name="emergency_activated">緊急停止が活性化されました</string>
+    <string name="error_blocked">ロボットが妨害されました</string>
+    <string name="error_emergency_stop">運行中に緊急停止が発生しました。すぐに処理してください</string>
+    <string name="error_collision">運行中に衝突が検出されました。すぐに処理してください</string>
+    <string name="alert_select_station">目標ステーションを選択してください</string>
+    <string name="alert_select_task">タスクを選択してください</string>
+    <string name="log_command_sent">コマンドが送信されました</string>
+    <string name="error_send_command">コマンドの送信に失敗しました</string>
+    <string name="log_form_submitted">フォームが正常に送信されました</string>
+    <string name="error_form_submit">フォームの送信に失敗しました</string>
+    <string name="error_network_response">ネットワークの応答が異常です</string>
+    <string name="error_fetch_status">ステータスの取得に失敗しました</string>
+    <string name="error_get_string_resource">文字列リソースの取得に失敗しました</string>
+    <string name="state_idle">アイドル</string>
+    <string name="state_running">実行中</string>
+    <string name="state_failed">失敗</string>
+    <string name="server_request_error">サーバーがリクエストを処理中にエラーが発生しました</string>
+    <string name="error_request_processing">リクエストの処理中にエラーが発生しました</string>
+    <string name="state_completed">完了</string>
+    <string name="tts_instance_set">TTSインスタンスが設定されました</string>
+    <string name="error_tts_null">nullのTTSインスタンスを設定しようとしました</string>
+    <string name="elevator_wait_point">待機地点</string>
+    <string name="elevator_ride_point">乗場地点</string>
+    <string name="elevator_robot_config">ロボット設定</string>
+    <string name="elevator_control">エレベーター制御</string>
+    <string name="add_wait_point">待機地点を追加</string>
+    <string name="add_ride_point">乗場地点を追加</string>
+    <string name="elevator_id">エレベーターID</string>
+    <string name="elevator_name">エレベーター名</string>
+    <string name="lora_channel">LoRaチャンネル</string>
+    <string name="lora_address">LoRaアドレス</string>
+    <string name="call_elevator">エレベーターを呼ぶ</string>
+    <string name="elevator_floor">階</string>
+    <string name="open_elevator">ドアを開ける</string>
+    <string name="close_elevator">ドアを閉める</string>
+    <string name="elevator_id_hint">エレベーターIDを入力</string>
+    <string name="elevator_name_hint">エレベーター名を入力</string>
+    <string name="lora_channel_hint">チャンネル番号 (1-64)</string>
+    <string name="lora_address_hint">アドレス (0-255)</string>
+    <string name="select_floor">階を選択</string>
+    <string name="floor_prefix">%d階</string>
+    <string name="save_config">設定を保存</string>
+    <string name="config_saved">設定を保存しました</string>
+    <string name="invalid_channel">チャンネルは1-64の間で入力してください</string>
+    <string name="invalid_address">アドレスは0-255の間で入力してください</string>
+    <string name="module_settings">モジュール設定</string>
+    <string name="music_select">R音楽選択を実行</string>
+    <string name="input_wait_point_name">待機地点の名前を入力してください</string>
+    <string name="add_points">地点を追加</string>
+    <string name="lora_config">LoRaデバイス設定</string>
+    <string name="robot_lora_config">ロボットLoRa設定</string>
+    <string name="elevator_lora_config">エレベーターLoRa設定</string>
+    <string name="elevator_address_hint">エレベーターアドレス</string>
+    <string name="floor_settings">階設定</string>
+    <string name="min_floor_hint">開始階</string>
+    <string name="max_floor_hint">終了階</string>
+    <string name="update_floors">更新</string>
+    <string name="ground_floor">G</string>
+    <string name="basement_prefix">B%d</string>
+    <string name="no_data_image_desc">no_data_image_desc</string>
+    <string name="floor_hint">階を入力</string>
+    <string name="id_hint">IDを入力</string>
+    <string name="number_hint">番号を入力</string>
+    <string name="get_floor_failed">現在の階層取得に失敗しました,地図名の接尾辞にフロアIDが含まれていることを確認してください</string>
+    <string name="floor_incorrect">追加失敗：現在の階層(%d)と対象階層(%d)が一致しません</string>
+    <string name="avoidance_settings_title">回避設定</string>
+    <string name="area_settings_title">エリア設定</string>
+    <string name="robot_config_title">ロボット設定</string>
+    <string name="add_area">エリア追加</string>
+    <string name="robot_name_hint">ロボット名</string>
+    <string name="robot_address_hint">ロボットアドレス</string>
+    <string name="save_robot">ロボット保存</string>
+    <string name="saved_robots_title">保存済みロボット</string>
+    <string name="area_type_hint">エリアタイプを選択</string>
+    <string name="area_id_hint">エリアID</string>
+    <string name="area_range_hint">エリア範囲 (x1,y1;x2,y2;...)</string>
+    <string name="error_invalid_range">有効なエリア範囲を入力してください</string>
+    <string name="error_name_required">名前を入力してください</string>
+    <string name="error_address_required">アドレスを入力してください</string>
+    <string name="add_elevator">エレベーターを追加</string>
+    <string name="sort_elevators">エレベーターを並べ替え</string>
+    <string name="wait_point">待機ポイント</string>
+    <string name="ride_point">乗車ポイント</string>
+    <string name="update">位置を更新</string>
+    <string name="add_robot">ロボットを追加</string>
+    <string name="elevator">エレベーター設定</string>
+    <string name="map_prefix">マップ接頭辞</string>
+    <string name="floor_level">フロア</string>
+    <string name="current_map">現在のマップ: %s</string>
+    <string name="floor_title">フロア %d</string>
+    <string name="current_map1">現在のマップ:</string>
+    <string name="floor_title1">現在のフロア:</string>
+    <string name="robot_loading">ロボットを読み込んでいます。しばらくお待ちください…</string>
+    <string name="command_sequence_failed">コマンド実行に失敗しました</string>
+    <string name="dialog_button_continue_with_time">続行 (%d秒)</string>
+    <string name="elevator_info_format">エレベーター (アドレス: %d  チャンネル: %d)</string>
+    <string name="update_position">位置を更新</string>
+    <string name="elevator_settings">エレベーター設定</string>
+
+    <string name="open_door">ドアを開く</string>
+    <string name="close_door">ドアを閉じる</string>
+    <string name="clear_occupy">占有クリア</string>
+    <string name="call_floor">階を呼ぶ</string>
+    <string name="add_floor">追加</string>
+    <string name="save">保存</string>
+
+    <!-- プロンプト・エラー -->
+    <string name="error_floors_must_be_positive">階数は1以上にしてください</string>
+    <string name="error_alias_empty">エイリアスは空欄できません</string>
+    <string name="error_channel_range">チャンネルは1～125の範囲です</string>
+    <string name="error_address_range">アドレスは0～255の範囲です</string>
+
+    <!-- 操作フィードバック -->
+    <string name="clear_occupy_success">占有クリア成功</string>
+    <string name="clear_occupy_error">占有クリア失敗</string>
+    <string name="open_door_success">ドアを開けました</string>
+    <string name="open_door_error">ドア開け失敗</string>
+    <string name="close_door_success">ドアを閉めました</string>
+    <string name="close_door_error">ドア閉め失敗</string>
+    <string name="going_to_floor">階へ移動中…</string>
+    <string name="call_floor_success">%d階へ行くコマンド送信済: %s</string>
+    <string name="call_floor_error">階移動失敗: %s</string>
+
+    <!-- 確認ダイアログ -->
+    <string name="confirm_delete_elevator_message">このエレベーター設定を削除しますか？</string>
+    <string name="confirm_delete_floor_message">この階を削除しますか？</string>
+    <string name="confirm_delete_map_areas_message">%1$s の %2$d 件のエリアを削除しますか？</string>
+    <string name="map_areas_deleted">%s のエリアを削除しました</string>
+    <string name="confirm_delete_area_message">エリア %s を削除しますか？</string>
+    <string name="area_deleted">エリア %s を削除しました</string>
+
+    <!-- エリア統計 -->
+    <string name="total_areas_format">%d 件のエリア</string>
+    <string name="door_control_count">ドア制御：%d</string>
+    <string name="info_count">情報：%d</string>
+    <string name="traffic_count">交通制御：%d</string>
+
+    <!-- フォーマット文字列 -->
+    <string name="floor_prefix_format">%d階</string>
+    <string name="position_display_format">X:%.2f Y:%.2f T:%.2f</string>
+    <string name="new_floor_default_name">新規階</string>
+
+    <!-- 座標表示 -->
+    <string name="position_x_format">X:%.2f</string>
+    <string name="position_y_format">Y:%.2f</string>
+    <string name="position_yaw_format">T:%.2f</string>
+
+    <!-- 入力ヒント -->
+    <string name="alias_hint">エイリアス</string>
+    <string name="channel_hint">チャンネル</string>
+    <string name="address_hint">アドレス</string>
+    <string name="floors_hint">階数</string>
+
+    <!-- ダイアログタイトル -->
+    <string name="add_elevator_dialog_title">新規エレベーター追加</string>
+    <string name="elevator_control_dialog_title">エレベーター操作</string>
+    <string name="elevator_settings_dialog_title">エレベーター設定</string>
+
+    <string name="Call_settings_dialog_title">呼び出し設定</string>
+    <string name="history_dialog_title">履歴</string>
+    <string name="robot_run_dialog_title">ロボットログ</string>
+
+    <string name="call_box_settings_title">呼び出しボックス設定</string>
+    <string name="add_call_box">呼び出しボックスを追加</string>
+    <string name="button_count">ボタン数</string>
+    <string name="name">名称</string>
+    <string name="button_config">ボタン設定</string>
+    <string name="station_binding">ステーション割り当て</string>
+    <string name="select_station">ステーションを選択</string>
+    <string name="select_task">タスクを選択</string>
+    <string name="add_new">追加</string>
+    <string name="no_data">No Data</string>
+    <string name="current_map_label">現在のマップ</string>
+    <string name="current_floor_label">現在のフロア</string>
+    <string name="operation_completed">タスクが完了しました</string>
+    <string name="error_fill_complete_info">すべての必須情報を入力してください</string>
+    <string name="not_configured">未設定</string>
+    <string name="no_available_stations">利用可能なステーションデータがありません</string>
+    <string name="task_selection_box_desc">タスク選択ボックス</string>
+
+    <string name="park_failed">駐車失敗、駐車ポイントを確認してください</string>
+    <string name="charge_failed">充電失敗、充電ポイントを確認してください</string>
+    <string name="charge_missing">充電ポイントが不足しています。充電ポイントを追加してください</string>
+    <string name="invalid_elevator_task">タスク失敗、エレベーター内でのタスク送信は許可されていません</string>
+    <string name="elevator_empty">タスク失敗、エレベーター設定が空です</string>
+    <string name="map_incorrect">タスク失敗、タスクステーションがマップ上にありません</string>
+
+    <string name="task_queued">タスクがキューに追加されました (#%2$d)</string>
+    <string name="queued_task_list">キューに入ったタスク一覧</string>
+    <string name="queued_task_count">キュー内タスク数: %d</string>
+    <string name="cancel_queued_task">キャンセル</string>
+    <string name="no_queued_tasks">キューに入ったタスクはありません</string>
+
+    <string name="button_default_name_format">ボタン %d</string>
+    <string name="call_box_info_format">（チャンネル: %d | アドレス: %d | ボタン数: %d）</string>
+    <string name="floor_title_separator">--- フロア %d ---</string>
+
+    <string name="confirm_delete_call_box_message">この呼び出しボックスを削除しますか？</string>
+    <string name="confirm_delete_button_message">このボタンを削除しますか？</string>
+
+    <string name="cruise_task_prefix">巡行：</string>
+    <string name="jack_task_prefix">リフト：</string>
+    <string name="label_station">ステーション:</string>
+    <string name="label_task">タスク:</string>
+    <string name="label_config">設定</string>
+    <string name="label_start_time">開始時刻</string>
+    <string name="label_end_time">終了時刻</string>
+    <string name="label_task_type">タスク種別</string>
+    <string name="action_query">検索</string>
+
+    <string name="select_date_title">日付を選択</string>
+    <string name="clear_records_title">履歴をクリア</string>
+    <string name="clear_records_message">すべての履歴を削除してもよろしいですか？</string>
+    <string name="no_matching_records">該当するタスク記録が見つかりません</string>
+    <string name="error_date_parsing">日付解析エラー</string>
+
+    <string name="cancel_task_title">タスクのキャンセル</string>
+    <string name="cancel_task_message">このタスクをキャンセルしてもよろしいですか？</string>
+
+    <string name="error_date_range_exceeds">期間は30日を超えられません</string>
+    <string name="error_end_time_exceeds_current">終了時刻は現在時刻を超えられません</string>
+    <string name="error_start_after_end">開始時刻は終了時刻より後にできません</string>
+
+    <string name="all_tasks">すべて</string>
+    <string name="cruise_task">巡航タスク</string>
+    <string name="jack_task">ジャックタスク</string>
+    <string name="delivery_task">搬送タスク</string>
+    <string name="charge_task">充電タスク</string>
+    <string name="parking_task">駐車タスク</string>
+    <string name="unknown_task">不明タスク</string>
+
+    <string-array name="task_types">
+        <item>@string/all_tasks</item>
+        <item>@string/cruise_task</item>
+        <item>@string/jack_task</item>
+        <item>@string/delivery_task</item>
+        <item>@string/charge_task</item>
+        <item>@string/parking_task</item>
+    </string-array>
+    <string name="create_time_format">作成日時: %s</string>
+    <string name="duration_format">実行時間: %s</string>
+    <string name="add_failed_duplicate_name">追加に失敗しました。同名のステーションが既に存在します: %s</string>
+    <string name="add_failed_duplicate_callbox_name">追加に失敗しました。同名の呼出ボックスが既に存在します: %s</string>
+    <string name="manual_charging_error">手動充電中のため、タスクを実行できません</string>
+
+    <string name="refresh">リフレッシュ</string>
+    <string name="refreshed">更新済み</string>
+
+    <string name="robot_communication_settings">ボット通信設定</string>
+    <string name="robot_id">ロボット ID</string>
+
+    <string name="current_building_label">現在の建物</string>
+    <string name="building_prefix_format">建物  %s</string>
+    <string name="cannot_get_current_position">現在の位置を取得できません</string>
+
+    <string name="default_building_name">本館</string>
+    <string name="default_building_short">メイン</string>
+    <string name="building_name_format">建物 %s</string>
+    <string name="floor_title_with_building">%s - フロア %d</string>
+    <string name="basement_title_with_building">%s - 地下  %d</string>
+
+    <string name="transition_point">移行ポイント</string>
+    <string name="confirm_switch_orbit_mode">ナビゲーションモードの切り替えを確認する</string>
+
+    <string name="cannot_add_point_wrong_floor">床 %s にポイントを追加できません。ロボットは現在 床 %s にいます。</string>
+    <string name="cannot_update_point_wrong_floor">床 %s のポイントを更新できません。ロボットは現在 床 %s にいます。</string>
+    <string name="cannot_delete_point_wrong_floor">床 %s のポイントを削除できません。ロボットは現在 床 %s にいます。</string>
+
+    <string name="cannot_add_point_wrong_building">建物 %s にポイントを追加できません。ロボットは現在 建物 %s にいます。</string>
+    <string name="cannot_update_point_wrong_building">建物 %s のポイントを更新できません。ロボットは現在 建物 %s にいます。</string>
+    <string name="cannot_delete_point_wrong_building">建物 %s のポイントを削除できません。ロボットは現在 建物 %s にいます。</string>
+
+    <string name="reset">リセット</string>
+
+    <string name="relocalize_confirmation_title">再ローカライズの確認</string>
+    <string name="relocalize_confirmation_message">ロボットを現在の位置に再ローカライズしますか "%s"?</string>
+    <string name="cannot_relocalize_wrong_floor">再ローカライズできません：ロボットは床 %s にいますが、再ローカライズポイントは床 %s にあります。</string>
+    <string name="cannot_relocalize_wrong_building">再ローカライズできません：ロボットは建物 %s にいますが、再ローカライズポイントは建物 %s にあります。</string>
+    <string name="relocalize_success">再ローカライズコマンドを正常に送信しました。</string>
+    <string name="relocalize_failed">再ローカライズに失敗しました。</string>
+
+    <string name="websocket_not_connected">WebSocketが接続されていません。</string>
+    <string name="reset_coordinates_title">座標リセットの確認</string>
+    <string name="reset_coordinates_message">「%s」の座標を(0, 0, 0)にリセットしてもよろしいですか？</string>
+    <string name="coordinates_reset">座標をリセットしました。</string>
+    <string name="cannot_reset_point_wrong_floor">リセット失敗：ロボットの現在の階は %s ですが、リセット対象の階は %s です。</string>
+    <string name="cannot_reset_point_wrong_building">リセット失敗：ロボットの現在の建物は %s ですが、リセット対象の建物は %s です。</string>
+
+    <string name="preride_point">事前走行ポイント</string>
+    <string name="unknown_map">不明な地図</string>
+    <string name="current_location_building_floor">%1$s棟、%2$s階</string>
+    <string name="current_location_map_station">%1$s、%2$s</string>
+    <string name="current_location_map">%1$s</string>
+    <string name="home_current_location_map_station">位置：%1$s、%2$s</string>
+    <string name="home_current_location_map">位置：%1$s</string>
+    <string name="queued_task_cooldown">キュータスク待機時間</string>
+    <string name="time_unit_seconds">秒</string>
+    <string name="queued_task_cooldown_range_error">キュータスク待機時間は5秒未満に設定できません</string>
+    <string name="no_warnings">アラーム情報なし！</string>
+
+    <!-- 建図ルールフローティングヒント -->
+    <string name="map_rules_title">建図ルール</string>
+    <string name="map_rules_tip_content">1. マップ保存時、マップ名には棟番号と階番号の両方を含める必要があります。\n\n2. 棟番号・階番号はいずれも1から始め、0は使用しないでください。\n\n3. 棟番号はマップ名の「マップ接頭辞」と「階番号」の間に記述します。形式は次のとおりです：\n\n   {マップ接頭辞}{棟番号}_{階番号}\n\n   例：office1_3\n   マップ接頭辞 office、1棟、3階を意味します。\n\n   単一棟の場合も棟番号は必須です（例：office1_2）。office_2 のように省略しないでください。\n\nヒント：このヒントボックスはドラッグできます。閉じるボタンをタップするとドットに折りたたまれます。</string>
+
+    <!-- エレベーター操作ガイドフローティングヒント -->
+    <string name="elevator_tip_title">エレベーター操作ガイド</string>
+    <string name="elevator_tip_content">【フロア追加/削除】\n1. 追加したフロアはデフォルトで「新規フロア」となるため、すぐに意味のある名前に変更する。\n2. フロアを削除すると、そのフロアの待機点、事前走行点、乗車点、移行点も同時に削除される。\n3. 追加/削除後、フロア番号が連続しているか確認し、番号飛び（例：1→3で2階が欠落）を避ける。\n\n【建物切り替え】\n4. 建物タブを切り替える前に、現在の変更が保存されていることを確認する（ダイアログの「保存」ボタンをタップ）。\n5. 座標ポイント未設定の新規フロアは、建物切り替え後に失われる可能性がある。\n6. カスタムフロア別名は、切り替え後にデフォルト名にリセットされる可能性がある。\n\n【ポイントアップロード/ダウンロード】\n7. アップロードとダウンロードはすべてのポイントデータ（エレベーターポイント含む）を同期する。\n8. ダウンロードはローカルのカスタムフロア別名と番号を上書きする可能性がある。\n9. アップロード/ダウンロード前にエレベーター設定が保存済みであることを確認することを推奨する。\n10. ダウンロード後、エレベーターフロアリストが完全で番号が正しいか確認する。\n\n【エレベーター削除】\n11. エレベーターを削除すると、そのエレベーター下のすべてのフロアとポイントも削除される。\n12. 同じフロアに他のエレベーターがある場合、そのポイントは影響を受けない。\n13. この操作は元に戻せない。確認ダイアログで慎重に確認する。\n\nヒント：このヒントボックスをドラッグして移動できます。閉じるボタンをタップするとドットに折りたたまれます。</string>
+
+    <!-- MapViewModel関連 -->
+    <string name="map_cannot_get_current_position">現在位置を取得できません</string>
+    <string name="map_no_points_to_delete">削除可能なポイントがありません</string>
+    <string name="map_building_not_found">指定された建物が見つかりません</string>
+    <string name="map_no_points_on_floor">このフロアにポイントがありません</string>
+    <string name="map_point_not_found_by_name">「%1$s」という名前のポイントが見つかりません</string>
+    <string name="map_point_deleted">ポイントを削除しました: %1$s</string>
+    <string name="map_point_delete_failed">ポイントの削除に失敗しました</string>
+    <string name="map_invalid_map_name">マップ名が無効です</string>
+    <string name="map_no_points_to_upload">アップロード可能なポイントがありません</string>
+    <string name="map_syncing_points">%1$d 個のポイントを同期中、%2$d フロアに関連...</string>
+    <string name="map_cannot_get_server_data">サーバーデータを取得できません: %1$s</string>
+    <string name="map_upload_failed">アップロード失敗: %1$s</string>
+    <string name="map_downloading_points">マップポイントをダウンロード中...</string>
+    <string name="map_no_floor_data_for_map">マップ「%1$s」に関連するフロアデータが見つかりません</string>
+    <string name="map_get_map_list_failed">マップリストの取得に失敗しました: %1$s</string>
+    <string name="map_upload_all_success">すべてのマップポイントの同期に成功しました</string>
+    <string name="map_upload_completed_with_failures">マップポイントの同期完了、失敗数: %1$d</string>
+    <string name="map_download_floors_no_points">%1$d フロアが見つかりましたが、ポイントデータがありません</string>
+    <string name="map_download_no_points_on_map">このマップにポイントデータがありません</string>
+    <string name="map_download_success">%1$d 個のポイントをダウンロードしました。%2$d 棟の %3$d フロアに分布</string>
+
+    <!-- 基本設定バリデーションメッセージ -->
+    <string name="basic_robot_id_range_0_255">ロボットIDは0〜255の範囲である必要があります</string>
+    <string name="basic_please_enter_valid_robot_id">有効なロボットIDを入力してください</string>
+    <string name="basic_lora_address_range_0_65535">LoRaアドレスは0〜65535の範囲である必要があります</string>
+    <string name="basic_please_enter_valid_lora_address">有効なLoRaアドレスを入力してください</string>
+    <string name="basic_obstacle_time_range">障害物回避時間は-1〜600の範囲である必要があります</string>
+    <string name="basic_please_enter_valid_obstacle_time">有効な障害物回避時間を入力してください</string>
+    <string name="basic_no_mp3_files">利用可能なMP3音楽ファイルがありません</string>
+    <string name="basic_password_must_be_4_digits">パスワードは4桁の数字である必要があります</string>
+
+    <!-- MapAreaFragment -->
+    <string name="maparea_ws_not_connected_connecting">WebSocket未接続、接続を試行中...</string>
+    <string name="maparea_ws_connect_failed">WebSocket接続失敗、ネットワーク接続を確認してください</string>
+    <string name="maparea_ws_client_not_init">WebSocketクライアント未初期化、初期化中...</string>
+    <string name="maparea_ws_init_failed">WebSocket初期化失敗、ネットワーク接続を確認してください</string>
+    <string name="maparea_ws_not_connected_connect_first">WebSocket未接続、先に接続してください</string>
+    <string name="maparea_loading_map_data">マップデータを読み込み中...</string>
+    <string name="maparea_get_map_data_failed">マップデータの取得に失敗しました: %1$s</string>
+    <string name="maparea_data_store_not_init">データストレージが初期化されていません</string>
+    <string name="maparea_load_failed">読み込み失敗: %1$s</string>
+    <string name="maparea_traffic_robot_list_title">交通制御ロボットリスト（グローバル共有）</string>
+    <string name="maparea_traffic_robot_list_hint">すべての交通制御区域がこのリストを共有します。1回設定すればOK</string>
+    <string name="traffic_robot_item_label">ロボット</string>
+    <string name="maparea_robots_saved">%1$d 台のロボットを保存しました</string>
+    <string name="maparea_ws_not_connected">WebSocket未接続</string>
+    <string name="maparea_map_name_empty">現在のマップ名が空です</string>
+    <string name="maparea_syncing_controller_area">コントローラー区域を同期中...</string>
+    <string name="maparea_sync_failed">同期失敗: %1$s</string>
+    <string name="maparea_no_available_maps">利用可能なマップがありません</string>
+    <string name="maparea_get_map_list_failed">マップリストの取得に失敗しました: %1$s</string>
+    <string name="maparea_select_map">マップを選択</string>
+    <string name="maparea_add_map_item_failed">マップ項目の追加に失敗しました</string>
+    <string name="maparea_load_map_image_failed">マップ画像の読み込みに失敗しました</string>
+    <string name="maparea_polygon_needs_3_vertices">多角形には少なくとも3つの頂点が必要です</string>
+    <string name="maparea_no_undo_operations">元に戻す操作がありません</string>
+    <string name="maparea_no_redo_operations">やり直す操作がありません</string>
+    <string name="maparea_area_edit">区域編集</string>
+    <string name="maparea_draw_mode_instruction">描画モード：マップをタップして多角形の頂点を追加してください</string>
+    <string name="maparea_save_success">保存成功</string>
+    <string name="maparea_area_detail">区域詳細</string>
+    <string name="maparea_cannot_get_robot_position">ロボットの現在位置を取得できません</string>
+    <string name="maparea_sync_completed">同期完了: %1$d 区域</string>
+    <string name="maparea_close">閉じる</string>
+
+    <!-- 区域詳細ダイアログ -->
+    <string name="area_detail_name_label">区域名</string>
+    <string name="area_detail_type_label">区域タイプ</string>
+    <string name="area_detail_channel_label">チャンネル</string>
+    <string name="area_detail_address_label">アドレス</string>
+    <string name="area_detail_expand_label">区域拡張 (m, 正数=拡大/早期トリガー, 負数=縮小/遅延トリガー)</string>
+    <string name="area_detail_traffic_hint">交通制御区域：他の参加ロボットはメイン画面の「交通制御ロボットリスト」ボタンで一括設定してください</string>
+    <string name="area_type_door_control">ドア制御区域</string>
+    <string name="area_type_info">情報区域</string>
+    <string name="area_type_traffic">交通制御区域</string>
+    <string name="area_default_name">区域%1$d</string>
+    <string name="area_default_channel">チャンネル1</string>
+    <string name="area_default_address">アドレス1</string>
+    <string name="area_lora_byte_range_error">チャンネルは0〜255の整数で入力してください</string>
+    <string name="area_list_info_format">タイプ: %1$s | チャンネル: %2$s | アドレス: %3$s</string>
+    <string name="area_robot_in_area">ロボット位置: %1$s マップの %2$s 区域（タイプ: %3$s）</string>
+    <string name="area_robot_not_in_any">ロボット位置: %1$s マップ、定義された区域内にありません</string>
+    <string name="area_origin_label">原点</string>
+    <string name="area_type_display_door">ドア制御</string>
+    <string name="area_type_display_info">情報</string>
+    <string name="area_type_display_traffic">交通制御</string>
+    <string name="area_add_map">マップを追加</string>
+    <string name="area_check_robot_area">ロボット区域を確認</string>
+    <string name="area_add_area">区域を追加</string>
+    <string name="area_undo">元に戻す</string>
+    <string name="area_redo">やり直す</string>
+    <string name="area_list_title">区域リスト</string>
+    <string name="area_sync_controller">コントローラー区域を同期</string>
+    <string name="area_traffic_robot_list">交通制御ロボットリスト</string>
+    <string name="area_edit_area">区域編集</string>
+    <string name="area_map_name_placeholder">マップ名</string>
+    <string name="area_name_placeholder">区域名</string>
+    <string name="area_info_placeholder">タイプ: -- | チャンネル: -- | アドレス: --</string>
+
+    <!-- Avoidance Settings - Toast Messages -->
+    <string name="avoidance_ws_connect_failed">WebSocket接続失敗: %1$s</string>
+    <string name="avoidance_ws_not_connected_retrying">WebSocket未接続、再接続中...</string>
+    <string name="avoidance_data_parse_error">データ解析エラー</string>
+    <string name="avoidance_image_process_error">画像処理エラー: %1$s</string>
+    <string name="avoidance_need_3_points">区域を形成するには少なくとも3点必要です</string>
+    <string name="avoidance_area_info_incomplete">区域情報が不完全です</string>
+    <string name="avoidance_area_saved">区域を保存しました</string>
+    <string name="avoidance_save_failed_retry">保存失敗、再試行してください</string>
+    <string name="avoidance_draw_cancelled">区域描画をキャンセルしました</string>
+    <string name="avoidance_ws_connected">WebSocket接続を確立しました</string>
+    <string name="avoidance_ws_connection_closed">WebSocket接続が閉じられました</string>
+    <string name="avoidance_ws_error">WebSocketエラー: %1$s</string>
+    <string name="avoidance_fill_area_type_and_id">区域タイプとIDを入力してください</string>
+    <string name="avoidance_fill_complete_info">完全な情報を入力してください</string>
+    <string name="avoidance_address_range_0_255">アドレスは0〜255の範囲である必要があります</string>
+    <string name="avoidance_address_must_be_number">アドレスは数字である必要があります</string>
+    <string name="avoidance_robot_added">ロボットを追加しました</string>
+    <string name="avoidance_area_deleted">区域を削除しました</string>
+    <string name="avoidance_robot_deleted">ロボットを削除しました</string>
+    <string name="avoidance_delete_area_confirm">この区域を削除しますか？</string>
+    <string name="avoidance_delete_robot_confirm">このロボットを削除しますか？</string>
+    <string name="avoidance_save_drawing">描画を保存</string>
+    <string name="avoidance_cancel_drawing">描画をキャンセル</string>
+
+    <!-- User Management -->
+    <string name="user_add_user_title">ユーザー追加</string>
+    <string name="user_edit_user_title">ユーザー情報編集</string>
+    <string name="user_error">エラー</string>
+    <string name="user_success">成功</string>
+    <string name="user_fields_required">ユーザーID、名前、パスワードは必須です</string>
+    <string name="user_add_success">ユーザーを追加しました</string>
+    <string name="user_id_exists">ユーザーIDは既に存在します</string>
+    <string name="user_edit_success">ユーザー情報を更新しました</string>
+    <string name="user_confirm_delete">削除確認</string>
+    <string name="user_confirm_delete_message">ユーザー %1$s を削除しますか？</string>
+    <string name="user_delete_success">ユーザーを削除しました</string>
+    <string name="user_delete_failed_not_exist">削除失敗、ユーザーが存在しません</string>
+    <string name="user_type_operator">オペレーター</string>
+    <string name="user_type_admin">管理者</string>
+    <string name="user_type_super_admin">スーパー管理者</string>
+    <string name="user_management">ユーザー管理</string>
+
+    <string-array name="user_type_array">
+        <item>@string/user_type_operator</item>
+        <item>@string/user_type_admin</item>
+        <item>@string/user_type_super_admin</item>
+    </string-array>
+
+    <!-- Camera -->
+    <string name="camera_not_ready">カメラの準備ができていません</string>
+    <string name="camera_cannot_access">カメラにアクセスできません</string>
+    <string name="camera_open_failed">カメラを開けませんでした</string>
+    <string name="camera_photo_saved">写真を保存しました: %1$s</string>
+    <string name="camera_permission_required">カメラ権限が必要です</string>
+    <string name="camera_error">カメラエラー: %1$d</string>
+    <string name="camera_config_failed">設定に失敗しました</string>
+    <string name="camera_capture_config_failed">撮影設定に失敗しました</string>
+    <string name="camera_upload_success">アップロード成功!</string>
+    <string name="camera_upload_failed_http">アップロード失敗: HTTP %1$d - %2$s</string>
+    <string name="camera_upload_exception">アップロード例外: %1$s</string>
+
+    <!-- QR / RFID -->
+    <string name="qr_web_service_not_started">Webサービスが起動していません</string>
+    <string name="qr_generation_failed">QRコード生成に失敗しました</string>
+    <string name="rfid_invalid_card">無効なRFIDカード</string>
+    <string name="rfid_list_empty">RFIDリストが空です</string>
+    <string name="rfid_system_not_init">RFIDシステムが初期化されていません</string>
+    <string name="rfid_data_format_error">RFIDデータ形式エラー</string>
+    <string name="rfid_timeout_retry">カード読み取りタイムアウト、再試行してください</string>
+    <string name="rfid_init_failed">RFID初期化に失敗しました</string>
+    <string name="rfid_management">RFID管理</string>
+
+    <!-- Map / TaskExecutor -->
+    <string name="map_point_added">ポイントを追加しました: %1$s (X:%2$s, Y:%3$s)</string>
+    <string name="elevator_coordinate_reset">%1$s 座標を0にリセットしました</string>
+    <string name="task_executor_battery_too_low">バッテリー不足(%1$d%%、状態：%2$s)、新規タスクを拒否</string>
+    <string name="task_executor_unknown">不明</string>
+    <string name="task_executor_task_not_found">一致するタスクが見つかりません</string>
+    <string name="task_executor_unsupported_task_type">サポートされていないタスクタイプ: %1$s</string>
+    <string name="task_executor_start_failed">起動失敗: %1$s</string>
+    <string name="task_executor_cruise">巡航</string>
+    <string name="task_executor_jack">ジャッキ</string>
+    <string name="task_executor_backpack">背負い</string>
+    <string name="task_executor_homepage">ホーム</string>
+    <string name="task_executor_park_charge_call">待機/充電/呼び出し</string>
+
+    <string name="task_running_status_toggle_success">タスク実行状態の切り替えに成功しました</string>
+
+    <!-- i18n runtime fixes -->
+    <string name="pause_command_received">一時停止コマンドを受信しました</string>
+    <string name="resume_command_received">再開コマンドを受信しました</string>
+    <string name="navigation_resumed">ナビゲーションを再開しました</string>
+    <string name="task_cancelled_toast">タスクをキャンセルしました</string>
+    <string name="auto_task_disabled">この自動タスクは無効です</string>
+    <string name="task_updated">タスクを更新しました</string>
+    <string name="auto_task_cancelled">自動タスクをキャンセルしました</string>
+    <string name="auto_task_time_conflict">同じ時間の自動クルーズタスクが既に存在します。別の時間を選択してください</string>
+    <string name="auto_task_status_toggle">%1$s 自動タスクを%2$sしました</string>
+    <string name="status_enabled">有効</string>
+    <string name="status_disabled">無効</string>
+    <string name="swipe_card_prompt">カードをスワイプしてください...</string>
+    <string name="no_charge_point_use_floor">現在のフロアに充電ポイントがありません。%1$d 階の充電ポイントを使用します</string>
+    <string name="no_park_point_use_floor">現在のフロアに待機ポイントがありません。%1$d 階の待機ポイントを使用します</string>
+    <string name="no_charge_point_go_floor">現在のフロアに充電ポイントがありません。%1$d 階へ移動して充電します</string>
+    <string name="door_lock_comm_lost">通信切断</string>
+    <string name="elevator_cannot_update_other_building">現在の建物で他の建物のエレベーターポイントを更新できません</string>
+    <string name="elevator_update_point_on_floor">%1$d 階でこのフロアのポイントを更新してください (現在: %2$d 階)</string>
+    <string name="elevator_cannot_control_other_building">他の建物からこのエレベーターを制御できません</string>
+    <string name="task_record_status_completed">完了</string>
+    <string name="task_record_status_failed">失敗</string>
+    <string name="task_record_status_cancelled">キャンセル</string>
+    <string name="task_record_status_running">実行中</string>
+    <string name="user_type_unknown">不明</string>
+    <string name="user_id_label">ユーザーID:</string>
+    <string name="user_name_label">名前:</string>
+    <string name="user_department_label">部署:</string>
+    <string name="user_floor_label">フロア:</string>
+    <string name="user_password_label">パスワード:</string>
+    <string name="user_type_label">ユーザータイプ:</string>
+    <string name="user_id_hint">ユーザーIDを入力</string>
+    <string name="user_name_hint">名前を入力</string>
+    <string name="user_department_hint">部署を入力</string>
+    <string name="user_floor_hint">フロアを入力</string>
+    <string name="user_password_hint">パスワードを入力</string>
+    <string name="prompt_name_label">プロンプト名</string>
+    <string name="prompt_name_hint">プロンプト名を入力</string>
+    <string name="prompt_content_label">プロンプト内容</string>
+    <string name="prompt_content_hint">プロンプト内容を入力</string>
+    <string name="point_name_hint">ポイント名</string>
+    <string name="station_name_hint">ステーション名を入力</string>
+    <string name="button_config_station_hint">ステーション</string>
+    <string name="button_config_task_hint">タスク</string>
+    <string name="take_photo">撮影</string>
+    <string name="toast_message_preview">メッセージ</string>
+    <string name="tts_install_title">中国語音声パックをインストール</string>
+    <string name="tts_install_message">音声機能を使用するには中国語音声データのインストールが必要です。</string>
+    <string name="tts_install_now">今すぐインストール</string>
+    <string name="user_department_preview">管理部門</string>
+    <string name="user_floor_preview">1階</string>
+
+    <string-array name="area_type_display_values">
+        <item>@string/area_type_door_control</item>
+        <item>@string/area_type_info</item>
+        <item>@string/area_type_traffic</item>
+    </string-array>
+
+    <!-- 欠落していた文字列の追加翻訳 -->
+    <string name="add_failed_standby_point_reserved">「待機点」という名前のステーションは追加できません</string>
+    <string name="all">すべて</string>
+    <string name="app_initializing">初期化中です。しばらくお待ちください</string>
+    <string name="app_welcome">ようこそ</string>
+    <string name="arrived_at_station_continue_with_next">%1$s に到着しました\n%2$s へ続けて移動しますか？</string>
+    <string name="auto_charge_hint">有効にすると、バッテリー残量が「最低作業電量」を下回ったときに自動的に充電ドックへ戻って充電します</string>
+    <string name="auto_load_config">起動時読み込み</string>
+    <string name="auto_task_set_as">自動タスクに設定</string>
+    <string name="Backward">後退</string>
+    <string name="base_battery_too_low_for_task">バッテリー残量が低すぎます(%1$d%%)、タスクを実行できません</string>
+    <string name="basic_cloud_ip_invalid">IPアドレスの形式が正しくありません</string>
+    <string name="basic_cloud_port_invalid">有効なポート番号を入力してください(1-65535)</string>
+    <string name="battery_too_low_for_task">バッテリー不足のため、タスクを実行できません (%d%%)</string>
+    <string name="button_cancel">キャンセル</string>
+    <string name="button_confirm">確認</string>
+    <string name="call_task">呼び出しタスク</string>
+    <string name="clear_records_confirmation">すべての履歴をクリアしてもよろしいですか？</string>
+    <string name="cloud_connection_settings">クラウド接続</string>
+    <string name="cloud_ip">クラウドIP</string>
+    <string name="cloud_ip_hint">クラウドIPを入力してください</string>
+    <string name="cloud_port">クラウドポート</string>
+    <string name="cloud_port_hint">クラウドポートを入力してください</string>
+    <string name="command_send_error">コマンド送信エラー</string>
+    <string name="command_send_failed">コマンドの送信に失敗しました</string>
+    <string name="config_edit_saved">設定が保存され適用されました</string>
+    <string name="config_file_settings">設定ファイル</string>
+    <string name="config_json_invalid">JSON形式が正しくありません。ご確認ください</string>
+    <string name="config_load_failed">設定の読み込みに失敗しました</string>
+    <string name="config_loaded">設定が読み込まれ適用されました</string>
+    <string name="cruise_loading_task">タスクを読み込み中...</string>
+    <string name="current_music">現在の音楽</string>
+    <string name="current_position_only_station">現在位置：%s</string>
+    <string name="current_position_with_station">現在位置：(%.2f, %.2f, %.2f) - %s</string>
+    <string name="date_range_error">期間は30日を超えられません</string>
+    <string name="delivery_battery_too_low_backpack">バッテリー残量が低すぎます(%1$d%%)、背負いタスクを実行できません</string>
+    <string name="destination_point">目標ポイント</string>
+    <string name="device_start_web_service_first">先にWebサービスを起動してください</string>
+    <string name="dialog_add_marker_title">ステーションを追加</string>
+    <string name="dialog_marker_name_hint">ステーション名を入力してください</string>
+    <string name="door_lock_1">ドアロック 1</string>
+    <string name="door_lock_2">ドアロック 2</string>
+    <string name="door_lock_3">ドアロック 3</string>
+    <string name="door_lock_4">ドアロック 4</string>
+    <string name="door_lock_close_manual_hint">施錠は手動で操作してください</string>
+    <string name="door_lock_hint">ヒント：スイッチをオンにすると開錠コマンドが送信されます。施錠は手動で操作してください</string>
+    <string name="door_lock_init_failed">ドアロック通信の初期化に失敗しました</string>
+    <string name="door_lock_not_initialized">ドアロック通信が初期化されていません</string>
+    <string name="Door_lock_settings">ドアロック設定</string>
+    <string name="door_lock_status_closed">施錠</string>
+    <string name="door_lock_status_label">状態：</string>
+    <string name="door_lock_status_open">解錠</string>
+    <string name="door_lock_status_unknown">不明</string>
+    <string name="door_lock1_unlock_failed">ドアロック1の開錠に失敗しました</string>
+    <string name="door_lock1_unlock_success">ドアロック1の開錠コマンドを送信しました</string>
+    <string name="door_lock2_unlock_failed">ドアロック2の開錠に失敗しました</string>
+    <string name="door_lock2_unlock_success">ドアロック2の開錠コマンドを送信しました</string>
+    <string name="door_lock3_unlock_failed">ドアロック3の開錠に失敗しました</string>
+    <string name="door_lock3_unlock_success">ドアロック3の開錠コマンドを送信しました</string>
+    <string name="door_lock4_unlock_failed">ドアロック4の開錠に失敗しました</string>
+    <string name="door_lock4_unlock_success">ドアロック4の開錠コマンドを送信しました</string>
+    <string name="edit_config">設定を編集</string>
+    <string name="edit_config_title">設定ファイルを編集</string>
+    <string name="elevator_added_with_floors">エレベーターを追加しました。合計 %1$d 階</string>
+    <string name="elevator_cannot_get_position">現在の位置を取得できません</string>
+    <string name="elevator_display_format">(ID: %s, アドレス: %d, チャンネル: %d)</string>
+    <string name="elevator_download_map_first">先に地図データをダウンロードしてください</string>
+    <string name="elevator_no_building_data">現在の建物にデータがありません</string>
+    <string name="elevator_no_floor_data_download_first">利用可能なフロアデータがありません。先にマップポイントをダウンロードしてください</string>
+    <string name="elevator_processing">処理中...</string>
+    <string name="elevator_ride_point_updated">乗車ポイントを更新しました</string>
+    <string name="elevator_transition_point_updated">移行ポイントを更新しました</string>
+    <string name="elevator_wait_point_updated">待機ポイントを更新しました</string>
+    <string name="end_task_with_time">終了 (%1$ds)</string>
+    <string name="end_time_error">終了時刻は現在時刻を超えられません</string>
+    <string name="error_button_count_zero">ボタン数は0個にできません</string>
+    <string name="error_button_count_max">ボタン数は20個を超えられません</string>
+    <string name="error_map_name_unavailable">現在のマップ名を取得できません</string>
+    <string name="error_marker_name_empty">ステーション名は空にできません</string>
+    <string name="error_position_unavailable">現在の位置を取得できません</string>
+    <string name="feature_visibility_configuration">機能表示設定</string>
+    <string name="Forward">前進</string>
+    <string name="hidden_settings">隠し設定</string>
+    <string name="home_point">原点に戻る</string>
+    <string name="invalid_jack_loop_count">ループ回数は -1 または 0 より大きい整数を入力してください</string>
+    <string name="jack_loop_count_hint">ループ回数（-1で無限）</string>
+    <string name="jack_loop_format">ループ: %1$s</string>
+    <string name="load_config_now">設定を読み込み</string>
+    <string name="location_index_format">%d</string>
+    <string name="map_unknown">現在のマップ：不明</string>
+    <string name="music_options">音楽オプション</string>
+    <string name="navigating_to">%s へ移動中</string>
+    <string name="no_available_tasks">利用可能なタスクがありません</string>
+    <string name="no_charging_point_in_map">現在のマップに充電ポイントがありません。すぐに設定してください</string>
+    <string name="obstacle_avoidance_time">固定パス障害物回避時間(-1〜99)</string>
+    <string name="operation_executing_cruise_task">巡検タスクを実行中</string>
+    <string name="pharmacy_point">薬局</string>
+    <string name="pivas_point">静脈調剤室</string>
+    <string name="please_reset">ロボットのソフトウェア緊急停止が作動しました。リセットしてください</string>
+    <string name="positions_updated">ポイントがマップと同期されました</string>
+    <string name="RecognizeEntry">認識進入</string>
+    <string name="repeat_mode_disabled">繰り返しモードをオフにしました</string>
+    <string name="repeat_mode_enabled">繰り返しモードをオンにしました</string>
+    <string name="repeat_task">繰り返し実行</string>
+    <string name="repeating_task">繰り返し実行中</string>
+    <string name="rfid_add_card_title">RFIDカードを追加</string>
+    <string name="rfid_add_success">RFIDカードを追加しました</string>
+    <string name="rfid_card_type_label">カードタイプ</string>
+    <string name="rfid_card_type_management">管理カード</string>
+    <string name="rfid_card_type_operation">操作カード</string>
+    <string name="rfid_confirm_delete_message">RFIDカード %1$s を削除してもよろしいですか？</string>
+    <string name="rfid_delete_not_found">削除に失敗しました。RFIDカードが存在しません</string>
+    <string name="rfid_delete_success">RFIDカードを削除しました</string>
+    <string name="rfid_duplicate_error">RFIDシリアル番号は既に存在します</string>
+    <string name="rfid_edit_card_title">RFIDカード情報を編集</string>
+    <string name="rfid_edit_success">RFIDカード情報を更新しました</string>
+    <string name="rfid_error_title">エラー</string>
+    <string name="rfid_filter_all_statuses">すべての状態</string>
+    <string name="rfid_filter_all_types">すべてのタイプ</string>
+    <string name="rfid_filter_all_users">すべてのユーザー</string>
+    <string name="rfid_management_title">RFID管理</string>
+    <string name="rfid_read_button">RFIDを読み取り</string>
+    <string name="rfid_required_error">RFIDシリアル番号とユーザーIDは空にできません</string>
+    <string name="rfid_search_hint">RFIDシリアル番号またはユーザーIDを検索</string>
+    <string name="rfid_serial_label">RFIDシリアル番号</string>
+    <string name="rfid_status_label">状態</string>
+    <string name="rfid_status_lost_disabled">紛失登録/無効</string>
+    <string name="rfid_status_normal">正常</string>
+    <string name="rfid_success_title">成功</string>
+    <string name="rfid_user_id_label">ユーザーID</string>
+    <string name="run_distance_default">走行距離：0.00 m</string>
+    <string name="run_distance_format">走行距離：%s</string>
+    <string name="run_distance_format_km">走行距離：%.2f km</string>
+    <string name="run_distance_format_m">走行距離：%.2f m</string>
+    <string name="running_time_label">実行時間</string>
+    <string name="save_config_now">設定を保存</string>
+    <string name="select_cruise_task_hint">巡検タスクを選択してください</string>
+    <string name="select_task_type">タスクタイプを選択</string>
+    <string name="shelf_settings_tab">ラック設定</string>
+    <string name="special_point_1">4階のマップに切り替え</string>
+    <string name="special_point_2">5階のマップに切り替え</string>
+    <string name="Start_charge">充電開始</string>
+    <string name="start_end_error">開始時刻は終了時刻より後にできません</string>
+    <string name="start_return_home">待機点への復帰を開始</string>
+    <string name="state_charging">充電中</string>
+    <string name="station_edit_name_title">ステーション名を編集</string>
+    <string name="station_name_cannot_be_empty">ステーション名は空にできません</string>
+    <string name="station_name_updated">ステーション名を更新しました</string>
+    <string name="stations_not_exist">タスクに無効なステーションが含まれています</string>
+    <string name="status_canceled">キャンセル済み</string>
+    <string name="status_completed">完了</string>
+    <string name="status_failed">失敗</string>
+    <string name="status_runnings">実行中</string>
+    <string name="stop_charge_task">充電タスクを終了</string>
+    <string name="task_count">回数</string>
+    <string name="task_count_format">回数：%d</string>
+    <string name="task_end_time">終了</string>
+    <string name="task_history_task_cancelled">タスクがキャンセルされました</string>
+    <string name="task_name_prefix">配送タスク-&gt;</string>
+    <string name="task_name_prefix1">充電ステーションへ戻る-&gt;</string>
+    <string name="task_name_prefix2">待機点へ戻る-&gt;</string>
+    <string name="task_start_time">開始</string>
+    <string name="task_status">タスク状態：%s</string>
+    <string name="task_type">タスクタイプ</string>
+    <string name="task_type_charge">充電タスク</string>
+    <string name="task_type_cruise">巡検タスク</string>
+    <string name="task_type_delivery">配送タスク</string>
+    <string name="task_type_jack">ジャックタスク</string>
+    <string name="task_type_parking">駐車タスク</string>
+    <string name="task_type_station">ステーション呼び出し</string>
+    <string name="task_type_task">タスク実行</string>
+    <string name="task_type_unknown">不明タスク</string>
+    <string name="unsafe_to_start_task">ロボットが充電ドックに近すぎます</string>
+
+    <!-- Remaining legacy non-translatable strings -->
+    <string name="bg_status_tag">ステータスラベル背景</string>
+    <string name="edit_task">タスクを編集</string>
+    <string name="HistoryNews_settings">履歴</string>
+    <string name="logo_name">Ezhan</string>
+    <string name="no_history_data">履歴がありません</string>
+    <string name="Robot_run_settings">運行ログ</string>
+    <string name="search">検索</string>
+    <string name="select_date">日付を選択</string>
+    <string name="select_type">タスクタイプ</string>
+    <string name="update_task">ルートを更新</string>
+</resources>

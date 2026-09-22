@@ -1,0 +1,6 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 选中状态：显示下划线 -->
+    <item android:state_selected="true" android:drawable="@drawable/tab_button_underline"/>
+    <!-- 默认状态：透明背景 -->
+    <item android:drawable="@android:color/transparent"/>
+</selector>

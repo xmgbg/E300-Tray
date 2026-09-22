@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/dialog_background">
+
+    <!-- 标题 -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:paddingBottom="16dp"/>
+
+    <!-- 消息内容 -->
+    <TextView
+        android:id="@+id/tvMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:paddingBottom="24dp"/>
+
+    <!-- 按钮容器（水平居中） -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnNegative"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:textSize="18sp"
+            android:background="@drawable/btn_border"
+            android:textColor="@color/white"
+            style="@style/BaseButtonStyle"/>
+
+
+
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="0dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnPositive"
+            android:layout_width="120dp"
+            android:layout_height="48dp"
+            android:textSize="18sp"
+            android:background="@drawable/btn_filled"
+            android:textColor="@color/white"
+            style="@style/BaseButtonStyle"/>
+
+    </LinearLayout>
+</LinearLayout>

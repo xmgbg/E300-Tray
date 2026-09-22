@@ -1,0 +1,1350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="16dp">
+
+    <!-- 可滚动的内容区域 (高度填满剩余空间) -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:padding="36dp"
+            android:layout_margin="8dp"
+            android:elevation="4dp">
+
+            <!-- 原有内容保持不变 -->
+            <!-- 音量设置和速度控制对齐布局 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:baselineAligned="false">
+
+                <!-- 音量设置 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingEnd="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/volume_setting"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:drawableStart="@drawable/ic_bar"
+                        android:drawablePadding="8dp"
+                        android:textColor="#000000"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <SeekBar
+                            android:id="@+id/volumeSeekBar"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:progress="41"/>
+
+                        <TextView
+                            android:id="@+id/volumeValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="41"
+                            android:layout_marginStart="8dp"
+                            android:textSize="16sp"
+                            android:textColor="#000000"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- 速度控制 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingStart="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/speed_control"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        android:drawableStart="@drawable/ic_bar"
+                        android:drawablePadding="8dp"
+                        android:textColor="#000000"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <SeekBar
+                            android:id="@+id/speedSeekBar"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:max="160"
+                            android:progress="80"/>
+
+                        <TextView
+                            android:id="@+id/speedValue"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="1.2"
+                            android:layout_marginStart="8dp"
+                            android:textSize="16sp"
+                            android:textColor="#000000"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 参数配置 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/parameter_configuration"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_bar"
+                android:drawablePadding="8dp"
+                android:textColor="#000000"
+                android:layout_marginTop="24dp"/>
+
+
+            <!-- 修改：三个等分布局 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:paddingStart="32dp"
+                android:weightSum="3">
+
+                <!-- 配送停留（等待时间） -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/delivery_stay"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:gravity="start"/>
+
+                    <TextView
+                        android:id="@+id/deliveryStayValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="60"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="#000000"
+                        android:layout_marginStart="26dp"
+                        android:gravity="start"/>
+                </LinearLayout>
+
+                <!-- 识别距离 - Updated ID to match fragment code -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/recognition_distance"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:gravity="start"/>
+
+                    <EditText
+                        android:id="@+id/recognizeDistanceValue"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="1.0"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="#000000"
+                        android:layout_marginStart="26dp"
+                        android:gravity="start"
+                        android:inputType="numberSigned|numberDecimal"
+                        android:background="@android:drawable/editbox_background"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/queued_task_cooldown"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:maxLines="1"
+                        android:ellipsize="end"/>
+
+                    <EditText
+                        android:id="@+id/queuedTaskCooldownValue"
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:text="6"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="#000000"
+                        android:layout_marginStart="12dp"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:background="@android:drawable/editbox_background"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/time_unit_seconds"
+                        android:textSize="14sp"
+                        android:textColor="#666666"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 语言设置 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/language_configuration"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_bar"
+                android:drawablePadding="8dp"
+                android:textColor="#000000"
+                android:layout_marginTop="24dp"/>
+
+            <!-- 修改：三等分布局 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="32dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:weightSum="6">
+
+                <!-- 当前语言标签 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="@string/current_language"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:gravity="start"/>
+
+                <!-- 语言选择框 -->
+                <Spinner
+                    android:id="@+id/spinnerLanguage"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.3"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginEnd="50dp"
+                    android:entries="@array/languages"
+                    android:spinnerMode="dropdown"/>
+            </LinearLayout>
+
+            <!-- 音乐选择 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/music_select"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_bar"
+                android:drawablePadding="8dp"
+                android:textColor="#000000"
+                android:layout_marginTop="24dp"/>
+
+            <!-- 音乐选择下拉框 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingStart="32dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:weightSum="6">
+
+                <!-- 音乐选择标签 -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="@string/music_select"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:gravity="start"/>
+
+                <!-- 音乐选择下拉框 -->
+                <Spinner
+                    android:id="@+id/spinnerMusic"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.3"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginEnd="50dp"
+                    android:spinnerMode="dropdown"/>
+            </LinearLayout>
+
+            <!-- 闲时回待命设置 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:paddingStart="32dp"
+                android:paddingEnd="16dp"
+                android:gravity="center_vertical"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="start|center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/idle_return_home"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:gravity="start"/>
+
+                    <Switch
+                        android:id="@+id/switchIdleReturnHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:checked="false"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="start|center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/idle_return_wait_time"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:gravity="start"/>
+
+                    <TextView
+                        android:id="@+id/idleReturnWaitSecondsValue"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="600"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:layout_marginStart="12dp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/time_unit_seconds"
+                        android:textSize="14sp"
+                        android:textColor="#666666"
+                        android:layout_marginStart="4dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 电量管理设置 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/battery_management_settings"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_bar"
+                android:drawablePadding="8dp"
+                android:textColor="#000000"
+                android:layout_marginTop="24dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:paddingStart="32dp"
+                android:paddingEnd="16dp"
+                android:gravity="center_vertical"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="start|center_vertical"
+                    android:padding="4dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/return_to_dock_charging"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:gravity="start"/>
+
+                    <Switch
+                        android:id="@+id/switchAutoCharge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="start|center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/idle_charge"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:gravity="start"/>
+
+                    <Switch
+                        android:id="@+id/switchIdleCharge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:checked="true"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/auto_charge_hint"
+                android:textSize="13sp"
+                android:textColor="#666666"
+                android:layout_marginTop="4dp"
+                android:paddingStart="32dp"
+                android:paddingEnd="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:paddingStart="32dp"
+                android:paddingEnd="16dp"
+                android:gravity="center_vertical"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="start|center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/idle_charge_wait_time"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:gravity="start"/>
+
+                    <TextView
+                        android:id="@+id/idleChargeWaitValue"
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="#000000"
+                        android:layout_marginStart="12dp"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/time_unit_minutes"
+                        android:textSize="14sp"
+                        android:textColor="#666666"
+                        android:layout_marginStart="4dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    android:gravity="start|center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/full_charge_return_home"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:gravity="start"/>
+
+                    <Switch
+                        android:id="@+id/switchFullChargeReturnHome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:checked="true"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/battery_threshold_settings"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginTop="16dp"
+                android:paddingStart="32dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:paddingStart="32dp"
+                android:paddingEnd="16dp"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/battery_critical_level"
+                        android:textSize="16sp"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:id="@+id/batteryCriticalValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="5"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="#000000"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/battery_min_work_level"
+                        android:textSize="16sp"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:id="@+id/batteryMinWorkValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="#000000"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/battery_idle_level"
+                        android:textSize="16sp"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:id="@+id/batteryIdleValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="60"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="#000000"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/battery_full_level"
+                        android:textSize="16sp"
+                        android:textColor="#000000"/>
+
+                    <TextView
+                        android:id="@+id/batteryFullValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="#000000"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/battery_full_level_hint"
+                android:textSize="13sp"
+                android:textColor="#666666"
+                android:layout_marginTop="4dp"
+                android:paddingStart="32dp"
+                android:paddingEnd="16dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/battery_idle_level_hint"
+                android:textSize="13sp"
+                android:textColor="#666666"
+                android:layout_marginTop="4dp"
+                android:paddingStart="32dp"
+                android:paddingEnd="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/password_verification"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:drawableStart="@drawable/ic_bar"
+                    android:drawablePadding="8dp"
+                    android:textColor="#000000"/>
+
+                <!-- 修改：三等分布局 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="8dp"
+                    android:paddingStart="32dp"
+                    android:weightSum="3">
+
+                    <!-- 开关控制区域 (1/3) -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="start|center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/off"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:layout_marginEnd="8dp"
+                            android:gravity="start"/>
+
+                        <Switch
+                            android:id="@+id/switchPassword"
+                            android:layout_width="wrap_content"
+                            android:layout_height="45dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/on"
+                            android:textColor="#000000"
+                            android:textSize="16sp"
+                            android:layout_marginStart="8dp"
+                            android:gravity="start"/>
+                    </LinearLayout>
+
+                    <!-- 密码输入框 (2/3) -->
+                    <EditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="45dp"
+                        android:layout_marginStart="16dp"
+                        android:hint="@string/password_hint"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:maxLines="1"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+                <!-- 轨道设置 - Modified to use Switch instead of two buttons -->
+                <TextView
+                    android:id="@+id/tvTrackSettings"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/track_settings_with_current"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:drawableStart="@drawable/ic_bar"
+                    android:drawablePadding="8dp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="24dp"/>
+
+                <!-- 轨道模式选择 - Changed to Switch -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="32dp"
+                    android:gravity="center_vertical"
+                    android:weightSum="3">
+
+                    <!-- 虚拟轨道标签 -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/virtual_track"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:gravity="start"/>
+
+                    <Switch
+                        android:id="@+id/switchOrbitMode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:layout_marginStart="16dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="32dp"
+                    android:gravity="center_vertical"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/virtual_orbit_one_way_navigation"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:gravity="start"/>
+
+                    <Switch
+                        android:id="@+id/switchVirtualOrbitOneWay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:layout_marginStart="16dp"/>
+                </LinearLayout>
+
+                <!-- 绕障时间设置 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="32dp"
+                    android:gravity="center_vertical"
+                    android:weightSum="3">
+
+                    <!-- 绕障时间标签 -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/obstacle_time"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:gravity="start"/>
+
+                    <EditText
+                        android:id="@+id/etObstacleTime"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="-1"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="#000000"
+                        android:layout_marginStart="16dp"
+                        android:gravity="center"
+                        android:inputType="numberSigned"
+                        android:background="@android:drawable/editbox_background"/>
+
+                    <!-- 单位 -->
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/obstacle_time_unit"
+                        android:textSize="14sp"
+                        android:textColor="#666666"
+                        android:gravity="start"/>
+                </LinearLayout>
+
+                <!-- 模块设置 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/module_settings"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:drawableStart="@drawable/ic_bar"
+                    android:drawablePadding="8dp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="24dp"/>
+
+                <!-- 顶升模块开关 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="32dp"
+                    android:gravity="center_vertical"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lift_mode"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:gravity="start"/>
+
+                    <Switch
+                        android:id="@+id/switchJackModule"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"/>
+                </LinearLayout>
+
+                <!-- 料架模块开关 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="32dp"
+                    android:gravity="center_vertical"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Shelf_setup"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:gravity="start"/>
+
+                    <Switch
+                        android:id="@+id/switchShelfModule"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"/>
+                </LinearLayout>
+
+                <!-- 梯控模块开关 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="32dp"
+                    android:gravity="center_vertical"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/elevator"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:gravity="start"/>
+
+                    <Switch
+                        android:id="@+id/switchElevatorModule"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"/>
+                </LinearLayout>
+
+                <!-- 呼叫盒模块开关 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="32dp"
+                    android:gravity="center_vertical"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/call_box_settings_title"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:gravity="start"/>
+
+                    <Switch
+                        android:id="@+id/switchCallBoxModule"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"/>
+                </LinearLayout>
+
+                <!-- 区域设置模块开关 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="32dp"
+                    android:gravity="center_vertical"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/area_settings_title"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:gravity="start"/>
+
+                    <Switch
+                        android:id="@+id/switchMapAreaModule"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"/>
+                </LinearLayout>
+
+                <!-- 避让设置模块开关 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:paddingStart="32dp"
+                    android:paddingEnd="32dp"
+                    android:gravity="center_vertical"
+                    android:weightSum="3">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/avoidance_settings_title"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:gravity="start"/>
+
+                    <Switch
+                        android:id="@+id/switchAvoidanceModule"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"/>
+                </LinearLayout>
+
+                <!-- 机器人通信设置 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/robot_communication_settings"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:drawableStart="@drawable/ic_bar"
+                    android:drawablePadding="8dp"
+                    android:textColor="#000000"
+                    android:layout_marginTop="24dp"/>
+
+                <!-- 三个等分布局 - 匹配现有样式 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:paddingStart="32dp"
+                    android:weightSum="3">
+
+                    <!-- 机器人ID -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/robot_id"
+                            android:textSize="16sp"
+                            android:textColor="#000000"
+                            android:gravity="start"/>
+
+                        <EditText
+                            android:id="@+id/etRobotId"
+                            android:layout_width="80dp"
+                            android:layout_height="wrap_content"
+                            android:text="1"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:textColor="#000000"
+                            android:layout_marginStart="8dp"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:background="@android:drawable/editbox_background"
+                            android:padding="4dp"/>
+                    </LinearLayout>
+
+                    <!-- LoRa地址 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lora_address"
+                            android:textSize="16sp"
+                            android:textColor="#000000"
+                            android:gravity="start"/>
+
+                        <EditText
+                            android:id="@+id/etLoraAddress"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textStyle="bold"
+                            android:textSize="15sp"
+                            android:textColor="#000000"
+                            android:layout_marginStart="8dp"
+                            android:gravity="center"
+                            android:inputType="number"
+                            android:background="@android:drawable/editbox_background"
+                            android:padding="4dp"/>
+                    </LinearLayout>
+
+                    <!-- LoRa信道 -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lora_channel"
+                            android:textSize="16sp"
+                            android:textColor="#000000"
+                            android:gravity="start"/>
+
+                        <Spinner
+                            android:id="@+id/spinnerLoraChannel"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:entries="@array/lora_channels"
+                            android:spinnerMode="dropdown"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 云端连接设置 -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cloud_connection_settings"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/ic_bar"
+                android:drawablePadding="8dp"
+                android:textColor="#000000"
+                android:layout_marginTop="16dp"/>
+
+            <!-- 云端 IP 与端口 - 两列等宽 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:paddingStart="32dp"
+                android:weightSum="2">
+
+                <!-- 云端 IP -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cloud_ip"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:gravity="start"/>
+
+                    <EditText
+                        android:id="@+id/etCloudIp"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="#000000"
+                        android:layout_marginStart="8dp"
+                        android:gravity="center"
+                        android:inputType="text"
+                        android:hint="@string/cloud_ip_hint"
+                        android:background="@android:drawable/editbox_background"
+                        android:padding="4dp"/>
+                </LinearLayout>
+
+                <!-- 云端端口 -->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginStart="8dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cloud_port"
+                        android:textSize="16sp"
+                        android:textColor="#000000"
+                        android:gravity="start"/>
+
+                    <EditText
+                        android:id="@+id/etCloudPort"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="#000000"
+                        android:layout_marginStart="8dp"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:hint="@string/cloud_port_hint"
+                        android:background="@android:drawable/editbox_background"
+                        android:padding="4dp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- 分隔线 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginEnd="32dp"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 固定在底部的按钮区域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:layout_marginTop="16dp">
+
+        <!-- 恢复默认按钮 -->
+        <LinearLayout
+            android:id="@+id/btnReset"
+            android:layout_width="0dp"
+            android:layout_height="74dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingVertical="16dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_rounded_container"
+            android:layout_marginEnd="4dp"
+            android:elevation="2dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:backgroundTint="#6633cc"
+            android:stateListAnimator="@null"
+            android:alpha="1.0">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_setting_restore"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/reset_default_settings"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:padding="4dp"/>
+        </LinearLayout>
+
+        <!-- 保存按钮 -->
+        <LinearLayout
+            android:id="@+id/btnSave"
+            android:layout_width="0dp"
+            android:layout_height="74dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingVertical="16dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_rounded_container"
+            android:layout_marginStart="4dp"
+            android:elevation="2dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:backgroundTint="#FF4081"
+            android:stateListAnimator="@null"
+            android:alpha="1.0">
+
+            <ImageView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:src="@drawable/ic_storage"
+                android:layout_marginLeft="20dp"
+                android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/save_settings"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:padding="4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="20dp"
+    android:height="20dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="#2196F3">
+
+    <!-- 圆形轮廓 -->
+    <path
+        android:fillColor="@android:color/transparent"
+        android:strokeColor="#2196F3"
+        android:strokeWidth="1"
+        android:pathData="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/>
+
+    <!-- 中心定位点 -->
+    <path
+        android:fillColor="#2196F3"
+        android:pathData="M12 15.5C13.933 15.5 15.5 13.933 15.5 12C15.5 10.067 13.933 8.5 12 8.5C10.067 8.5 8.5 10.067 8.5 12C8.5 13.933 10.067 15.5 12 15.5Z"/>
+</vector>

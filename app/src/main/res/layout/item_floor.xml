@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="?attr/selectableItemBackground"
+    android:padding="8dp">
+
+    <!-- 详细信息容器，默认可见 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tvAlias"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:textColor="@drawable/text_color_selector"
+                android:textStyle="bold" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnToggleDetails"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="▼"
+                android:textSize="15sp"
+                android:textColor="@color/blue_500"
+                android:paddingLeft="4dp"
+                android:paddingRight="10dp"/>
+        </LinearLayout>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnFloorSettings"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/floor_settings"
+            android:textColor="@color/blue_500"
+            android:textSize="22sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/detailsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible"
+        android:paddingStart="16dp">
+
+        <!-- 前置点行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/preride_point"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/tvPreridePosition"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:fontFamily="monospace"
+                android:layout_marginStart="100dp"
+                android:singleLine="true"
+                android:ellipsize="middle"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUpdatePreridePoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="↻"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="@color/blue_500"
+                style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnResetPreridePoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⊗"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_marginEnd="10dp"
+                style="@style/Widget.MaterialComponents.Button.TextButton"/>
+        </LinearLayout>
+
+        <!-- 侯梯点行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/wait_point"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/tvWaitPosition"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:fontFamily="monospace"
+                android:layout_marginStart="100dp"
+                android:singleLine="true"
+                android:ellipsize="middle"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUpdateWaitPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="↻"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="@color/blue_500"
+                style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnResetWaitPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⊗"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_marginEnd="10dp"
+                style="@style/Widget.MaterialComponents.Button.TextButton"/>
+        </LinearLayout>
+
+        <!-- 乘梯点行 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ride_point"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/tvRidePosition"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:fontFamily="monospace"
+                android:layout_marginStart="100dp"
+                android:singleLine="true"
+                android:ellipsize="middle"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUpdateRidePoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="↻"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="@color/blue_500"
+                style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnResetRidePoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⊗"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_marginEnd="10dp"
+                style="@style/Widget.MaterialComponents.Button.TextButton"/>
+        </LinearLayout>
+
+        <!-- 过渡点行 (新增) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="4dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/transition_point"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:id="@+id/tvTransitionPosition"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="20sp"
+                android:fontFamily="monospace"
+                android:layout_marginStart="100dp"
+                android:singleLine="true"
+                android:ellipsize="middle"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUpdateTransitionPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="↻"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="@color/blue_500"
+                style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnResetTransitionPoint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⊗"
+                android:textSize="40sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/holo_red_dark"
+                android:layout_marginEnd="10dp"
+                style="@style/Widget.MaterialComponents.Button.TextButton"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

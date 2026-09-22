@@ -1,0 +1,13 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 短下划线（左右留空使下划线变短） -->
+    <item
+        android:gravity="bottom"
+        android:top="-4dp"
+        android:left="4dp"
+        android:right="4dp">
+        <shape android:shape="rectangle">
+            <size android:height="1dp" />
+            <solid android:color="@color/blue_500" />
+        </shape>
+    </item>
+</layer-list>

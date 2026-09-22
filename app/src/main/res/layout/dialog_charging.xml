@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    android:background="@color/black"
+    tools:context=".ui.BaseActivity">
+
+
+<!--    &lt;!&ndash; 背景装饰元素 - 网格线条 &ndash;&gt;-->
+    <View
+        android:id="@+id/dialogBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:alpha="0.1"/>
+
+
+    <!-- 中央内容区域 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- 标题文本 -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/charging"
+            android:textSize="28sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:layout_marginBottom="40dp"
+            android:layout_marginEnd="10dp"
+            android:shadowColor="#05DF72"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="8"/>
+
+        <FrameLayout
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="20dp">
+
+            <!-- 充电GIF动画 -->
+            <ImageView
+                android:id="@+id/charging_gif"
+                android:layout_width="260dp"
+                android:layout_height="260dp"
+                android:src="@drawable/robot_charging"
+                android:contentDescription="机器人充电动画"/>
+
+            <!-- 电量百分比 -->
+            <TextView
+                android:id="@+id/charging_progress_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0%"
+                android:textSize="28sp"
+                android:textColor="#05DF72"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="14dp"
+                android:shadowColor="#000000"
+                android:shadowDx="1"
+                android:shadowDy="1"
+                android:shadowRadius="2"/>
+
+        </FrameLayout>
+
+        <!-- 充电进度条 -->
+        <ProgressBar
+            android:id="@+id/charging_progress_bar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="250dp"
+            android:layout_height="15dp"
+            android:layout_marginBottom="32dp"
+            android:layout_marginEnd="5dp"
+            android:progress="0"
+            android:max="100"
+            android:progressDrawable="@drawable/progress_charging_bar"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

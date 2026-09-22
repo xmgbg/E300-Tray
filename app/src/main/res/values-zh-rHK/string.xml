@@ -1,0 +1,1334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ezhan</string>
+    <string name="back_button">返回</string>
+    <string name="battery_status">電池狀態</string>
+    <string name="select_prompt_hint">選擇視覺提示詞</string>
+
+    <string name="robot_number">202604181619</string>
+    <string name="device_number">E300-Pro</string>
+    <string name="charging">正在充電</string>
+    <string name="language_setting">語言設定</string>
+    <string name="select_language">選擇語言</string>
+    <string name="distance">識別距離範圍在-3到-0.5，0.5-3之間</string>
+    <string name="distance_valid">識別距離必須是有效數字</string>
+    <string name="recognition_distance">識別距離</string>
+
+    <string name="track_settings_with_current">導航模式選擇（目前為%s）</string>
+    <string name="track_settings">軌道設定</string>
+    <string name="virtual_track">固定路徑模式</string>
+    <string name="virtual_orbit_one_way_navigation">虛擬軌道單向軌道導航</string>
+    <string name="free_path_track">自由路徑模式</string>
+    <string name="obstacle_time">繞障時間</string>
+    <string name="obstacle_time_unit">秒（0立即繞障，-1不繞障）</string>
+    <string name="confirm_virtual_track_message">確定要啟用固定路徑導航模式嗎？此模式將按照預設的固定路徑進行導航。</string>
+    <string name="confirm_free_path_message">確定要啟用自由路徑軌道模式嗎？此模式下允許自由導航前往目標點。</string>
+    <string name="virtual_track_started">固定路徑模式已啟動</string>
+    <string name="free_path_started">自由路徑模式已啟動</string>
+    <string name="already_in_mode">已經係呢個模式</string>
+    <string name="switching_to_mode">正在切換到%s</string>
+    <string name="switched_to_mode">已切換到%s</string>
+    <string name="switch_cancelled">已取消切換</string>
+    <string name="orbit_mode_manager_unavailable">軌道模式管理器不可用</string>
+    <!-- QR -->
+    <string name="qr_scan">掃描二維碼訪問:\n %s</string>
+
+    <!-- Map Url -->
+    <string name="map_url">http://192.0.2.10:9999/#/pages/deploy/map?language=zh_fn</string>
+    <string name="robot_run_url">http://192.0.2.10:9999/#/pages/log/log</string>
+    <string name="shelf_url">http://192.0.2.10:9999/#/pages/other/shelf?language=zh_fn</string>
+    <!-- 基礎設定Fragment -->
+    <string name="volume_setting">音量設定</string>
+    <string name="speed_control">速度設定(m/s)</string>
+    <string name="parameter_configuration">配送設定</string>
+    <string name="delivery_stay">等待停留時間(s)</string>
+    <string name="low_power_operation">預警電量值(%)</string>
+    <string name="idle_charge">閒時充電</string>
+    <string name="auto_charge_start_time">開始時間</string>
+    <string name="auto_charge_end_time">結束時間</string>
+    <string name="idle_charge_wait_time">閒置超過</string>
+    <string name="time_unit_minutes">分鐘</string>
+    <string name="idle_charge_wait_range_error">閒時充電等待時間範圍應為1-1440分鐘</string>
+    <string name="idle_return_home">閒時回待命</string>
+    <string name="idle_return_wait_time">回待命等待</string>
+    <string name="idle_return_wait_range_error">閒時回待命等待時間範圍應為1-86400秒</string>
+    <string name="jack_stay_duration_range_error">停留時間範圍應為0-86400秒</string>
+    <string name="battery_management_settings">電量管理設定</string>
+    <string name="battery_threshold_settings">電量閾值</string>
+    <string name="battery_critical_level">極低電量(%)</string>
+    <string name="battery_min_work_level">最低工作電量(%)</string>
+    <string name="battery_idle_level">閒時充電上限(%)</string>
+    <string name="battery_full_level">充滿判定(%)</string>
+    <string name="full_charge_return_home">充滿電回待命</string>
+    <string name="battery_idle_level_hint">開啟閒時充電時，電量需不低於「最低工作電量」且低於「閒時充電上限」才會觸發（例：最低20%、上限60%，則20%～59%可觸發）</string>
+    <string name="battery_full_level_hint">開啟「充滿電回待命」後，充電中電量達到「充滿判定」時將自動返回待命點</string>
+    <string name="battery_threshold_order_error">電量閾值須滿足：極低 ≤ 最低工作 ≤ 閒時充電上限 ≤ 充滿判定</string>
+    <string name="pause_wait">暫停等待(s)</string>
+    <string name="language_configuration">語言設定</string>
+    <string name="current_language">當前語言</string>
+    <string name="delivery_configuration">充電設定</string>
+    <string name="return_to_dock_charging">自動充電</string>
+    <string name="visual_inspection">視覺巡檢</string>
+    <string name="lift_mode">頂升模式</string>
+    <string name="password_verification">密碼設定</string>
+    <string name="off">已關閉</string>
+    <string name="on">已開啟</string>
+    <string name="password_hint">輸入密碼,只支援4位整數</string>
+    <string name="reset_default_settings">恢復預設設定</string>
+    <string name="save_settings">儲存設定</string>
+
+    <!-- 對話框文字 -->
+    <string name="modify_settings">修改設定</string>
+    <string name="confirm">確認</string>
+    <string name="cancel">取消</string>
+    <string name="reset_confirm_title">確認恢復預設設定？</string>
+    <string name="reset_confirm_message">所有自訂設定將被清除</string>
+    <string name="password_error">密碼必須為4位數字</string>
+    <string name="settings_saved">設定已儲存</string>
+    <!-- 裝置設定介面新增字串 -->
+    <string name="title_device_settings">裝置設定</string>
+    <string name="device_serial_number">裝置序號</string>
+    <string name="device_machine_number">裝置機器號</string>
+    <string name="app_version_number">APP版本號</string>
+    <string name="exit_app">退出APP</string>
+    <string name="startup_broadcast">開機播報：</string>
+    <!-- 應用標語 -->
+    <string name="app_slogan">無人運載,智享未來</string>
+
+    <!-- 系統狀態相關 -->
+    <string name="pose_probability_unknown">定位置信度 : 未知</string>
+    <string name="system_status">系統狀態</string>
+    <string name="nav_status_unknown">運行狀態：未知</string>
+    <string name="error_status_unknown">異常狀態：未知</string>
+    <string name="current_position_default">當前位置：X:0  Y:0  T:0</string>
+    <string name="current_time">當前時間</string>
+
+    <!-- 功能模式 -->
+    <string name="delivery_mode">背負模式</string>
+    <string name="jack_mode">頂升模式</string>
+    <string name="cruise_mode">巡航模式</string>
+
+    <!-- 操作按鈕 -->
+    <string name="return_to_charge">回樁充電</string>
+    <string name="return_to_home">回待命點</string>
+    <string name="system_settings">系統設定</string>
+    <!-- 配送按鈕 -->
+    <string name="delivery_button">配送任務</string>
+    <!-- 頂升按鈕 -->
+    <string name="jack_button">頂升任務</string>
+    <!-- 巡航按鈕 -->
+    <string name="cruise_button">巡航任務</string>
+    <!-- 回充電樁按鈕 -->
+    <string name="return_charge">回充電樁</string>
+    <!-- 返回駐車點按鈕 -->
+    <string name="return_home">返回待命點</string>
+    <!-- 設定按鈕 -->
+    <string name="settings">設定</string>
+    <string name="pose_probability">定位置信度：%d%%</string>
+    <string name="nav_status">運行狀態：%s</string>
+    <string name="error_status">異常狀態：%s</string>
+    <string name="navigation_status">正在返回待命點</string>
+    <string name="logo_name" translatable="false">Ezhan</string>
+    <string name="company_name">壹站智匯</string>
+    <!-- 日期時間格式 -->
+    <string name="date_pattern">yyyy年MM月dd日</string>
+
+    <!-- 導航狀態文本 -->
+    <string name="nav_status_running">運行狀態：運行中</string>
+    <string name="nav_status_completed">運行狀態：完成</string>
+    <string name="nav_status_failed">運行狀態：失敗</string>
+    <string name="nav_status_idle">運行狀態：空閒</string>
+
+    <!-- 錯誤狀態 -->
+    <string name="error_status_none">異常狀態：無</string>
+    <!-- 日期時間格式 -->
+    <string name="date_format">yyyy年MM月dd日</string>
+    <string name="time_format">HH:mm:ss</string>
+
+    <!-- 當前位置 -->
+    <string name="current_position">當前位置：X:%1$.2f Y:%2$.2f T:%3$.2f</string>
+
+    <!-- 按鈕和提示 -->
+    <string name="resume_task_with_time">放行(%1$ds)</string>
+    <string name="confirm_with_time">確定(%1$ds)</string>
+    <string name="task_canceled">已取消任務</string>
+    <string name="task_resumed">已繼續任務</string>
+    <string name="task_completed_message">已成功返回待命點！</string>
+    <string name="starting_charge">開始回樁充電點…</string>
+    <string name="navigation_failed">導航指令發送失敗</string>
+    <string name="no_home_position">未設置待命點</string>
+    <string name="returning_to_home">正在返回待命點</string>
+    <string name="start_to_home">我要回家了</string>
+    <string name="operation_success">操作成功</string>
+    <string name="operation_error">錯誤: %1$s</string>
+    <string name="network_error">網路錯誤: %1$s</string>
+    <string name="wifi_strength">%1$d/4</string>
+    <string name="battery_percent">%1$d%%</string>
+
+    <!-- 音樂播放狀態 -->
+    <string name="music_preparing">音樂準備中…</string>
+    <string name="music_started">音樂開始播放</string>
+    <string name="music_paused">音樂已暫停</string>
+    <string name="music_completed">音樂播放完成</string>
+    <string name="music_error">音樂播放失敗: %1$s</string>
+    <string name="error_code_1001">電池電量不足</string>
+    <string name="error_code_1002">導航路徑被阻擋</string>
+    <string name="error_code_1003">感測器故障</string>
+    <string name="unknown_error">未知錯誤</string>
+    <string name="start_task">開始任務</string>
+    <string name="cancel_task">取消任務</string>
+    <!-- 通用消息 -->
+    <string name="operation_error_format">錯誤: %s</string>
+    <string name="network_error_format">網路錯誤: %s</string>
+    <string name="stop_gif_error">停止GIF出錯</string>
+    <string name="show_pause_dialog_failed">顯示暫停對話框失敗</string>
+    <string name="no_position_data">暫無位置資料</string>
+    <string name="no_station_selected">未選擇任何站點</string>
+    <string name="selected_prefix">已選擇: </string>
+    <string name="select_at_least_one_station">請至少選擇一個站點</string>
+    <string name="start_task_prefix">開始任務到: </string>
+    <string name="start_task_with_station_count">開始任務，共%d個站點</string>
+    <string name="selected_stations_cleared">已清除選中的站點</string>
+    <string name="navigating_to_station">前往站點[%d/%d]: %s</string>
+    <string name="navigating_to_task_point">正在前往任務點：%s</string>
+    <string name="navigating">正在導航...</string>
+    <string name="arrived_at_station">到達站點: %s</string>
+    <string name="status_fetch_failed">狀態獲取失敗</string>
+    <string name="no_running_task">當前沒有運行中的任務</string>
+    <string name="select_target_station_first">請先選擇目標站點</string>
+    <string name="select_only_one_destination_point">請只選擇一個待命點</string>
+    <string name="set_destination_point">設置待命點: %s</string>
+    <string name="arrived_final_station">已到達: %s</string>
+    <string name="arrived_at_park_point">已到達待命點</string>
+    <string name="arrived_at_station_continue">已到達: %s\n是否繼續前往下一站?</string>
+    <string name="task_location_empty">任務位置列表為空</string>
+    <string name="task_already_running">已有任務正在運行</string>
+    <string name="point_location_tab">普通位置</string>
+    <string name="fixed_location_tab">特殊位置</string>
+    <string name="add_location">位置添加</string>
+    <string name="sort_location">位置排序</string>
+    <string name="fetch_location_from_map">位置下載</string>
+    <string name="fetch_location_confirmation_title" translatable="false">獲取位置確認</string>
+    <string name="fetch_location_confirmation_message" translatable="false">確定要從地圖獲取所有點位嗎？</string>
+    <string name="upload_location">位置上傳</string>
+    <string name="upload_location_confirmation_title" translatable="false">上傳確認</string>
+    <string name="upload_location_confirmation_message" translatable="false">確定要上傳所有點位資訊嗎？</string>
+    <!-- 位置設置相關 -->
+    <string name="add_new_location">添加新位置</string>
+    <string name="input_location_name">輸入位置名稱</string>
+    <string name="add_success">添加成功: %s</string>
+    <string name="sync_map_position_success">已同步最新地圖位置</string>
+    <string name="Unable_to_operate_in_a_current_map_or_floor">無法操作非當前地圖或樓層</string>
+    <string name="position_updated">位置已更新</string>
+    <string name="confirm_delete">確認刪除</string>
+    <string name="delete_location_prompt">確定要刪除位置 %s 嗎？</string>
+    <string name="delete">刪除</string>
+    <string name="delete_success">已刪除位置</string>
+    <string name="sort_by_id">按ID排序</string>
+    <string name="sort_by_name">按名稱排序</string>
+    <string name="ok">確定</string>
+
+    <!-- 位置格式 -->
+    <string name="location_id_format">ID:%d</string>
+    <string name="location_name_format">名稱:%s</string>
+    <string name="location_x_format">X:%.3f</string>
+    <string name="location_y_format">Y:%.3f</string>
+    <string name="location_yaw_format">角度(T):%.3f</string>
+    <string name="cruise_name">巡航任務</string>
+    <!-- 特殊位置點 -->
+    <string name="charge_point">充電點</string>
+    <string name="park_point">待命點</string>
+    <string name="relocalize_point">重定位點</string>
+    <string name="Position_setting">位置設定</string>
+    <string name="Language_settings">語音設定</string>
+    <string name="Shelf_setup">料架設置</string>
+    <string name="Map_settings">地圖設定</string>
+    <string name="Basic_setup">基礎設定</string>
+    <string name="Regarding_the_equipment">關於裝置</string>
+    <string name="Setting_interface">設定介面</string>
+    <string name="Retrieve_again">更新位置</string>
+    <string name="Mission_accomplished">任 務 完 成</string>
+    <!-- 補充缺失的巡航資源 -->
+    <string name="task_name_hint">任務名稱:</string>
+    <string name="input_task_name">  請輸入任務名稱</string>
+    <string name="default_stay">預設停留:</string>
+    <string name="seconds">秒</string>
+    <string name="cruise_times">巡航次數:</string>
+    <string name="normal_mode">普通</string>
+    <string name="auto_mode">自動</string>
+    <string name="start_time">開始時間</string>
+    <string name="save_route">儲存路線</string>
+    <string name="start_cruise">開始巡航</string>
+    <string name="visual_model">視覺大模型</string>
+    <string name="times">次</string>
+    <string name="infinite_loop">無限循環</string>
+    <string name="cruise_count_value_format">%1$d次</string>
+    <string name="Create_a_task">建立任務</string>
+    <!-- 任務相關 -->
+    <string name="delete_task_prompt">確定要刪除巡航任務 \"%1$s\" 嗎？</string>
+    <string name="task_deleted">任務已刪除</string>
+    <string name="route_saved">路線儲存成功</string>
+    <string name="select_task_first">請先選擇任務</string>
+    <string name="task_data_error">任務資料異常</string>
+    <string name="task_not_exist">任務不存在</string>
+    <string name="no_changes_detected">沒有更新</string>
+    <string name="task_scheduled">巡航任務已安排，將在 %1$s 開始</string>
+    <string name="low_confidence">定位置信度過低（＜40%），無法執行巡航任務</string>
+    <string name="charging_task_failed">機器人正在充電,當前任務執行失敗！</string>
+    <string name="scheduled_task_set">定時任務已設定，將按預定時間啟動！</string>
+    <string name="start_cruise_task">開始執行巡航任務！</string>
+    <string name="task_terminated">巡航任務已終止</string>
+    <string name="task_completed">站點總數: %1$d\n循環次數: %2$d</string>
+    <string name="task">任務完成：</string>
+    <string name="confirm_task_completion">任務完成已確認！</string>
+    <string name="task_name_exists">任務名稱已存在，請重新輸入</string>
+
+
+    <!-- 導航狀態 -->
+    <string name="preparing_cruise">🟡 準備啟動巡航任務...</string>
+    <string name="cruise_started">巡航任務已啟動</string>
+    <string name="loop_start_format">🔄 開始第 %1$d次循環</string>
+    <string name="loop_completed_format">第%1$d次循環已完成，開始下一次循環！</string>
+    <string name="arrived_at_station_format">✅ 到達站點: %1$s\n%2$d/%3$d (循環: %4$d/%5$d)</string>
+    <string name="navigating_to_station_format">➔ 正在前往: %1$s</string>
+    <string name="progress_format">當前進度: %1$d/%2$d (循環: %3$d/%4$d)\n正在前往: %5$s</string>
+    <string name="staying_format">✅ 到達站點: %1$s\n停留中...%2$d秒</string>
+    <string name="resuming_format">\n進度: %2$d/%3$d (循環: %4$d/%5$s)</string>
+    <string name="emergency_stop">機器人急停被觸發</string>
+    <string name="collision_occurred">機器人發生碰撞,請恢復</string>
+    <string name="pedestrian_alert">行人防撞：</string>
+    <string name="arrival_announcement">到達播報</string>
+    <string name="select_auto_mode_first">請先選擇自動巡航模式</string>
+    <string name="no_visual_prompts_available">無可用提示詞</string>
+    <string name="system_not_ready">系統未準備好，請稍後重試</string>
+    <string name="waiting_robot_status">正在等待機器人狀態更新...</string>
+    <string name="station_data_error">站點資料異常: %s</string>
+    <string name="station_not_exist">站點不存在: %s</string>
+    <string name="default_task_name_format">CRUISE-%s</string>
+    <string name="task_params_format">模式: %1$s%2$s | 停留: %3$ds | 循環: %4$s | 站點: %5$d個</string>
+    <string name="select_start_time_first">請選擇開始時間</string>
+    <string name="start_executing_cruise_task">開始執行巡航任務！</string>
+
+    <string name="initializing" >正在初始化中</string>
+    <string name="welcome_use" >歡迎您使用</string>
+
+    <string name="connection_to_controller_failed">連接控制器失敗</string>
+    <string name="connection_restored">連接控制器恢復</string>
+    <string name="navigation_normal_description">正在前往點位: %s</string>
+    <string name="navigation_wait_description">正在前往樓層%1$s候梯點</string>
+    <string name="navigation_ride_description">正在前往樓層%1$s乘梯點</string>
+    <string name="calling_elevator_description">呼叫電梯到樓層 %s</string>
+    <string name="waiting_elevator_description">等待電梯到達樓層 %s</string>
+    <string name="opening_door_description">正在開門</string>
+    <string name="closing_door_description">正在關門</string>
+    <string name="changing_map_description">正在切換地圖到樓層 %s</string>
+    <string name="checking_access_description">檢查存取權限</string>
+    <string name="navigation_park_description">導航到駐車點</string>
+    <string name="navigation_charge_description">導航到充電點</string>
+    <string name="navigation_precharge_description">導航到充電前置點</string>
+    <string name="target_location_prefix">目標點: %s</string>
+
+    <string name="precharge_point">充电前置点</string>
+    <!-- 其他 -->
+    <string name="time_picker_title">選擇開始時間</string>
+    <string name="minute_format">%02d</string>
+    <string name="auto_mode_active">自動</string>
+    <string name="normal_mode_active">普通</string>
+    <string name="scheduled_time_format">%02d:%02d</string>
+    <!--頂升模式-->
+    <string name="task_name_duplicate">任務名稱已存在</string>
+    <string name="task_list_empty">任務列表為空，無法執行</string>
+    <string name="confirm_delete_title">確認刪除</string>
+    <string name="confirm_delete_message">確定要刪除這個任務嗎？</string>
+    <string name="robot_paused_title">機器人已暫停</string>
+    <string name="select_operation">請選擇操作</string>
+    <string name="resume">繼續</string>
+    <string name="Create_a_jacking_task">新建頂升任務</string>
+    <string name="Please_enter_a_name_for_the_task">請輸入任務名稱</string>
+    <string name="create">建立</string>
+    <string name="Custom_tasks">自訂任務</string>
+    <string name="Save_the_route">保存路線</string>
+    <string name="operation_type">操作類型：</string>
+    <string name="stay_duration">停留時間：</string>
+    <string name="duration_hint">秒數</string>
+    <string name="point_name_default">點位1</string>
+    <string name="Lifting">識別舉升</string>
+    <string name="Put_down">識別放下</string>
+    <string name="lift_up">頂升上升</string>
+    <string name="lift_down">頂升下降</string>
+    <string name="Go_out">駛離庫位</string>
+    <string name="None">移動</string>
+    <string name="JackLoad">頂升舉起</string>
+    <string name="JackUnload">頂升放下</string>
+    <string name="Forward">前进</string>
+    <string name="Backward">后退</string>
+    <string name="edit">編輯</string>
+    <string name="Start">開始</string>
+    <string name="Lifting5">搬運任務</string>
+    <string name="Confirm_deletion">確定要刪除這個操作嗎？</string>
+    <!-- 語言 -->
+    <string name="en">英語(en)</string>
+    <string name="zh">中文(zh)</string>
+    <string name="zh_HK">繁體中文(hk)</string>
+    <string name="ja">日語(ja)</string>
+    <string name="ko">韓語(ko)</string>
+    <string name="vi">越南語(VI)</string>
+    <string name="id">印尼語(id)</string>
+    <!-- 語音設定介面新增 -->
+    <string name="departure_broadcast">出發播報：</string>
+    <string name="position_lost">定位遺失：</string>
+    <string name="lead_start">領航開始：</string>
+    <string name="lead_arrival">領航到達：</string>
+    <string name="low_battery">電量過低：</string>
+    <string name="obstacle_alert">障礙物提醒：</string>
+    <string name="operation_error_prompt">操作錯誤：</string>
+    <string name="charge_complete">充電完成：</string>
+    <string name="return_arrival">驻车到達：</string>
+    <string name="task_interrupted">任務終斷：</string>
+    <string name="lead_departure">領航出發：</string>
+    <string name="cruise_departure">巡航出發：</string>
+    <string name="cruise_arrival">巡航到達：</string>
+    <string name="go_charging">前往充電：</string>
+
+    <!-- 預設語音文本 -->
+    <string name="default_departure_text">開始配送任務</string>
+    <string name="default_arrival_text">已經到達站點</string>
+    <string name="default_lost_text">我好像迷路了，請把我推回充電樁</string>
+    <string name="default_lead_start_text">開始領航，請跟緊</string>
+    <string name="default_lead_arrive_text">已經到達您的位置了</string>
+    <string name="default_low_power_text">電量不足，請及時充電</string>
+    <string name="default_obstacle_text">前方有障礙物，請小心</string>
+    <string name="default_task_done_text">任務已完成，感謝使用</string>
+    <string name="default_op_error_text">操作錯誤，請重試</string>
+    <string name="default_charge_done_text">充電已完成，可以開始工作</string>
+    <string name="default_return_arrive_text">我回來了，還有什麼事情吩咐嗎</string>
+    <string name="default_task_break_text">任務中斷了</string>
+    <string name="default_lead_go_text">請跟我來吧</string>
+    <string name="default_cruise_go_text">我出發了，請讓讓我</string>
+    <string name="default_cruise_arrive_text">我已經到達了，請盡快</string>
+    <string name="default_pedestrian_text">運行中</string>
+    <string name="default_go_charge_text">我要去充電了</string>
+    <string name="arrival">到達播報：</string>
+    <string name="default_navigation_error_text">請避讓</string>
+    <string name="default_robot_error_text">機器人出錯了,請及時處理</string>
+    <string name="default_emergency_stop_text">機器人急停被觸發</string>
+    <string name="default_collision_alert_text">機器人發生碰撞,請恢復</string>
+    <string name="default_position_not_found_text">不存在該點位,請添加點位</string>
+    <string name="default_low_confidence_error_text">定位置信度低,當前任務執行失敗！</string>
+    <string name="default_charging_task_error_text">機器人正在充電,任務執行失敗！</string>
+    <string name="default_going_to_point_text">機器人去往目標點</string>
+    <string name="going_to_point">機器人去往目標點</string>
+    <string name="default_returning_home_text">機器人返回停車點</string>
+    <string name="low_confidence_navigation">定位置信度過低（＜40%），無法返航</string>
+    <!-- 新增密碼錯誤提示 -->
+    <string name="password_incorrect">密碼錯誤，請重試</string>
+
+    <!-- 新增系統不可用提示 -->
+    <string name="current_unavailable">當前不可用</string>
+    <!-- 新增字串資源 -->
+    <string name="task_paused">任務暫停</string>
+    <string name="end_task">結束</string>
+    <string name="resume_task">繼續</string>
+    <string name="dialog_button_cancel">放棄</string>
+    <string name="arrival_station_title">到 達 站 點</string>
+    <string name="dialog_button_continue">放行</string>
+    <string name="please_enter_your_password">請輸入密碼</string>
+    <!-- 巡航任務對話框相關字串 -->
+    <string name="cruise_task_info_title">巡航任務資訊</string>
+    <string name="close_button_desc">關閉</string>
+    <string name="task_name_label">任務名稱: </string>
+    <string name="current_station_placeholder">到達站點: 準備中...</string>
+    <string name="next_station_placeholder">下一個站點: 準備中...</string>
+    <string name="Get_the_link">獲取連結</string>
+    <!-- 錯誤碼資源 -->
+    <string name="error_code_10000">導航防撞</string>
+    <string name="error_code_10001">急停按下</string>
+    <string name="error_code_10002">防撞條觸碰</string>
+    <string name="error_code_10003">軟急停按下</string>
+    <string name="error_code_10010">自動充電失敗</string>
+    <string name="error_code_10020">路線脫離</string>
+    <string name="error_code_10030">防撞條觸發</string>
+    <string name="error_code_10040">里程計遺失</string>
+    <string name="error_code_10050">導航雷射遺失</string>
+    <string name="error_code_10051">導航雷射頭頻率過低</string>
+    <string name="error_code_10052">導航雷射頭獲取雷射延遲過大</string>
+    <string name="error_code_10060">路線控制器超時</string>
+    <string name="error_code_10070">與底層通訊失敗(table延遲過大)</string>
+    <string name="error_code_10080">導航過程中誤差過大</string>
+    <string name="error_code_10090">自動控制速度無效</string>
+    <string name="error_code_10100">任務結束時,與終點誤差過大</string>
+    <string name="error_code_10110">定位置信度過低</string>
+    <string name="error_code_10111">定位可能沒有啟動</string>
+    <string name="error_code_10112">定位資料超時</string>
+    <string name="error_code_10113">路線上鎖(導致任務暫停)</string>
+    <string name="error_code_10130">切圖中</string>
+    <string name="error_code_10131">切圖失敗</string>
+    <string name="error_code_20000">接受路線時,因有指令碼運行被阻止</string>
+    <string name="error_code_20001">接受路線時,因自動充電中被阻止</string>
+    <string name="error_code_20002">接受路線時,因不在定位中被阻止</string>
+    <string name="error_code_20003">接受路線時,因相同路線被阻止</string>
+    <string name="error_code_20004">接受路線時,因地圖不同被阻止</string>
+    <string name="error_code_20005">接受路線時,因手動模式中被阻止</string>
+    <string name="error_code_20006">接受路線時,因有動作被阻止</string>
+    <string name="error_code_20007">接受路線時,因指令碼設定等待被阻止</string>
+    <string name="error_code_20008">接受路線時,因定位置信過低被阻止</string>
+    <string name="error_code_20009">接受路線時,因上次路線未完成被阻止</string>
+    <string name="error_code_20010">接受路線時,因極低電量資訊被阻止</string>
+    <string name="error_code_20011">接受路線時,因啟動等待被阻止</string>
+    <string name="error_code_20100">按路線名運行時,因有指令碼運行被阻止</string>
+    <string name="error_code_20101">按路線名運行時,因沒有路線檔案被阻止</string>
+    <string name="error_code_20102">按路線名運行時,因沒有找到路線被阻止</string>
+    <string name="error_code_20103">按路線名運行時,因路線為空被阻止</string>
+    <string name="error_code_20104">按路線名運行時,因地圖名字不同被阻止</string>
+    <string name="error_code_20105">按路線名運行時,因不在起點被阻止</string>
+    <string name="error_code_20106">按路線名運行時,因低電量被阻止</string>
+    <string name="error_code_20107">按路線名運行時,因上次任務未完成被阻止</string>
+    <string name="error_code_20108">按路線名運行時,因低置信度被阻止</string>
+    <string name="error_code_20109">按路線名運行時,因沒有定位被阻止</string>
+    <string name="error_code_20200">解鎖事件時,因切換地圖被阻止</string>
+    <string name="error_code_20201">解鎖事件時,因指令碼運行被阻止</string>
+    <string name="error_code_60001">接收到清除路線任務指令，停止</string>
+    <string name="error_code_60002">接收到路線任務暫停指令</string>
+    <string name="error_code_60003">自動導航路線規劃失敗,無法規劃出一條有效的到達目標點的路線</string>
+    <string name="error_code_60004">全域規劃路徑輸入控制執行單元失敗，放棄目標任務,停止</string>
+    <string name="error_code_60005">機器人發生原地擺動震盪現象，停止，進入recovery模式</string>
+    <string name="error_code_60006">無法找到有效的控制輸出指令，通常為軌跡路線防撞觸發</string>
+    <string name="error_code_60007">機器人震盪，在進行recovery模式以後依舊發生，停止。</string>
+    <string name="error_code_60008">巡線路線輸出巡線控制單元失敗，停止</string>
+    <string name="error_code_60009">clearing 模式，更新障礙物地圖中，停止</string>
+    <string name="error_code_60010">非自動導航狀態接收到自動導航任務，放棄任務停止</string>
+    <string name="error_code_60011">巡線任務中,輸出控制速度為前進，但最大前進速度限速為0,停止</string>
+    <string name="error_code_60012">巡線任務中,輸出控制速度為後退，但最大後退速度限速為0,停止</string>
+    <string name="error_code_60013">巡線任務中,輸出原地旋轉控制速度，最大前進速度限速或者最大後退速度限速為0,停止</string>
+    <string name="error_code_60014">巡線任務中,最大任務實時限速為0,停止</string>
+    <string name="error_code_60015">巡線任務中,輸出原地旋轉控制速度，最大前進速度限速或者最大後退速度限速為0,停止</string>
+    <string name="error_code_60105">驅動輪可轉向底盤，自動導航任務時，旋轉輪角度過大，脫離差速論模型，停止</string>
+    <string name="error_code_60200">感測器資料超時,停止</string>
+    <string name="error_code_60301">識別頂升料架任務中,尚未穩定識別到料腿並規劃處進料架路線。</string>
+    <string name="navigation_status_completed">導航狀態：完成</string>
+    <!-- 添加以下新資源 -->
+    <string name="password_dialog_title">請輸入密碼</string>
+    <string name="delete_button">刪除</string>
+    <string name="confirm_button">確定</string>
+    <string name="password_input_hint">____</string>
+    <string name="password_error_toast">密碼必須為4位數字</string>
+    <string name="settings_saved_toast">設定已儲存</string>
+    <!-- 添加以下字串 -->
+    <string name="emergency_stop1">急停報警：</string>
+    <string name="collision_alert">碰撞報警：</string>
+    <string name="navigation_error">導航錯誤：</string>
+    <string name="default_point_name">點位%d</string>
+    <string name="confirm_reset_title">確認恢復預設設定？</string>
+    <string name="confirm_reset_message">所有自訂設定將被清除</string>
+    <string name="default_speed_format">%.1f</string>
+    <string name="error_positive_number">請輸入非負數</string>
+    <string name="error_invalid_number">無效的數字格式</string>
+    <string name="start_lifting_task">開始執行搬運任務</string>
+    <string name="descending">頂升下降中</string>
+    <string name="ascending">頂升上升中</string>
+    <!-- WebService 相關字串 -->
+    <string name="web_title">Ezhan 機器人控制終端</string>
+    <string name="robot_status_title">機器人狀態</string>
+    <string name="status_running">運行狀態</string>
+    <string name="status_battery">電池電量</string>
+    <string name="status_emergency">急停狀態</string>
+    <string name="status_target">目標點</string>
+    <string name="status_confidence">置信度</string>
+    <string name="status_position">位置</string>
+    <string name="status_operation">當前操作</string>
+    <string name="status_alert">告警</string>
+    <string name="select_station_hint">-- 選擇目標站點 --</string>
+    <string name="select_jack_task_hint">-- 選擇搬運任務 --</string>
+    <string name="btn_confirm">確認</string>
+    <string name="btn_park">去停車</string>
+    <string name="btn_charge">去充電</string>
+    <string name="btn_cancel">取消</string>
+    <string name="btn_pause">暫停</string>
+    <string name="btn_resume">恢復</string>
+    <string name="error_no_target">請選擇要前往的站點</string>
+    <string name="error_task_running">機器人正在執行搬運任務,任務下發失敗</string>
+    <!-- 新增資源 -->
+    <string name="no_error">無報錯</string>
+    <string name="unknown">未知</string>
+    <string name="no_target">無目標</string>
+    <string name="unknown_position">位置未知</string>
+    <string name="no_operation">無操作</string>
+    <string name="target_prefix">目標點：</string>
+    <string name="web_service_started">Web服務已啟動，端口: %d</string>
+    <string name="web_service_start_failed">Web服務啟動失敗：所有端口均被佔用</string>
+    <!-- 新增缺失的字串 -->
+    <string name="error_application_context_null">Application context is null</string>
+    <string name="error_parse_post_params">解析POST參數失敗</string>
+    <string name="log_status_update">定時更新狀態</string>
+    <string name="log_params_received">獲取到的參數: </string>
+    <string name="log_cancel_navigation">取消當前導航</string>
+    <string name="log_pause_navigation">暫停當前導航</string>
+    <string name="log_resume_navigation">恢復當前導航</string>
+    <string name="operation_navigating_to">執行单點任務...</string>
+    <string name="operation_executing_task">執行搬運任務...</string>
+    <string name="operation_charging">到充電點...</string>
+    <string name="operation_parking">到停車點...</string>
+    <string name="operation_canceling">取消導航...</string>
+    <string name="operation_canceled">任務已取消</string>
+    <string name="operation_pausing">暫停導航...</string>
+    <string name="operation_paused">任務已暫停</string>
+    <string name="operation_resuming">恢復導航...</string>
+    <string name="operation_resumed">任務已恢復</string>
+    <string name="error_select_task">請選擇要執行的任務</string>
+    <string name="log_navigating_to_station">開始導航到站點: %s</string>
+    <string name="log_navigating_home">開始導航到停車點</string>
+    <string name="log_navigating_charge">開始導航到充電點</string>
+    <string name="task_delivery_completed">搬運任務已完成</string>
+    <string name="log_going_to_point">前往點位: %s</string>
+    <string name="log_execute_lift">在點位: %s執行操作舉升操作</string>
+    <string name="log_execute_lower">在點位: %s執行操作放下操作</string>
+    <string name="log_execute_leave">在點位: %s執行操作駛離操作</string>
+    <string name="warn_port_conflict">注意：實際使用端口 %2$d（預設端口 %1$d 被佔用）</string>
+    <string name="error_port_occupied">端口 %d 已被佔用：%s</string>
+    <string name="error_all_ports_occupied">無法啟動Web服務，端口 %d 到 %d 均被佔用</string>
+    <string name="error_task_send_failed">任務下發失敗,任務暫停</string>
+    <string name="warn_task_retry">任務下發失敗，準備重試 (%d/3)</string>
+    <string name="state_paused">暫停</string>
+    <string name="state_canceled">取消</string>
+    <string name="status_normal">正常</string>
+    <string name="emergency_activated">急停</string>
+    <string name="error_blocked">機器人被阻擋了</string>
+    <string name="error_emergency_stop">運行中觸發急停，請及時處理</string>
+    <string name="error_collision">運行中觸發碰撞，請及時處理</string>
+    <string name="alert_select_station">請選擇一個目標站點</string>
+    <string name="alert_select_task">請選擇一個任務</string>
+    <string name="log_command_sent">Command sent</string>
+    <string name="error_send_command">Failed to send command</string>
+    <string name="log_form_submitted">Form submitted successfully</string>
+    <string name="error_form_submit">Form submission failed</string>
+    <string name="error_network_response">網路響應不正常</string>
+    <string name="error_fetch_status">獲取狀態失敗</string>
+    <string name="error_get_string_resource">Error getting string resource</string>
+    <string name="state_idle">空閒</string>
+    <string name="state_running">運行</string>
+    <string name="state_failed">失敗</string>
+    <string name="server_request_error">伺服器處理請求時出錯</string>
+    <string name="error_request_processing">處理請求時出錯</string>
+    <string name="state_completed">完成</string>
+    <string name="tts_instance_set">TTS實例已設定</string>
+    <string name="error_tts_null">嘗試設定null的TTS實例</string>
+    <string name="elevator_wait_point">候梯點</string>
+    <string name="elevator_ride_point">乘梯點</string>
+    <string name="elevator_robot_config">機器人配置</string>
+    <string name="elevator_control">電梯控制</string>
+    <string name="add_wait_point">新增候梯點</string>
+    <string name="add_ride_point">新增乘梯點</string>
+    <string name="elevator_id">電梯ID</string>
+    <string name="elevator_name">電梯名稱</string>
+    <string name="lora_channel">LoRa頻道</string>
+    <string name="lora_address">LoRa位址</string>
+    <string name="call_elevator">呼叫電梯</string>
+    <string name="elevator_floor">樓層</string>
+    <string name="open_elevator">開門</string>
+    <string name="close_elevator">關門</string>
+    <string name="elevator_id_hint">輸入電梯ID</string>
+    <string name="elevator_name_hint">輸入電梯名稱</string>
+    <string name="lora_channel_hint">輸入頻道號碼(1-64)</string>
+    <string name="lora_address_hint">輸入位址(0-255)</string>
+    <string name="select_floor">選擇樓層</string>
+    <string name="floor_prefix">%d樓</string>
+    <string name="save_config">儲存配置</string>
+    <string name="config_saved">配置已儲存</string>
+    <string name="invalid_address">位址必須在0-255之間</string>
+    <string name="module_settings">模組設定</string>
+    <string name="music_select">執行音樂選擇</string>
+    <string name="input_wait_point_name">請輸入候梯點的名稱</string>
+    <string name="add_points">新增站點</string>
+    <string name="lora_config">LoRa設備配置</string>
+    <string name="robot_lora_config">機器人LoRa配置</string>
+    <string name="elevator_lora_config">電梯LoRa配置</string>
+    <string name="elevator_address_hint">電梯位址</string>
+    <string name="floor_settings">樓層設定</string>
+    <string name="min_floor_hint">起始樓層</string>
+    <string name="max_floor_hint">終止樓層</string>
+    <string name="update_floors">更新</string>
+    <string name="ground_floor">G</string>
+    <string name="basement_prefix">B%d</string>
+    <string name="no_data_image_desc">no_data_image_desc</string>
+    <string name="floor_hint">輸入樓層</string>
+    <string name="id_hint">輸入ID</string>
+    <string name="number_hint">輸入電梯編號</string>
+    <string name="get_floor_failed">獲取當前樓層失敗,請確保地圖名稱後綴包含樓層ID</string>
+    <string name="floor_incorrect">添加失敗：當前樓層(%d)與目標樓層(%d)不一致</string>
+    <string name="avoidance_settings_title">避讓配置</string>
+    <string name="area_settings_title">區域設定</string>
+    <string name="robot_config_title">機器人配置</string>
+    <string name="add_area">新增區域</string>
+    <string name="robot_name_hint">機器人名稱</string>
+    <string name="robot_address_hint">機器人位址</string>
+    <string name="save_robot">儲存機器人</string>
+    <string name="saved_robots_title">已儲存的機器人</string>
+    <string name="area_type_hint">選擇區域類型</string>
+    <string name="area_id_hint">區域ID</string>
+    <string name="area_range_hint">區域範圍 (x1,y1;x2,y2;...)</string>
+    <string name="error_invalid_range">請輸入有效的區域範圍</string>
+    <string name="error_name_required">請輸入名稱</string>
+    <string name="error_address_required">請輸入位址</string>
+    <string name="add_elevator">新增升降機</string>
+    <string name="sort_elevators">排序升降機</string>
+    <string name="wait_point">候機點</string>
+    <string name="ride_point">乘機點</string>
+    <string name="update">更新位置</string>
+    <string name="add_robot">新增機械人</string>
+    <string name="elevator">升降機設定</string>
+    <string name="map_prefix">地圖前綴</string>
+    <string name="floor_level">樓層</string>
+    <string name="current_map">目前地圖：%s</string>
+    <string name="floor_title">第 %d 層</string>
+    <string name="current_map1">目前地圖：</string>
+    <string name="floor_title1">目前樓層:</string>
+    <string name="robot_loading">機器人載入中，請稍候…</string>
+    <string name="command_sequence_failed">指令執行失敗</string>
+    <string name="dialog_button_continue_with_time">繼續（%d 秒）</string>
+    <string name="elevator_info_format">電梯 (位址：%d  頻道：%d)</string>
+    <string name="update_position">更新位置</string>
+    <string name="elevator_settings">電梯設定</string>
+
+    <string name="open_door">開門</string>
+    <string name="close_door">關門</string>
+    <string name="clear_occupy">清除佔用</string>
+    <string name="call_floor">呼叫樓層</string>
+    <string name="add_floor">新增</string>
+    <string name="save">儲存</string>
+
+    <!-- 提示與錯誤 -->
+    <string name="error_floors_must_be_positive">樓層數必須大於 0</string>
+    <string name="error_alias_empty">別名不能為空</string>
+    <string name="error_channel_range">頻道必須在 1–125 之間</string>
+    <string name="error_address_range">位址必須在 0–255 之間</string>
+
+    <!-- 操作回饋 -->
+    <string name="clear_occupy_success">清除佔用成功</string>
+    <string name="clear_occupy_error">清除佔用錯誤</string>
+    <string name="open_door_success">開門成功</string>
+    <string name="open_door_error">開門錯誤</string>
+    <string name="close_door_success">關門成功</string>
+    <string name="close_door_error">關門錯誤</string>
+    <string name="going_to_floor">正在前往樓層…</string>
+    <string name="call_floor_success">已傳送前往 %d 樓命令：%s</string>
+    <string name="call_floor_error">前往樓層失敗：%s</string>
+
+    <!-- 確認對話框 -->
+    <string name="confirm_delete_elevator_message">確定要刪除此電梯設定嗎？</string>
+    <string name="confirm_delete_floor_message">確定要刪除此樓層嗎？</string>
+    <string name="confirm_delete_map_areas_message">確定要刪除 %1$s 的所有 %2$d 個區域嗎？</string>
+    <string name="map_areas_deleted">已刪除 %s 的所有區域</string>
+    <string name="confirm_delete_area_message">確定要刪除區域 %s 嗎？</string>
+    <string name="area_deleted">已刪除區域 %s</string>
+
+    <!-- 區域統計 -->
+    <string name="total_areas_format">共 %d 個區域</string>
+    <string name="door_control_count">門控：%d</string>
+    <string name="info_count">資訊：%d</string>
+    <string name="traffic_count">交管：%d</string>
+
+    <!-- 格式字串 -->
+    <string name="floor_prefix_format">%d 樓</string>
+    <string name="position_display_format">X:%.2f Y:%.2f T:%.2f</string>
+    <string name="new_floor_default_name">新樓層</string>
+
+    <!-- 座標顯示 -->
+    <string name="position_x_format">X:%.2f</string>
+    <string name="position_y_format">Y:%.2f</string>
+    <string name="position_yaw_format">T:%.2f</string>
+
+    <!-- 輸入提示 -->
+    <string name="alias_hint">別名</string>
+    <string name="channel_hint">頻道</string>
+    <string name="address_hint">位址</string>
+    <string name="floors_hint">樓層數</string>
+
+    <!-- 對話框標題 -->
+    <string name="add_elevator_dialog_title">新增電梯</string>
+    <string name="elevator_control_dialog_title">電梯控制</string>
+    <string name="elevator_settings_dialog_title">電梯設定</string>
+
+    <string name="Call_settings_dialog_title">呼叫設定</string>
+    <string name="history_dialog_title">歷史記錄</string>
+    <string name="robot_run_dialog_title">運行日誌</string>
+
+    <string name="call_box_settings_title">呼叫盒設定</string>
+    <string name="add_call_box">新增呼叫盒</string>
+    <string name="button_count">按鈕數</string>
+    <string name="name">名稱</string>
+    <string name="button_config">按鈕配置</string>
+    <string name="station_binding">站點綁定</string>
+    <string name="select_station">選擇站點</string>
+    <string name="select_task">選擇任務</string>
+    <string name="add_new">新增</string>
+    <string name="no_data">No Data</string>
+    <string name="current_map_label">當前地圖標籤</string>
+    <string name="current_floor_label">當前樓層標籤</string>
+
+    <string name="park_failed">駐車失敗，請檢查駐車點</string>
+    <string name="charge_failed">充電失敗，請檢查充電點</string>
+    <string name="charge_missing">充電點缺失，請新增充電點</string>
+    <string name="invalid_elevator_task">任務失敗，不允許在電梯內發送任務</string>
+    <string name="elevator_empty">任務失敗，電梯配置為空</string>
+    <string name="map_incorrect">任務失敗，任務站點不在地圖上</string>
+
+    <string name="task_queued">任務已加入排隊隊列 (#%2$d)</string>
+    <string name="queued_task_list">排隊任務列表</string>
+    <string name="queued_task_count">排隊任務數: %d</string>
+    <string name="cancel_queued_task">取消</string>
+    <string name="no_queued_tasks">暫無排隊任務</string>
+
+    <string name="operation_completed">任务已完成</string>
+    <string name="error_fill_complete_info">請填寫完整資訊</string>
+    <string name="not_configured">未設定</string>
+    <string name="no_available_stations">無可用站點資料</string>
+    <string name="task_selection_box_desc">任務選擇框</string>
+
+    <string name="button_default_name_format">按鈕%d</string>
+    <string name="call_box_info_format">（頻道: %d | 位址: %d | 按鈕數: %d）</string>
+    <string name="floor_title_separator">--- 樓層 %d ---</string>
+
+    <string name="confirm_delete_call_box_message">確定要刪除此呼叫盒嗎？</string>
+    <string name="confirm_delete_button_message">確定要刪除此按鈕嗎？</string>
+
+    <string name="cruise_task_prefix">巡行：</string>
+    <string name="jack_task_prefix">頂升：</string>
+    <string name="label_station">站點:</string>
+    <string name="label_task">任務:</string>
+    <string name="label_config">配置</string>
+    <string name="label_start_time">起始時間</string>
+    <string name="label_end_time">結束時間</string>
+    <string name="label_task_type">任務類型</string>
+    <string name="action_query">查詢</string>
+
+    <string name="cancel_task_title">取消任务</string>
+    <string name="cancel_task_message">确定要取消此任务吗？</string>
+
+    <string name="select_date_title">選擇日期</string>
+    <string name="clear_records_title">清空記錄</string>
+    <string name="clear_records_message">確定要清空所有歷史記錄嗎？</string>
+    <string name="no_matching_records">找不到符合的任務記錄</string>
+    <string name="error_date_parsing">日期解析錯誤</string>
+
+    <string name="error_date_range_exceeds">時間間隔不能超過30天</string>
+    <string name="error_end_time_exceeds_current">結束時間不能超過當前時間</string>
+    <string name="error_start_after_end">起始時間不能晚於結束時間</string>
+
+    <string name="all_tasks">全部</string>
+    <string name="cruise_task">巡航任務</string>
+    <string name="jack_task">頂升任務</string>
+    <string name="delivery_task">背負任務</string>
+    <string name="charge_task">充電任務</string>
+    <string name="parking_task">駐車任務</string>
+    <string name="unknown_task">未知任務</string>
+
+    <string-array name="task_types">
+        <item>@string/all_tasks</item>
+        <item>@string/cruise_task</item>
+        <item>@string/jack_task</item>
+        <item>@string/delivery_task</item>
+        <item>@string/charge_task</item>
+        <item>@string/parking_task</item>
+    </string-array>
+
+    <string name="create_time_format">建立時間: %s</string>
+    <string name="duration_format">執行時長: %s</string>
+    <string name="add_failed_duplicate_name">新增失敗，已存在同名站點：%s</string>
+    <string name="add_failed_duplicate_callbox_name">新增失敗，已存在同名呼叫盒：%s</string>
+    <string name="manual_charging_error">手動充電中，無法執行任務</string>
+
+    <string name="refresh">刷新</string>
+    <string name="refreshed">已刷新</string>
+
+    <string name="robot_communication_settings">機器人通訊配置</string>
+    <string name="robot_id">機器人 ID</string>
+
+    <string name="current_building_label">目前大樓</string>
+    <string name="building_prefix_format">大樓  %s</string>
+    <string name="cannot_get_current_position">無法獲取目前位置</string>
+
+    <string name="default_building_name">本館</string>
+    <string name="default_building_short">主</string>
+    <string name="building_name_format">楼栋 %s</string>
+    <string name="floor_title_with_building">%s - 樓層 %d</string>
+    <string name="basement_title_with_building">%s - 地下層 %d</string>
+
+    <string name="transition_point">轉換點</string>
+    <string name="confirm_switch_orbit_mode">確認切換導航模式</string>
+
+    <string name="cannot_add_point_wrong_floor">無法在 %s 樓層新增點位。機器人目前位於 %s 樓層。</string>
+    <string name="cannot_update_point_wrong_floor">無法更新 %s 樓層的點位。機器人目前位於 %s 樓層。</string>
+    <string name="cannot_delete_point_wrong_floor">無法刪除 %s 樓層的點位。機器人目前位於 %s 樓層。</string>
+
+    <string name="cannot_add_point_wrong_building">無法在 %s 建築物新增點位。機器人目前位於 %s 建築物。</string>
+    <string name="cannot_update_point_wrong_building">無法更新 %s 建築物的點位。機器人目前位於 %s 建築物。</string>
+    <string name="cannot_delete_point_wrong_building">無法刪除 %s 建築物的點位。機器人目前位於 %s 建築物。</string>
+
+    <string name="reset">重置</string>
+
+    <string name="relocalize_confirmation_title">確認重新定位</string>
+    <string name="relocalize_confirmation_message">是否要將機器人重新定位到目前位置 "%s"?</string>
+    <string name="cannot_relocalize_wrong_floor">無法重新定位：機器人位於 %s 樓層，但重新定位點位於 %s 樓層。</string>
+    <string name="cannot_relocalize_wrong_building">無法重新定位：機器人位於 %s 建築物，但重新定位點位於 %s 建築物。</string>
+    <string name="relocalize_success">重新定位指令已成功發送。</string>
+    <string name="relocalize_failed">重新定位失敗: %s</string>
+
+    <string name="websocket_not_connected">WebSocket 未連線。</string>
+    <string name="reset_coordinates_title">確認重設座標</string>
+    <string name="reset_coordinates_message">確認是否將「%s」的座標重設為 (0, 0, 0)？</string>
+    <string name="coordinates_reset">座標已重設。</string>
+    <string name="cannot_reset_point_wrong_floor">重設失敗：機器人目前樓層為 %s，但重設目標樓層為 %s。</string>
+    <string name="cannot_reset_point_wrong_building">    重設失敗：機器人目前所在建築物為 %s，但重設目標建築物為 %s。</string>
+
+    <string name="preride_point">預先行駛點</string>
+
+    <string name="unknown_map">未知地图</string>
+    <string name="current_location_building_floor">%1$s棟，%2$s樓</string>
+    <string name="current_location_map_station">%1$s，%2$s</string>
+    <string name="current_location_map">%1$s</string>
+    <string name="home_current_location_map_station">位置：%1$s，%2$s</string>
+    <string name="home_current_location_map">位置：%1$s</string>
+    <string name="queued_task_cooldown">排隊任務冷卻時間</string>
+    <string name="time_unit_seconds">秒</string>
+    <string name="queued_task_cooldown_range_error">排隊任務冷卻時間不能少於5秒</string>
+    <string name="no_warnings">無告警資訊！</string>
+
+    <!-- 建圖規則浮動提示 -->
+    <string name="map_rules_title">建圖規則</string>
+    <string name="map_rules_tip_content">1. 建圖儲存時，地圖名稱必須同時包含樓棟號和樓層號。\n\n2. 樓棟號、樓層號均從 1 開始編號，不要使用 0。\n\n3. 樓棟號寫在地圖名稱裡，位於「地圖前綴」和「樓層號」之間，格式如下：\n\n   {地圖前綴}{樓棟號}_{樓層號}\n\n   示例：office1_3\n   表示地圖前綴 office、1 棟、3 層。\n\n   單棟場景同樣必須寫樓棟號，例如 office1_2，不可省略為 office_2。\n\n提示：可拖曳本提示框，點擊關閉按鈕收起為圓點。</string>
+
+    <!-- 電梯操作規範浮動提示 -->
+    <string name="elevator_tip_title">電梯操作規範</string>
+    <string name="elevator_tip_content">【增刪樓層】\n1. 新增樓層後預設為「新樓層」，請立即修改為有意義的名稱。\n2. 刪除樓層會同步移除該樓層的候梯點、前置點、乘坐點、過渡點。\n3. 增刪後請檢查樓層編號是否連續，避免出現跳號（如 1→3 缺少第 2 層）。\n\n【建築切換】\n4. 切換建築 Tab 前請確認目前修改已儲存（點擊彈窗「儲存」按鈕）。\n5. 新建樓層如未設定座標點位，切換建築後可能遺失。\n6. 自訂樓層別名在切換後可能被重設為預設名稱。\n\n【上傳/下載點位】\n7. 上傳和下載會同步所有點位資料（含電梯點位）。\n8. 下載可能覆蓋本地自訂的樓層別名和編號。\n9. 建議上傳/下載前先確認電梯配置已儲存完畢。\n10. 下載後請檢查電梯樓層列表是否完整、編號是否正確。\n\n【刪除電梯】\n11. 刪除電梯將同時移除該電梯下所有樓層及點位。\n12. 同樓層如有其他電梯，其點位不受影響。\n13. 操作不可撤銷，請在確認彈窗中仔細核對。\n\n提示：可拖曳本提示框，點擊關閉按鈕收起為圓點。</string>
+
+    <!-- MapViewModel 相關 -->
+    <string name="map_cannot_get_current_position">無法取得目前位置</string>
+    <string name="map_no_points_to_delete">沒有可刪除的點位</string>
+    <string name="map_building_not_found">未找到指定建築</string>
+    <string name="map_no_points_on_floor">該樓層沒有點位</string>
+    <string name="map_point_not_found_by_name">未找到名為 \"%1$s\" 的點位</string>
+    <string name="map_point_deleted">已刪除點位: %1$s</string>
+    <string name="map_point_delete_failed">刪除點位失敗</string>
+    <string name="map_invalid_map_name">地圖名稱無效</string>
+    <string name="map_no_points_to_upload">沒有可上傳的點位</string>
+    <string name="map_syncing_points">正在同步 %1$d 個點位，涉及 %2$d 個樓層...</string>
+    <string name="map_cannot_get_server_data">無法取得伺服器資料: %1$s</string>
+    <string name="map_upload_failed">上傳失敗: %1$s</string>
+    <string name="map_downloading_points">正在下載地圖點位...</string>
+    <string name="map_no_floor_data_for_map">未找到地圖 \"%1$s\" 相關的樓層資料</string>
+    <string name="map_get_map_list_failed">取得地圖列表失敗: %1$s</string>
+    <string name="map_upload_all_success">所有地圖點位同步成功</string>
+    <string name="map_upload_completed_with_failures">地圖點位同步完成，失敗數: %1$d</string>
+    <string name="map_download_floors_no_points">發現 %1$d 個樓層，但沒有任何點位資料</string>
+    <string name="map_download_no_points_on_map">該地圖沒有點位資料</string>
+    <string name="map_download_success">已下載 %1$d 個點位，分布在 %2$d 個建築的 %3$d 個樓層</string>
+
+    <!-- 基本設定驗證訊息 -->
+    <string name="basic_robot_id_range_0_255">機器人ID範圍應為0-255</string>
+    <string name="basic_please_enter_valid_robot_id">請輸入有效的機器人ID</string>
+    <string name="basic_lora_address_range_0_65535">LoRa地址範圍應為0-65535</string>
+    <string name="basic_please_enter_valid_lora_address">請輸入有效的LoRa地址</string>
+    <string name="basic_obstacle_time_range">繞障時間範圍應為-1到600</string>
+    <string name="basic_please_enter_valid_obstacle_time">請輸入有效的繞障時間</string>
+    <string name="basic_no_mp3_files">沒有可用的MP3音樂檔案</string>
+    <string name="basic_password_must_be_4_digits">密碼必須為4位數字</string>
+
+    <!-- MapAreaFragment -->
+    <string name="maparea_ws_not_connected_connecting">WebSocket連線未建立，正在嘗試連線...</string>
+    <string name="maparea_ws_connect_failed">WebSocket連線失敗，請檢查網路連線</string>
+    <string name="maparea_ws_client_not_init">WebSocket用戶端未初始化，正在初始化...</string>
+    <string name="maparea_ws_init_failed">WebSocket初始化失敗，請檢查網路連線</string>
+    <string name="maparea_ws_not_connected_connect_first">WebSocket未連線，請先連線</string>
+    <string name="maparea_loading_map_data">正在載入地圖資料...</string>
+    <string name="maparea_get_map_data_failed">取得地圖資料失敗: %1$s</string>
+    <string name="maparea_data_store_not_init">資料儲存未初始化</string>
+    <string name="maparea_load_failed">載入失敗: %1$s</string>
+    <string name="maparea_traffic_robot_list_title">交管機器人列表 (全域共用)</string>
+    <string name="maparea_traffic_robot_list_hint">所有交管區域共用此列表，配置一次即可</string>
+    <string name="traffic_robot_item_label">機器人</string>
+    <string name="maparea_robots_saved">已儲存 %1$d 個機器人</string>
+    <string name="maparea_ws_not_connected">WebSocket未連線</string>
+    <string name="maparea_map_name_empty">目前地圖名為空</string>
+    <string name="maparea_syncing_controller_area">正在同步控制器區域...</string>
+    <string name="maparea_sync_failed">同步失敗: %1$s</string>
+    <string name="maparea_no_available_maps">沒有可用的地圖</string>
+    <string name="maparea_get_map_list_failed">取得地圖列表失敗: %1$s</string>
+    <string name="maparea_select_map">選擇地圖</string>
+    <string name="maparea_add_map_item_failed">新增地圖項失敗</string>
+    <string name="maparea_load_map_image_failed">載入地圖圖片失敗</string>
+    <string name="maparea_polygon_needs_3_vertices">多邊形至少需要3個頂點</string>
+    <string name="maparea_no_undo_operations">沒有可撤銷的操作</string>
+    <string name="maparea_no_redo_operations">沒有可恢復的操作</string>
+    <string name="maparea_area_edit">區域編輯</string>
+    <string name="maparea_draw_mode_instruction">進入繪製模式，請點擊地圖新增多邊形頂點</string>
+    <string name="maparea_save_success">儲存成功</string>
+    <string name="maparea_area_detail">區域詳情</string>
+    <string name="maparea_cannot_get_robot_position">無法取得機器人目前位置</string>
+    <string name="maparea_sync_completed">同步完成: %1$d 個區域</string>
+    <string name="maparea_close">關閉</string>
+
+    <!-- 區域詳情對話框 -->
+    <string name="area_detail_name_label">區域名稱</string>
+    <string name="area_detail_type_label">區域類型</string>
+    <string name="area_detail_channel_label">通道</string>
+    <string name="area_detail_address_label">地址</string>
+    <string name="area_detail_expand_label">區域膨脹 (米, 正數放大提前觸發, 負數縮小延後觸發)</string>
+    <string name="area_detail_traffic_hint">交管區域: 其他參與機器人請在主介面的「交管機器人列表」按鈕中統一配置</string>
+    <string name="area_type_door_control">門控區域</string>
+    <string name="area_type_info">資訊區域</string>
+    <string name="area_type_traffic">交管區域</string>
+    <string name="area_default_name">區域%1$d</string>
+    <string name="area_default_channel">通道1</string>
+    <string name="area_default_address">地址1</string>
+    <string name="area_lora_byte_range_error">頻道必須為 0–255 的整數</string>
+    <string name="area_list_info_format">類型: %1$s | 通道: %2$s | 地址: %3$s</string>
+    <string name="area_robot_in_area">機器人位於: %1$s 地圖的 %2$s 區域（類型: %3$s）</string>
+    <string name="area_robot_not_in_any">機器人位於: %1$s 地圖，但不在任何已定義區域內</string>
+    <string name="area_origin_label">原點</string>
+    <string name="area_type_display_door">門控區域</string>
+    <string name="area_type_display_info">資訊區域</string>
+    <string name="area_type_display_traffic">交管區域</string>
+    <string name="area_add_map">新增地圖</string>
+    <string name="area_check_robot_area">檢查機器人區域</string>
+    <string name="area_add_area">新增區域</string>
+    <string name="area_undo">撤銷</string>
+    <string name="area_redo">恢復</string>
+    <string name="area_list_title">區域列表</string>
+    <string name="area_sync_controller">同步控制器區域</string>
+    <string name="area_traffic_robot_list">交管機器人列表</string>
+    <string name="area_edit_area">區域編輯</string>
+    <string name="area_map_name_placeholder">地圖名稱</string>
+    <string name="area_name_placeholder">區域名稱</string>
+    <string name="area_info_placeholder">類型: -- | 通道: -- | 地址: --</string>
+
+    <!-- Avoidance Settings - Toast Messages -->
+    <string name="avoidance_ws_connect_failed">WebSocket 連線失敗: %1$s</string>
+    <string name="avoidance_ws_not_connected_retrying">WebSocket 未連線，正在重試...</string>
+    <string name="avoidance_data_parse_error">資料解析錯誤</string>
+    <string name="avoidance_image_process_error">圖片處理錯誤: %1$s</string>
+    <string name="avoidance_need_3_points">至少需要 3 個點才能形成區域</string>
+    <string name="avoidance_area_info_incomplete">區域資訊不完整</string>
+    <string name="avoidance_area_saved">區域已儲存</string>
+    <string name="avoidance_save_failed_retry">儲存失敗，請重試</string>
+    <string name="avoidance_draw_cancelled">已取消繪製區域</string>
+    <string name="avoidance_ws_connected">WebSocket 連線已建立</string>
+    <string name="avoidance_ws_connection_closed">WebSocket 連線已關閉</string>
+    <string name="avoidance_ws_error">WebSocket 錯誤: %1$s</string>
+    <string name="avoidance_fill_area_type_and_id">請填寫區域類型與 ID</string>
+    <string name="avoidance_fill_complete_info">請填寫完整資訊</string>
+    <string name="avoidance_address_range_0_255">位址必須在 0–255 之間</string>
+    <string name="avoidance_address_must_be_number">位址必須為數字</string>
+    <string name="avoidance_robot_added">機器人已新增</string>
+    <string name="avoidance_area_deleted">區域已刪除</string>
+    <string name="avoidance_robot_deleted">機器人已刪除</string>
+    <string name="avoidance_delete_area_confirm">確定要刪除此區域嗎？</string>
+    <string name="avoidance_delete_robot_confirm">確定要刪除此機器人嗎？</string>
+    <string name="avoidance_save_drawing">儲存繪製</string>
+    <string name="avoidance_cancel_drawing">取消繪製</string>
+
+    <!-- User Management -->
+    <string name="user_add_user_title">新增使用者</string>
+    <string name="user_edit_user_title">修改使用者資訊</string>
+    <string name="user_error">錯誤</string>
+    <string name="user_success">成功</string>
+    <string name="user_fields_required">使用者 ID、姓名和密碼不能為空</string>
+    <string name="user_add_success">使用者新增成功</string>
+    <string name="user_id_exists">使用者 ID 已存在</string>
+    <string name="user_edit_success">使用者資訊修改成功</string>
+    <string name="user_confirm_delete">確認刪除</string>
+    <string name="user_confirm_delete_message">確定要刪除使用者 %1$s 嗎？</string>
+    <string name="user_delete_success">使用者刪除成功</string>
+    <string name="user_delete_failed_not_exist">刪除失敗，使用者不存在</string>
+    <string name="user_type_operator">操作人員</string>
+    <string name="user_type_admin">管理員</string>
+    <string name="user_type_super_admin">超級管理員</string>
+    <string name="user_management">使用者管理</string>
+
+    <string-array name="user_type_array">
+        <item>@string/user_type_operator</item>
+        <item>@string/user_type_admin</item>
+        <item>@string/user_type_super_admin</item>
+    </string-array>
+
+    <!-- Camera -->
+    <string name="camera_not_ready">相機未準備好</string>
+    <string name="camera_cannot_access">無法存取相機</string>
+    <string name="camera_open_failed">開啟相機失敗</string>
+    <string name="camera_photo_saved">照片已儲存: %1$s</string>
+    <string name="camera_permission_required">需要相機權限</string>
+    <string name="camera_error">相機錯誤: %1$d</string>
+    <string name="camera_config_failed">設定失敗</string>
+    <string name="camera_capture_config_failed">拍照設定失敗</string>
+    <string name="camera_upload_success">上傳成功!</string>
+    <string name="camera_upload_failed_http">上傳失敗: HTTP %1$d - %2$s</string>
+    <string name="camera_upload_exception">上傳異常: %1$s</string>
+
+    <!-- QR / RFID -->
+    <string name="qr_web_service_not_started">Web 服務未啟動</string>
+    <string name="qr_generation_failed">QR 碼產生失敗</string>
+    <string name="rfid_invalid_card">無效的 RFID 卡</string>
+    <string name="rfid_list_empty">RFID 列表為空</string>
+    <string name="rfid_system_not_init">RFID 系統未初始化</string>
+    <string name="rfid_data_format_error">RFID 資料格式錯誤</string>
+    <string name="rfid_timeout_retry">刷卡逾時，請重試</string>
+    <string name="rfid_init_failed">RFID 初始化失敗</string>
+    <string name="rfid_management">RFID 管理</string>
+
+    <!-- Map / TaskExecutor -->
+    <string name="map_point_added">已新增點位: %1$s (X:%2$s, Y:%3$s)</string>
+    <string name="elevator_coordinate_reset">%1$s 座標已重設為 0</string>
+    <string name="task_executor_battery_too_low">電量過低(%1$d%%，狀態：%2$s)，拒絕新任務</string>
+    <string name="task_executor_unknown">未知</string>
+    <string name="task_executor_task_not_found">未找到匹配的任務</string>
+    <string name="task_executor_unsupported_task_type">不支援的任務類型: %1$s</string>
+    <string name="task_executor_start_failed">啟動失敗: %1$s</string>
+    <string name="task_executor_cruise">巡航</string>
+    <string name="task_executor_jack">頂升</string>
+    <string name="task_executor_backpack">背負</string>
+    <string name="task_executor_homepage">主頁</string>
+    <string name="task_executor_park_charge_call">待命/充電/呼叫</string>
+
+    <string name="task_running_status_toggle_success">任務執行狀態轉換成功</string>
+
+    <!-- i18n runtime fixes -->
+    <string name="pause_command_received">暫停命令已接收</string>
+    <string name="resume_command_received">恢復命令已接收</string>
+    <string name="navigation_resumed">導航已恢復</string>
+    <string name="task_cancelled_toast">任務已取消</string>
+    <string name="auto_task_disabled">此自動任務已停用</string>
+    <string name="task_updated">任務已更新</string>
+    <string name="auto_task_cancelled">自動任務已取消</string>
+    <string name="auto_task_time_conflict">已存在相同時間的自動巡航任務，請重新選擇時間</string>
+    <string name="auto_task_status_toggle">%1$s 自動任務已%2$s</string>
+    <string name="status_enabled">啟用</string>
+    <string name="status_disabled">停用</string>
+    <string name="swipe_card_prompt">請刷卡...</string>
+    <string name="no_charge_point_use_floor">目前樓層無充電點，將使用 %1$d 樓充電點</string>
+    <string name="no_park_point_use_floor">目前樓層無待命點，將使用 %1$d 樓待命點</string>
+    <string name="no_charge_point_go_floor">目前樓層無充電點，將前往 %1$d 樓充電</string>
+    <string name="door_lock_comm_lost">通訊失聯</string>
+    <string name="elevator_cannot_update_other_building">不能在目前建築更新其他建築的電梯點位</string>
+    <string name="elevator_update_point_on_floor">請在 %1$d 層更新該樓層的點位 (目前樓層: %2$d)</string>
+    <string name="elevator_cannot_control_other_building">不能在其他建築控制該電梯</string>
+    <string name="task_record_status_completed">完成</string>
+    <string name="task_record_status_failed">失敗</string>
+    <string name="task_record_status_cancelled">取消</string>
+    <string name="task_record_status_running">執行中</string>
+    <string name="user_type_unknown">未知</string>
+    <string name="user_id_label">使用者 ID:</string>
+    <string name="user_name_label">姓名:</string>
+    <string name="user_department_label">科室/部門:</string>
+    <string name="user_floor_label">樓層:</string>
+    <string name="user_password_label">密碼:</string>
+    <string name="user_type_label">人員類型:</string>
+    <string name="user_id_hint">請輸入使用者 ID</string>
+    <string name="user_name_hint">請輸入姓名</string>
+    <string name="user_department_hint">請輸入科室/部門</string>
+    <string name="user_floor_hint">請輸入樓層</string>
+    <string name="user_password_hint">請輸入密碼</string>
+    <string name="prompt_name_label">提示詞名稱</string>
+    <string name="prompt_name_hint">輸入提示詞名稱</string>
+    <string name="prompt_content_label">提示詞內容</string>
+    <string name="prompt_content_hint">輸入提示詞內容</string>
+    <string name="point_name_hint">點位名稱</string>
+    <string name="station_name_hint">請輸入站點名稱</string>
+    <string name="button_config_station_hint">站點</string>
+    <string name="button_config_task_hint">任務</string>
+    <string name="take_photo">拍照</string>
+    <string name="toast_message_preview">提示訊息</string>
+    <string name="tts_install_title">安裝中文語音包</string>
+    <string name="tts_install_message">您的裝置需要安裝中文語音資料才能使用語音功能。</string>
+    <string name="tts_install_now">立即安裝</string>
+    <string name="user_department_preview">管理部門</string>
+    <string name="user_floor_preview">1 樓</string>
+
+    <string-array name="area_type_display_values">
+        <item>@string/area_type_door_control</item>
+        <item>@string/area_type_info</item>
+        <item>@string/area_type_traffic</item>
+    </string-array>
+
+    <string name="add_failed_standby_point_reserved">無法添加名為"待命點"的站點</string>
+    <string name="all">全部</string>
+    <string name="app_initializing">正在初始化，請稍候</string>
+    <string name="app_welcome">歡迎使用</string>
+    <string name="arrived_at_station_continue_with_next">已到達 %1$s\n是否繼續前往 %2$s？</string>
+    <string name="auto_charge_hint">開啟後，電量低於「最低工作電量」閾值時將自動返回充電樁充電</string>
+    <string name="auto_load_config">啟動讀取</string>
+    <string name="auto_task_set_as">設為自動任務</string>
+    <string name="base_battery_too_low_for_task">電量過低(%1$d%%)，無法執行任務</string>
+    <string name="basic_cloud_ip_invalid">IP位址格式不正確</string>
+    <string name="basic_cloud_port_invalid">請輸入有效的端口號(1-65535)</string>
+    <string name="battery_too_low_for_task">電量不足，無法執行任務 (%d%%)</string>
+    <string name="button_cancel">取消</string>
+    <string name="button_confirm">確認</string>
+    <string name="call_task">呼叫任務</string>
+    <string name="card_swipe_verify">刷卡驗證</string>
+    <string name="clear_records_confirmation">確定要清空所有歷史記錄嗎？</string>
+    <string name="cloud_connection_settings">雲端連接</string>
+    <string name="cloud_ip">雲端 IP</string>
+    <string name="cloud_ip_hint">請輸入雲端IP</string>
+    <string name="cloud_port">雲端端口</string>
+    <string name="cloud_port_hint">請輸入雲端端口</string>
+    <string name="command_send_error">發送指令錯誤</string>
+    <string name="command_send_failed">發送指令失敗</string>
+    <string name="config_edit_saved">配置已儲存並套用</string>
+    <string name="config_file_settings">配置文件</string>
+    <string name="config_json_invalid">JSON 格式錯誤，請檢查</string>
+    <string name="config_load_failed">配置讀取失敗</string>
+    <string name="config_loaded">配置已讀取並套用</string>
+    <string name="cruise_loading_task">載入任務中...</string>
+    <string name="current_music">當前音樂</string>
+    <string name="current_position_only_station">當前位置：%s</string>
+    <string name="current_position_with_station">當前位置：(%.2f, %.2f, %.2f) - %s</string>
+    <string name="date_range_error">時間範圍不能超過30天</string>
+    <string name="delivery_battery_too_low_backpack">電量過低(%1$d%%)，無法執行背負任務</string>
+    <string name="destination_point">目標點</string>
+    <string name="device_start_web_service_first">請先啟動Web服務</string>
+    <string name="dialog_add_marker_title">添加站點</string>
+    <string name="dialog_marker_name_hint">請輸入站點名稱</string>
+    <string name="door_lock_1">門鎖 1</string>
+    <string name="door_lock_2">門鎖 2</string>
+    <string name="door_lock_3">門鎖 3</string>
+    <string name="door_lock_4">門鎖 4</string>
+    <string name="door_lock_close_manual_hint">關鎖請手動操作</string>
+    <string name="door_lock_hint">提示：開啟開關將發送開鎖命令，關鎖請手動操作</string>
+    <string name="door_lock_init_failed">門鎖通訊初始化失敗</string>
+    <string name="door_lock_not_initialized">門鎖通訊未初始化</string>
+    <string name="Door_lock_settings">門鎖設定</string>
+    <string name="door_lock_status_closed">關閉</string>
+    <string name="door_lock_status_label">狀態：</string>
+    <string name="door_lock_status_open">開啟</string>
+    <string name="door_lock_status_unknown">未知</string>
+    <string name="door_lock1_unlock_failed">門鎖1開鎖失敗</string>
+    <string name="door_lock1_unlock_success">門鎖1開鎖命令已發送</string>
+    <string name="door_lock2_unlock_failed">門鎖2開鎖失敗</string>
+    <string name="door_lock2_unlock_success">門鎖2開鎖命令已發送</string>
+    <string name="door_lock3_unlock_failed">門鎖2開鎖失敗</string>
+    <string name="door_lock3_unlock_success">門鎖2開鎖命令已發送</string>
+    <string name="door_lock4_unlock_failed">門鎖2開鎖失敗</string>
+    <string name="door_lock4_unlock_success">門鎖2開鎖命令已發送</string>
+    <string name="edit_config">編輯配置</string>
+    <string name="edit_config_title">編輯配置文件</string>
+    <string name="elevator_added_with_floors">已添加電梯，共 %1$d 層</string>
+    <string name="elevator_cannot_get_position">無法取得當前位置</string>
+    <string name="elevator_display_format">(ID: %s, 位址: %d, 頻道: %d)</string>
+    <string name="elevator_download_map_first">請先下載地圖資料</string>
+    <string name="elevator_no_building_data">當前建築無資料</string>
+    <string name="elevator_no_floor_data_download_first">沒有可用的樓層資料，請先下載地圖點位</string>
+    <string name="elevator_processing">處理中...</string>
+    <string name="elevator_ride_point_updated">乘坐點已更新</string>
+    <string name="elevator_transition_point_updated">過渡點已更新</string>
+    <string name="elevator_wait_point_updated">等待點已更新</string>
+    <string name="end_task_with_time">結束 (%1$ds)</string>
+    <string name="end_time_error">結束時間不能超過當前時間</string>
+    <string name="error_button_count_zero">按鈕數量不能為0</string>
+    <string name="error_button_count_max">按鈕數量不能超過20個</string>
+    <string name="error_map_name_unavailable">無法取得當前地圖名稱</string>
+    <string name="error_marker_name_empty">站點名稱不能為空</string>
+    <string name="error_position_unavailable">無法取得當前位置</string>
+    <string name="feature_visibility_configuration">功能顯示配置</string>
+    <string name="hidden_settings">隱藏設定</string>
+    <string name="home_point">回原點</string>
+    <string name="invalid_channel">頻道必須在1-64之間</string>
+    <string name="invalid_jack_loop_count">循環次數請輸入 -1 或大於 0 的整數</string>
+    <string name="jack_loop_count_hint">循環次數（-1無限）</string>
+    <string name="jack_loop_format">循環: %1$s</string>
+    <string name="load_config_now">讀取配置</string>
+    <string name="location_index_format">%d</string>
+    <string name="map_unknown">當前地圖：未知</string>
+    <string name="music_options">音樂選項</string>
+    <string name="navigating_to">導航至：%s</string>
+    <string name="no_available_tasks">無可用任務</string>
+    <string name="no_charging_point_in_map">當前地圖暫無充電點，請立即設定</string>
+    <string name="obstacle_avoidance_time">固定路徑避障時間(-1~99)</string>
+    <string name="operation_executing_cruise_task">正在執行巡檢任務</string>
+    <string name="pharmacy_point">藥房</string>
+    <string name="pivas_point">靜配室</string>
+    <string name="please_reset">機器人軟體急停已觸發，請復位</string>
+    <string name="positions_updated">點位已與地圖同步</string>
+    <string name="RecognizeEntry">識別進入</string>
+    <string name="repeat_mode_disabled">已關閉重複模式</string>
+    <string name="repeat_mode_enabled">已開啟重複模式</string>
+    <string name="repeat_task">重複執行</string>
+    <string name="repeating_task">正在重複執行</string>
+    <string name="rfid_add_card_title">新增RFID卡片</string>
+    <string name="rfid_add_success">RFID卡片新增成功</string>
+    <string name="rfid_card_type_label">卡片類型</string>
+    <string name="rfid_card_type_management">管理卡</string>
+    <string name="rfid_card_type_operation">操作卡</string>
+    <string name="rfid_confirm_delete_message">確定要刪除RFID卡片 %1$s 嗎？</string>
+    <string name="rfid_delete_not_found">刪除失敗，RFID卡片不存在</string>
+    <string name="rfid_delete_success">RFID卡片刪除成功</string>
+    <string name="rfid_duplicate_error">RFID序號已存在</string>
+    <string name="rfid_edit_card_title">修改RFID卡片資訊</string>
+    <string name="rfid_edit_success">RFID卡片資訊修改成功</string>
+    <string name="rfid_error_title">錯誤</string>
+    <string name="rfid_filter_all_statuses">所有狀態</string>
+    <string name="rfid_filter_all_types">所有類型</string>
+    <string name="rfid_filter_all_users">所有使用者</string>
+    <string name="rfid_management_title">RFID管理</string>
+    <string name="rfid_read_button">讀取RFID</string>
+    <string name="rfid_required_error">RFID序號和使用者ID不能為空</string>
+    <string name="rfid_search_hint">搜尋RFID序號或使用者ID</string>
+    <string name="rfid_serial_label">RFID序號</string>
+    <string name="rfid_status_label">狀態</string>
+    <string name="rfid_status_lost_disabled">掛失/停用</string>
+    <string name="rfid_status_normal">正常</string>
+    <string name="rfid_success_title">成功</string>
+    <string name="rfid_user_id_label">使用者ID</string>
+    <string name="run_distance_default">行駛距離：0.00 m</string>
+    <string name="run_distance_format">行駛距離：%s</string>
+    <string name="run_distance_format_km">行駛距離：%.2f km</string>
+    <string name="run_distance_format_m">行駛距離：%.2f m</string>
+    <string name="running_time_label">運行時間</string>
+    <string name="save_config_now">儲存配置</string>
+    <string name="select_cruise_task_hint">請選擇巡檢任務</string>
+    <string name="select_task_type">選擇任務類型</string>
+    <string name="shelf_settings_tab">貨架設定</string>
+    <string name="special_point_1">切換到4樓地圖</string>
+    <string name="special_point_2">切換到5樓地圖</string>
+    <string name="Start_charge">開始充電</string>
+    <string name="start_end_error">開始時間不能晚於結束時間</string>
+    <string name="start_return_home">開始返回待命點</string>
+    <string name="state_charging">充電中</string>
+    <string name="station_edit_name_title">編輯站點名稱</string>
+    <string name="station_name_cannot_be_empty">站點名稱不能為空</string>
+    <string name="station_name_updated">站點名稱已更新</string>
+    <string name="stations_not_exist">任務包含無效站點</string>
+    <string name="status_canceled">已取消</string>
+    <string name="status_completed">已完成</string>
+    <string name="status_failed">失敗</string>
+    <string name="status_runnings">運行中</string>
+    <string name="stop_charge_task">離開充電任務</string>
+    <string name="task_count">數量</string>
+    <string name="task_count_format">次數：%d</string>
+    <string name="task_end_time">結束</string>
+    <string name="task_history_task_cancelled">任務已取消</string>
+    <string name="task_name_prefix">配送任務-&gt;</string>
+    <string name="task_name_prefix1">返回充電站-&gt;</string>
+    <string name="task_name_prefix2">返回待命點-&gt;</string>
+    <string name="task_start_time">開始</string>
+    <string name="task_status">任務狀態：%s</string>
+    <string name="task_type">任務類型</string>
+    <string name="task_type_charge">充電任務</string>
+    <string name="task_type_cruise">巡檢任務</string>
+    <string name="task_type_delivery">配送任務</string>
+    <string name="task_type_jack">頂升任務</string>
+    <string name="task_type_parking">泊車任務</string>
+    <string name="task_type_station">站點呼叫</string>
+    <string name="task_type_task">任務執行</string>
+    <string name="task_type_unknown">未知任務</string>
+    <string name="unsafe_to_start_task">機器人距離充電樁過近</string>
+
+    <!-- Remaining legacy non-translatable strings -->
+    <string name="bg_status_tag">狀態標籤背景</string>
+    <string name="edit_task">編輯任務</string>
+    <string name="HistoryNews_settings">歷史記錄</string>
+    <string name="no_history_data">暫無歷史記錄</string>
+    <string name="Robot_run_settings">運行日誌</string>
+    <string name="search">查詢</string>
+    <string name="select_date">選擇日期</string>
+    <string name="select_type">任務類型</string>
+    <string name="update_task">更新路線</string>
+</resources>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="16dp">
+
+    <!-- 左侧地图区域，占75%宽度 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/mapImageView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:scaleType="fitCenter"
+            android:contentDescription="地图图片"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btnAddArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/area_add_area"
+                android:background="@drawable/button_bg_selector"
+                android:textColor="@color/white"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="12dp"
+                android:textSize="16sp"
+                android:layout_marginRight="8dp"/>
+
+            <Button
+                android:id="@+id/btnSaveArea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/save"
+                android:background="@drawable/button_bg_selector"
+                android:textColor="@color/white"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="12dp"
+                android:textSize="16sp"
+                android:layout_marginRight="8dp"/>
+
+            <Button
+                android:id="@+id/btnUndo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/area_undo"
+                android:background="@drawable/button_bg_selector"
+                android:textColor="@color/white"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="12dp"
+                android:textSize="16sp"
+                android:layout_marginRight="8dp"/>
+
+            <Button
+                android:id="@+id/btnRedo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/area_redo"
+                android:background="@drawable/button_bg_selector"
+                android:textColor="@color/white"
+                android:paddingHorizontal="24dp"
+                android:paddingVertical="12dp"
+                android:textSize="16sp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- 右侧区域列表，占25%宽度 -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginLeft="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/area_list_title"
+            android:textSize="18sp"
+            android:textColor="@color/text_color"
+            android:fontFamily="sans-serif-medium"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnSyncController"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/area_sync_controller"
+            android:background="@drawable/button_bg_selector"
+            android:textColor="@color/white"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            android:textSize="13sp"
+            android:layout_marginBottom="8dp"/>
+
+        <Button
+            android:id="@+id/btnTrafficRobots"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/area_traffic_robot_list"
+            android:background="@drawable/button_bg_selector"
+            android:textColor="@color/white"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            android:textSize="13sp"
+            android:layout_marginBottom="12dp"/>
+
+        <ListView
+            android:id="@+id/areaListView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:divider="@color/gray"
+            android:dividerHeight="1dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

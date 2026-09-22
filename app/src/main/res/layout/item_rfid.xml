@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="@color/light_gray"
+    android:layout_marginBottom="8dp">
+
+    <!-- 序号 -->
+    <TextView
+        android:id="@+id/rfid_id_text"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="center" />
+
+    <!-- RFID序列号 -->
+    <TextView
+        android:id="@+id/rfid_serial_text"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:ellipsize="end"
+        android:singleLine="true" />
+
+    <!-- 姓名 -->
+    <TextView
+        android:id="@+id/rfid_name_text"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:ellipsize="end"
+        android:singleLine="true" />
+
+    <!-- 用户ID -->
+    <TextView
+        android:id="@+id/rfid_user_id_text"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:ellipsize="end"
+        android:singleLine="true" />
+
+    <!-- 状态 -->
+    <TextView
+        android:id="@+id/rfid_status_text"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="center" />
+
+    <!-- 类型 -->
+    <TextView
+        android:id="@+id/rfid_type_text"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:gravity="center" />
+
+    <!-- 操作按钮 -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="16dp">
+
+        <Button
+            android:id="@+id/edit_button"
+            android:layout_width="60dp"
+            android:layout_height="32dp"
+            android:text="@string/edit"
+            android:textSize="12sp"
+            android:layout_marginRight="8dp" />
+
+        <Button
+            android:id="@+id/delete_button"
+            android:layout_width="60dp"
+            android:layout_height="32dp"
+            android:text="@string/delete"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

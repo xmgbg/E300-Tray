@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/card_bg"
+    android:padding="16dp"
+    android:layout_marginBottom="16dp"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/tvMapName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/area_map_name_placeholder"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:fontFamily="sans-serif-medium"
+        android:maxLines="3"
+        android:ellipsize="end"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btnEditArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/area_edit_area"
+            android:background="@drawable/button_bg_selector"
+            android:textColor="@color/white"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:textSize="14sp"
+            android:layout_marginRight="8dp"/>
+
+        <Button
+            android:id="@+id/btnDeleteMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/delete"
+            android:background="@drawable/button_bg_selector"
+            android:textColor="@color/white"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

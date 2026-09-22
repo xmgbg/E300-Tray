@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/floor_settings"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"/>
+
+    <!-- 别名输入框 -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        >
+
+        <EditText
+            android:id="@+id/etAlias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/alias_hint"
+            android:inputType="text"
+            android:background="@drawable/edittext_background"
+            android:layout_marginBottom="10dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- 楼层号输入框 -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        >
+
+        <EditText
+            android:id="@+id/etFloor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/floor_hint"
+            android:inputType="number"
+            android:background="@drawable/edittext_background"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDeleteFloor"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:text="@string/delete"
+            app:cornerRadius="15dp"
+            android:textSize="19sp"
+            app:backgroundTint="#E25138"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="23dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:text="@string/save"
+            app:cornerRadius="15dp"
+            android:textSize="19sp"
+            app:backgroundTint="#2196F3"
+            android:layout_marginEnd="23dp"
+            android:textColor="@android:color/white"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddFloor"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:text="@string/add_floor"
+            app:cornerRadius="15dp"
+            android:textSize="19sp"
+            app:backgroundTint="#2196F3"
+            android:layout_marginEnd="23dp"
+            android:textColor="@android:color/white"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnGoToFloor"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:text="@string/call_floor"
+            app:cornerRadius="15dp"
+            android:textSize="20sp"
+            app:backgroundTint="#2196F3"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="90dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_marginTop="16dp">-->
+
+<!--        -->
+<!--    </LinearLayout>-->
+</LinearLayout>

@@ -1,0 +1,12 @@
+<!-- 文件路径：app/src/main/res/drawable/ic_play_arrow.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="25dp"
+    android:height="25dp"
+    android:viewportWidth="25"
+    android:viewportHeight="25"
+    android:tint="?attr/colorControlNormal">
+
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M8,5v14l11,-7z" />
+</vector>

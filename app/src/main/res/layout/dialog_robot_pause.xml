@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#16213E"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        android:text="@string/task_paused"
+        android:textSize="58sp"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:textSize="26sp"
+            android:layout_marginEnd="100dp"
+            android:text="@string/end_task"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            app:icon="@drawable/ic_task_over"
+            app:iconGravity="textTop"
+            app:iconSize="78dp"
+            app:iconTint="#FF0303"
+            app:backgroundTint="@color/btn_cancel_background_tint"
+            style="@style/NoCapsMaterialButton"
+            app:cornerRadius="18dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_resume"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:textSize="26sp"
+            android:text="@string/resume_task"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:icon="@drawable/ic_task_go"
+            app:iconGravity="textTop"
+            app:iconSize="80dp"
+            app:iconTint="#4CAF50"
+            app:backgroundTint="@color/btn_resume_background_tint"
+            style="@style/NoCapsMaterialButton"
+            app:cornerRadius="18dp" />
+
+    </LinearLayout>
+</LinearLayout>

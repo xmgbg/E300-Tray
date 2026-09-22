@@ -1,0 +1,83 @@
+<!-- res/drawable/ic_tts_install.xml -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- 扬声器/喇叭主体 -->
+    <path
+        android:fillColor="#4285F4"
+        android:pathData="M50,10
+            A40,40 0 0,1 90,50
+            A40,40 0 0,1 50,90
+            A40,40 0 0,1 10,50
+            A40,40 0 0,1 50,10"
+        android:strokeColor="#37474F"
+        android:strokeWidth="2"/>
+
+    <!-- 喇叭内部 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M50,20
+            A30,30 0 0,1 80,50
+            A30,30 0 0,1 50,80
+            A30,30 0 0,1 20,50
+            A30,30 0 0,1 50,20"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="0.5"/>
+
+    <!-- 声波符号 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:fillAlpha="0"
+        android:strokeColor="#4285F4"
+        android:strokeWidth="1.5"
+        android:pathData="M30,50
+            C30,60 40,60 40,50
+            C40,40 60,40 60,50
+            C60,60 70,60 70,50
+            C70,40 80,40 80,50
+            C80,60 90,60 90,50"/>
+
+    <!-- 下载箭头 -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M60,55
+            L65,55
+            L65,65
+            L70,65
+            L62.5,75
+            L55,65
+            L60,65
+            L60,55
+            Z"/>
+
+    <!-- 云下载效果 -->
+    <path
+        android:fillColor="#FFF9C4"
+        android:pathData="M25,80
+            L30,75
+            A8,8 0 0,1 35,78
+            L40,70
+            A5,5 0 0,1 45,72
+            L50,65
+            Z"/>
+
+    <!-- 下载点符号 -->
+    <path
+        android:fillColor="#388E3C"
+        android:pathData="M15,80
+            A5,5 0 1,1 15.01,80
+            Z"/>
+    <path
+        android:fillColor="#388E3C"
+        android:pathData="M20,78
+            A3,3 0 1,1 20.01,78
+            Z"/>
+    <path
+        android:fillColor="#388E3C"
+        android:pathData="M30,74
+            A2,2 0 1,1 30.01,74
+            Z"/>
+</vector>

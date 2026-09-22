@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:background="?attr/selectableItemBackground"
+    android:gravity="center_vertical"
+    android:minHeight="60dp">
+
+    <!-- ID -->
+    <TextView
+        android:id="@+id/tvId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="@color/blue_500"
+        android:minWidth="40dp"
+        tools:text="ID:1"/>
+
+    <!-- Name -->
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1.2"
+        android:textSize="16sp"
+        android:textColor="@android:color/black"
+        android:maxLines="1"
+        android:ellipsize="end"
+        tools:text="药房室"/>
+
+    <!-- X coordinate -->
+    <TextView
+        android:id="@+id/tvX"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="13sp"
+        android:textColor="@color/blue_500"
+        android:fontFamily="monospace"
+        tools:text="X:0.000"/>
+
+    <!-- Y coordinate -->
+    <TextView
+        android:id="@+id/tvY"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="13sp"
+        android:textColor="@android:color/black"
+        android:fontFamily="monospace"
+        tools:text="Y:0.000"/>
+
+    <!-- Yaw coordinate -->
+    <TextView
+        android:id="@+id/tvYaw"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:textSize="13sp"
+        android:textColor="@color/blue_500"
+        android:fontFamily="monospace"
+        tools:text="Yaw:0.000"/>
+
+    <!-- Reacquire button (update position) -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnReacquire"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="↻"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@color/blue_500"
+        android:paddingHorizontal="8dp"/>
+
+    <!-- Delete/Reset button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnDelete"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⊗"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/holo_red_dark"
+        android:paddingHorizontal="8dp"/>
+
+</LinearLayout>

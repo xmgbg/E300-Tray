@@ -1,0 +1,48 @@
+package com.ezhan.amr.utils;
+
+public class VoiceKeyConstants {
+    public static final String DEPARTURE_BROADCAST = "departure_broadcast";
+    public static final String ARRIVAL = "arrival";
+    public static final String POSITION_LOST = "position_lost";
+    public static final String LEAD_START = "lead_start";
+    public static final String LEAD_ARRIVAL = "lead_arrival";
+    public static final String LOW_BATTERY = "low_battery";
+    public static final String OBSTACLE_ALERT = "obstacle_alert";
+    public static final String TASK_COMPLETED = "task_completed";
+    public static final String OPERATION_ERROR_PROMPT = "operation_error_prompt";
+    public static final String CHARGE_COMPLETE = "charge_complete";
+    public static final String RETURN_ARRIVAL = "return_arrival";
+    public static final String TASK_INTERRUPTED = "task_interrupted";
+    public static final String LEAD_DEPARTURE = "lead_departure";
+    public static final String CRUISE_DEPARTURE = "cruise_departure";
+    public static final String CRUISE_ARRIVAL = "cruise_arrival";
+    public static final String PEDESTRIAN_ALERT = "pedestrian_alert";
+    public static final String GO_CHARGING = "go_charging";
+    public static final String ARRIVAl_ANNOUNCEMENT = "arrival_announcement";
+    public static final String NAVIGATION_ERROR = "navigation_error";
+    public static final String ROBOT_ERROR = "robot_error";
+    public static final String EMERGENCY_STOP = "emergency_stop1";
+    public static final String COLLISION_ALERT = "collision_alert";
+    public static final String POSITION_NOT_FOUND = "position_not_found";
+    public static final String LOW_CONFIDENCE_ERROR = "low_confidence_error";
+    public static final String CHARGING_TASK_ERROR = "charging_task_error";
+    public static final String GOING_TO_POINT = "going_to_point";
+    public static final String RETURNING_HOME = "returning_home";
+    public static final String DEFAULT_GOING_TO_NEXT_POINT_TEXT = "default_going_to_next_point_text";
+    public static final String SCHEDULED_TASK_SET = "scheduled_task_set";
+    public static final String START_EXECUTING_CRUISE_TASK = "start_executing_cruise_task";
+    public static final String DEFAULT_RETURNING_HOME_TEXT = "default_returning_home_text";
+    public static final String CHARGING_TASK_FAILED = "charging_task_failed";
+    public static final String OPERATION_PAUSED = "operation_paused";
+    public static final String OPERATION_CANCELLED = "operation_canceled";
+    public static final String OPERATION_RESUMED = "operation_resumed";
+    public static final String START_EXECUTING_JACK_TASK ="start_executing_jack_task";
+    public static final String CONNECTION_ERROR = "connection_error";
+    public static final String CONNECTION_RESTORED = "connection_restored";
+    public static final String CHARGE_FAILED ="charge_failed";
+    public static final String CHARGE_MISSING ="charge_missing";
+    public static final String PARK_FAILED="park_failed";
+    public static final String INVALID_ELEVATOR_TASK = "invalid_elevator_task";
+    public static final String ELEVATOR_EMPTY = "elevator_empty";
+    public static final String MAP_INCORRECT = "map_incorrect";
+}

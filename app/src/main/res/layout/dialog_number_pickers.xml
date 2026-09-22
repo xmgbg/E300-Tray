@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/dialog_background"> <!-- 创建圆角背景 -->
+    <!-- NumberPicker 居中显示 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginBottom="24dp">
+
+        <NumberPicker
+            android:id="@+id/numberPicker"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!-- 按钮居中布局 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingTop="8dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_cancel"
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:text="@android:string/cancel"
+            android:background="@drawable/btn_filled"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginEnd="16dp"
+            style="@style/BaseButtonStyle"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_confirm"
+            android:layout_width="120dp"
+            android:layout_height="45dp"
+            android:text="@android:string/ok"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:background="@drawable/btn_border"
+            android:textColor="@color/white"
+            style="@style/BaseButtonStyle"/>
+    </LinearLayout>
+</LinearLayout>

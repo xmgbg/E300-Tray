@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 按下状态 -->
+<!--    <item android:state_pressed="true" android:color="#CC0000"/> &lt;!&ndash; 较深的红色 &ndash;&gt;-->
+    <!-- 默认状态 -->
+    <item android:color="#FFFFFF"/> <!-- 原始灰色 -->
+</selector>

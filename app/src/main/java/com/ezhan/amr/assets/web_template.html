@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ezhan 机器人控制面板</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+          --primary-color: #4361ee;
+          --primary-hover: #3a56d4;
+          --success-color: #4cc9f0;
+          --success-hover: #3db5d6;
+          --warning-color: #f8961e;
+          --warning-hover: #e0851b;
+          --danger-color: #f94144;
+          --danger-hover: #e0383b;
+          --dark-color: #2b2d42;
+          --light-color: #f8f9fa;
+          --border-radius: 12px;
+          --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+          --transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+        }
+
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+        }
+
+        body {
+          font-family: 'Noto Sans SC', system-ui, sans-serif;
+          line-height: 1.6;
+          background: linear-gradient(135deg, #f5f7fa 0%, #e6e9f0 100%);
+          min-height: 100vh;
+          padding: 2rem;
+          color: var(--dark-color);
+        }
+
+        .container {
+          max-width: 640px;
+          margin: 0 auto;
+          background: rgba(255, 255, 255, 0.95);
+          border-radius: var(--border-radius);
+          padding: 2.5rem;
+          box-shadow: var(--box-shadow);
+          backdrop-filter: blur(8px);
+          border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        h1 {
+          color: var(--primary-color);
+          margin-bottom: 2rem;
+          font-weight: 700;
+          text-align: center;
+          font-size: 1.8rem;
+          letter-spacing: 0.5px;
+          position: relative;
+          padding-bottom: 1rem;
+        }
+
+        h1::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 80px;
+          height: 3px;
+          background: linear-gradient(90deg, var(--primary-color), var(--success-color));
+          border-radius: 3px;
+        }
+
+        .status-box {
+          background: white;
+          padding: 1.5rem;
+          border-radius: var(--border-radius);
+          margin-bottom: 1.5rem;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+          transition: var(--transition);
+        }
+
+        .status-box:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .status-title {
+          font-weight: 600;
+          color: var(--dark-color);
+          margin-bottom: 0.75rem;
+          font-size: 1rem;
+          display: flex;
+          align-items: center;
+        }
+
+        .status-title::before {
+          content: '';
+          display: inline-block;
+          width: 6px;
+          height: 6px;
+          background: var(--primary-color);
+          border-radius: 50%;
+          margin-right: 8px;
+        }
+
+        .status-value {
+          font-size: 1.15rem;
+          color: var(--dark-color);
+          font-weight: 500;
+          padding-left: 14px;
+        }
+
+        .status-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 0.8rem;
+        }
+
+        .status-card {
+          background: white;
+          border-radius: var(--border-radius);
+          padding: 0.8rem;
+          display: flex;
+          align-items: center;
+          gap: 0.8rem;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+          transition: all 0.3s ease;
+          border-left: 3px solid transparent;
+        }
+
+        .status-icon-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 40px;
+          height: 40px;
+          flex-shrink: 0;
+        }
+
+        .status-icon {
+          width: 36px;
+          height: 36px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1rem;
+          color: white;
+        }
+
+        .status-content {
+          flex: 1;
+        }
+
+        .status-label {
+          font-size: 0.8rem;
+          color: #666;
+        }
+
+        .status-value {
+          font-size: 0.9rem;
+          margin-top: 4px;
+        }
+
+        .btn-container {
+          display: grid;
+          gap: 1.25rem;
+        }
+
+        .form-row {
+          display: flex;
+          width: 100%;
+          gap: 0.5rem;
+          margin-bottom: 1rem;
+        }
+
+        .btn-row {
+          display: flex;
+          width: 100%;
+          gap: 0.5rem;
+          margin-bottom: 0.75rem;
+        }
+
+        select, button {
+          padding: 1.1rem 1.5rem;
+          border: none;
+          border-radius: var(--border-radius);
+          font-size: 1rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: var(--transition);
+        }
+
+        select {
+          flex: 3;
+          background-color: white;
+          border: 1px solid #e0e3e8;
+          appearance: none;
+          background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+          background-repeat: no-repeat;
+          background-position: right 1rem center;
+          background-size: 1em;
+        }
+
+        select:focus {
+          outline: none;
+          border-color: var(--primary-color);
+          box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+        }
+
+        button {
+          flex: 1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+        }
+
+        .btn-primary {
+          background-color: var(--primary-color);
+          color: white;
+        }
+
+        .btn-primary:hover {
+          background-color: var(--primary-hover);
+        }
+
+        .btn-success {
+          background-color: var(--success-color);
+          color: white;
+        }
+
+        .btn-success:hover {
+          background-color: var(--success-hover);
+        }
+
+        .btn-warning {
+          background-color: var(--warning-color);
+          color: white;
+        }
+
+        .btn-warning:hover {
+          background-color: var(--warning-hover);
+        }
+
+        .btn-danger {
+          background-color: var(--danger-color);
+          color: white;
+        }
+
+        .btn-danger:hover {
+          background-color: var(--danger-hover);
+        }
+
+        button:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        button:active {
+          transform: translateY(0);
+        }
+
+        .error-message {
+          color: var(--danger-color);
+          background-color: rgba(249, 65, 68, 0.1);
+          padding: 1.25rem;
+          border-radius: var(--border-radius);
+          margin-bottom: 1.5rem;
+          border-left: 4px solid var(--danger-color);
+          animation: fadeIn 0.3s ease-out;
+        }
+
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(-10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 600px) {
+          body {
+            padding: 1rem;
+          }
+          .container {
+            padding: 1.5rem;
+          }
+          .form-row, .btn-row {
+            flex-direction: column;
+          }
+          select, button {
+            width: 100%;
+          }
+        }
+
+        @media (max-width: 400px) {
+          .status-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Ezhan 机器人控制终端</h1>
+
+    ${errorSection}
+
+    <div class="status-box">
+        <div class="status-title">机器人状态</div>
+        <div class="status-grid">
+            ${statusCards}
+        </div>
+    </div>
+
+    <div class="status-box">
+        <div class="status-title">当前操作</div>
+        <div class="status-value">${currentOperation}</div>
+    </div>
+
+    <div class="btn-container">
+        <form id="stationForm" action="/" method="get" onsubmit="return validateSelection()">
+            <div class="form-row">
+                <select name="station" id="stationSelect">
+                    <option value="">-- 选择目标站点 --</option>
+                    ${stationOptions}
+                </select>
+                <button type="submit" class="btn-success">确认</button>
+            </div>
+        </form>
+
+        <form id="jackTaskForm" action="/" method="get" onsubmit="return validateTaskSelection()">
+            <div class="form-row">
+                <select name="jackTaskName" id="stationJackTask">
+                    <option value="">-- 选择搬运任务 --</option>
+                    ${jackTaskOptions}
+                </select>
+                <button type="submit" class="btn-success">确认</button>
+            </div>
+        </form>
+
+        <div class="btn-row">
+            <a href="/?call=park"><button class="btn-primary">停车点</button></a>
+            <a href="/?call=charge"><button class="btn-primary">充电点</button></a>
+        </div>
+
+        <div class="btn-row">
+            <a href="/?call=cancel"><button class="btn-danger">取消</button></a>
+            <a href="/?call=pause"><button class="btn-warning">暂停</button></a>
+            <a href="/?call=resume"><button class="btn-warning">恢复</button></a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function updateStatus(data) {
+      if (data.state) {
+        document.getElementById('state_value').textContent = data.state;
+        document.querySelector("[data-type='运行状态'] .status-icon").style.backgroundColor = getStateColor(data.state);
+      }
+      if (data.battery_level) {
+        document.getElementById('battery_value').textContent = data.battery_level + '%';
+        document.querySelector("[data-type='电池电量'] .status-icon").style.backgroundColor = getBatteryColor(data.battery_level);
+      }
+      if (data.target_id) {
+        document.getElementById('target_value').textContent = data.target_id;
+      }
+      if (data.confidence) {
+        document.getElementById('confidence_value').textContent = data.confidence + '%';
+        document.querySelector("[data-type='置信度'] .status-icon").style.backgroundColor = getConfidenceColor(data.confidence);
+      }
+      if (data.pos) {
+        document.getElementById('position_value').textContent = data.pos;
+      }
+      if (data.emergency !== undefined) {
+        const emergencyValue = data.emergency ? '急停' : '正常';
+        document.getElementById('emergency_value').textContent = emergencyValue;
+        document.getElementById('safety_icon').textContent = data.emergency ? '🚨' : '✅';
+        document.querySelector("[data-type='急停状态'] .status-icon").style.backgroundColor = data.emergency ? '#F44336' : '#4CAF50';
+      }
+    }
+
+    function getStateColor(state) {
+      switch(state) {
+        case '空闲': return '#4CAF50';
+        case '运行': return '#2196F3';
+        case '暂停': return '#FFC107';
+        case '失败': return '#F44336';
+        case '取消': return '#9E9E9E';
+        default: return '#673AB7';
+      }
+    }
+
+    function getBatteryColor(level) {
+      return level >= 80 ? '#4CAF50' :
+             level >= 50 ? '#8BC34A' :
+             level >= 20 ? '#FFC107' : '#F44336';
+    }
+
+    function getConfidenceColor(confidence) {
+      return confidence > 70 ? '#4CAF50' :
+             confidence > 40 ? '#FFC107' : '#F44336';
+    }
+
+    function fetchStatus() {
+      fetch('/api/status?t=' + Date.now())
+        .then(response => {
+          if (!response.ok) throw new Error('网络响应不正常');
+          return response.json();
+        })
+        .then(data => {
+          updateStatus(data);
+          setTimeout(fetchStatus, 1000);
+        })
+        .catch(error => {
+          console.error('获取状态失败:', error);
+          setTimeout(fetchStatus, 5000);
+        });
+    }
+
+    function validateSelection() {
+      const select = document.getElementById('stationSelect');
+      if (!select.value) {
+        alert('请选择一个目标站点');
+        return false;
+      }
+      return true;
+    }
+
+    function validateTaskSelection() {
+      const select = document.getElementById('stationJackTask');
+      if (!select.value) {
+        alert('请选择一个任务');
+        return false;
+      }
+      return true;
+    }
+
+    // Initialize with current state
+    const initialState = {
+      state: '${state}',
+      battery_level: ${battery_level},
+      target_id: '${target_id.isEmpty() ? "无目标" : target_id.replace("目标点：", "")}',
+      confidence: ${confidence},
+      pos: '${pos}',
+      emergency: ${emergency != null ? emergency : false}
+    };
+
+    updateStatus(initialState);
+    document.addEventListener('DOMContentLoaded', fetchStatus);
+</script>
+</body>
+</html>

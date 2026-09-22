@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/rounded_layout_border"
+    android:padding="16dp"
+    android:elevation="4dp"
+    android:outlineProvider="background">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/elevator_settings_dialog_title"
+        android:textSize="23sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        >
+
+        <EditText
+            android:id="@+id/etChannel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/channel_hint"
+            android:inputType="number"
+            android:background="@drawable/edittext_background"
+            android:layout_marginBottom="10dp"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        >
+
+        <EditText
+            android:id="@+id/etAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/address_hint"
+            android:inputType="number"
+            android:background="@drawable/edittext_background"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- 圆形保存/删除按钮 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDelete"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:text="@string/delete"
+            app:cornerRadius="15dp"
+            android:textSize="19sp"
+            app:backgroundTint="#E25138"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="80dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:text="@string/save"
+            app:cornerRadius="15dp"
+            android:textSize="19sp"
+            app:backgroundTint="#2196F3"
+            android:textColor="@android:color/white"
+            />
+    </LinearLayout>
+</LinearLayout>

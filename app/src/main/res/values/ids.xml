@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="original_name_tag" type="id" />
+    <item name="floor_tag" type="id" />
+    <item name="building_tag" type="id" />
+</resources>

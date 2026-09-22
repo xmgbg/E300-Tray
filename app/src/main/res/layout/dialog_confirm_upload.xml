@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/dialog_background">
+
+    <!-- 标题 -->
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:paddingBottom="16dp"/>
+
+    <!-- 消息 -->
+    <TextView
+        android:id="@+id/dialog_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:paddingBottom="24dp"/>
+
+    <!-- 按钮布局 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- 取消按钮 -->
+        <Button
+            android:id="@+id/negative_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancel"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:minWidth="120dp"
+            android:background="@drawable/btn_dialog_outline"
+            android:textColor="@color/white"/>
+
+
+        <!-- 间距 -->
+        <Space
+            android:layout_width="16dp"
+            android:layout_height="wrap_content"/>
+
+
+        <!-- 确认按钮 -->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/positive_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/confirm"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:minWidth="120dp"
+            android:background="@drawable/btn_dialog_solid"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+</LinearLayout>

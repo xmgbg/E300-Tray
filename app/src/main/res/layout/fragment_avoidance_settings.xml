@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            app:tabMode="fixed"
+            android:textSize="23sp"
+            />
+
+        <!-- 区域设置内容 -->
+        <FrameLayout
+            android:id="@+id/areaImageContainer"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="16dp"
+            android:background="@color/cardview_light_background"
+            android:clickable="false"
+            android:focusable="false">
+
+            <com.github.chrisbanes.photoview.PhotoView
+                android:id="@+id/areaImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_nodata"
+                android:scaleType="fitCenter" />
+        </FrameLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddArea"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/add_area"
+            android:textSize="22sp"
+            android:textColor="@color/blue_500"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvAreas"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="16dp"
+            android:scrollbars="vertical" />
+
+        <!-- 机器人配置内容 -->
+        <LinearLayout
+            android:id="@+id/robotConfigLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddRobot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/add_robot"
+                android:textSize="22sp"
+                android:textColor="@color/blue_500"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRobots"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 绘制控制按钮 (固定在底部) -->
+    <LinearLayout
+        android:id="@+id/drawingControlsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="16dp"
+        android:background="@color/cardview_light_background"
+        android:elevation="8dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveDrawing"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="@string/avoidance_save_drawing"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="16dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancelDrawing"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="@string/avoidance_cancel_drawing"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+</RelativeLayout>

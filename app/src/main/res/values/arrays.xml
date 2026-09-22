@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string-array name="languages">
+        <item>@string/zh</item>
+        <item>@string/en</item>
+        <item>@string/zh_HK</item> <!-- 新增香港繁体中文 -->
+        <item>@string/ja</item>
+        <item>@string/ko</item>
+        <item>@string/vi</item>
+    </string-array>
+    <string-array name="operation_types">
+        <item>@string/Lifting</item>
+        <item>@string/Put_down</item>
+        <item>@string/Go_out</item>
+        <item>@string/None</item>
+        <item>@string/JackLoad</item>
+        <item>@string/JackUnload</item>
+        <item>@string/Forward</item>
+        <item>@string/Backward</item>
+    </string-array>
+    <!-- 添加语言代码数组 -->
+    <string-array name="language_codes">
+        <item>zh</item> <!-- 简体中文 -->
+        <item>en</item> <!-- English -->
+        <item>zh-HK</item>  <!-- 新增香港繁体中文 -->
+        <item>ja</item> <!-- 日本語 -->
+        <item>ko</item> <!-- 한국어 -->
+        <item>vi</item> <!-- Vietnamese -->
+    </string-array>
+    <string-array name="lora_channels">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+    </string-array>
+</resources>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:padding="16dp">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSaveDrawing"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="@string/avoidance_save_drawing"
+        android:textSize="16sp"
+        app:backgroundTint="#4CAF50"
+        android:textColor="@android:color/white"
+        android:layout_marginEnd="16dp"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCancelDrawing"
+        android:layout_width="120dp"
+        android:layout_height="60dp"
+        android:text="@string/avoidance_cancel_drawing"
+        android:textSize="16sp"
+        app:backgroundTint="#F44336"
+        android:textColor="@android:color/white"/>
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="text_color">#FFFFFFFF</color> <!-- 默认文字颜色 -->
+    <color name="icon_color">#FFFFFFFF</color> <!-- 默认图标颜色 -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="track_divider">#FF000000</color> <!-- 分隔线黑色 -->
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="time_text_color">#FFFFFF</color>
+    <color name="date_text_color">#CCCCCC</color>
+    <color name="app_background_color">#16213E</color>
+    <color name="battery_high">#4CAF50</color> <!-- 绿色 -->
+    <color name="battery_medium">#FFC107</color> <!-- 黄色 -->
+    <color name="battery_low">#F44336</color> <!-- 红色 -->
+    <color name="delivery_green_normal">#4CAF50</color>
+    <color name="delivery_green_pressed">#6BCB77</color>
+    <color name="delivery_stroke_dark">#388E3C</color>
+    <color name="purple_500">#9C27B0</color> <!-- Material Design 标准紫色 -->
+    <color name="bg_tab_indicator">#757575</color>
+    <color name="tab_text_normal">#757575</color>
+    <color name="switch_track">#E0E0E0</color>
+    <color name="switch_thumb">#FFFFFF</color>
+    <color name="switch_active_track">#9C27B0</color>
+    <color name="purple_50">#F3E5F5</color>
+    <color name="card_background">#1A233A</color>
+    <color name="blue_500">#2196F3</color>
+    <color name="gray">#757575</color>
+    <color name="button_background">#F5F5F5</color>
+    <color name="tab_button_background">#F5F5F5</color>  <!-- 默认灰色背景 -->
+    <color name="tab_button_background_selected">#FFFFFF</color>  <!-- 选中时白色背景 -->
+    <color name="dark_green">#2E7D32</color>  <!-- 深绿色 -->
+    <color name="light_green">#E8F5E9</color>  <!-- 浅绿色 -->
+    <color name="lighter_green">#C8E6C9</color>  <!-- 更浅的绿色 -->
+    <color name="station_selected">#2A4B8D</color>
+    <color name="station_normal">#1B233A</color>
+    <color name="text_secondary">#B0B8D1</color>
+    <color name="jack_btn_color">#940DAB</color>
+    <color name="card_stroke">#80D0D0D0</color>
+    <color name="text_primary">#333</color>
+    <color name="button_edit_bg">#F5F5F5</color>
+    <color name="button_delete_bg">#FFF5F5</color>
+    <color name="button_start_bg">#E8F5E9</color>
+    <color name="primary_dark">#16213E</color>
+    <color name="primary">#1A1A2E</color>
+    <color name="accent">#60A3D9</color>
+    <color name="button_normal">#16213E</color>
+    <color name="button_pressed">#0F3460</color>
+    <color name="confirm_normal">#1DB954</color>
+    <color name="confirm_pressed">#45D4A9</color>
+    <color name="delete_normal">#293462</color>
+    <color name="delete_pressed">#3D56B2</color>
+    <color name="dialog_overlay">#80000000</color>
+    <color name="status_bar_color">#FF1A1A2E</color>
+    <color name="nav_bar_color">#FF000000</color>
+
+    <!-- 普通任务卡片背景色 -->
+    <color name="card_normal_bg">#801D1D1D</color>
+    <!-- 自动任务卡片背景色 -->
+    <color name="card_auto_bg">#1B233A</color>
+    <!-- 普通任务卡片文字色 -->
+    <color name="card_normal_text">#E5E7EB</color>
+    <!-- 自动任务卡片文字色 -->
+    <color name="card_auto_text">#FFFFFF</color>
+
+    <color name="splashBackgroundColor">#FFFFFF</color>
+    <color name="selected_floor">#FF6200EE</color>  <!-- 紫色 -->
+    <color name="unselected_floor">#FFBB86FC</color>  <!-- 浅紫色 -->
+
+    <!-- 灰色系列 -->
+    <color name="gray_300">#B0B0B0</color>
+    <color name="gray_500">#757575</color>
+    <color name="gray_600">#616161</color>
+    <color name="light_gray">#F5F5F5</color>
+    <color name="red_500">#F44336</color>
+
+    <!-- 建图规则浮动提示（浅色卡片，适配白色 WebView 背景） -->
+    <color name="tip_card_bg">#FFFFFFFF</color>            <!-- 卡片背景：纯白 -->
+    <color name="tip_card_stroke">#1A000000</color>        <!-- 卡片描边：浅灰 -->
+    <color name="tip_accent_bar">#60A3D9</color>           <!-- 左侧强调条：accent 蓝 -->
+    <color name="tip_title_text">#1A1A2E</color>           <!-- 标题文字：深色 -->
+    <color name="tip_content_text">#424242</color>         <!-- 正文文字：深灰 -->
+    <color name="tip_section_text">#3F51B5</color>         <!-- 分段标题：蓝色 -->
+    <color name="tip_close_icon">#616161</color>           <!-- 关闭图标：深灰 -->
+</resources>

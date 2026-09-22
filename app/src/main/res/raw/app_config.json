@@ -1,0 +1,31 @@
+{
+  "services": {
+    "webService": {
+      "enabled": true,
+      "port": 8080,
+      "description": "Main web interface for robot control"
+    },
+    "rcsHttpService": {
+      "enabled": true,
+      "port": 8068,
+      "description": "RCS HTTP API for upper system integration"
+    },
+    "rcsWebSocketService": {
+      "enabled": true,
+      "port": 8070,
+      "description": "RCS WebSocket for real-time upper system communication"
+    },
+    "callboxService": {
+      "enabled": true,
+      "port": null,
+      "description": "Callbox button handling via LoRa"
+    },
+    "modbusService": {
+      "enabled": true,
+      "port": 5020,
+      "description": "Modbus TCP Slave for PLC / upper system integration (5020: Android 不允许普通应用绑定 <1024 的特权端口 502)"
+    }
+  },
+  "environment": "production",
+  "debugMode": false
+}

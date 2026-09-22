@@ -1,0 +1,1159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_rounded_container"
+            android:paddingTop="8dp">
+
+            <!-- 出发播报 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/departure_broadcast"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:id="@+id/editTextDeparture"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/default_departure_text"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:focusableInTouchMode="false"
+                    android:paddingStart="4dp"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"/>
+
+                <ImageView
+                    android:id="@+id/imageViewDeparture"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- 到达播报 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0"
+                android:layout_marginStart="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/arrival"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:id="@+id/editTextArrival"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/default_arrival_text"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:focusableInTouchMode="false"
+                    android:paddingStart="4dp"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"/>
+
+                <ImageView
+                    android:id="@+id/imageViewArrival"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- 定位丢失 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0"
+                android:layout_marginStart="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/position_lost"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:id="@+id/editTextLost"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/default_lost_text"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:focusableInTouchMode="false"
+                    android:paddingStart="4dp"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"/>
+
+                <ImageView
+                    android:id="@+id/imageViewLost"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0"
+                android:layout_marginStart="16dp"/>
+
+<!--            &lt;!&ndash; 领航开始 &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:paddingVertical="16dp"-->
+<!--                android:paddingStart="16dp"-->
+<!--                android:paddingEnd="16dp"-->
+<!--                android:gravity="center_vertical">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/lead_start"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="@android:color/black"/>-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/editTextLeadStart"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="@string/default_lead_start_text"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textColor="#000000"-->
+<!--                    android:background="@null"-->
+<!--                    android:focusable="false"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusableInTouchMode="false"-->
+<!--                    android:paddingStart="4dp"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:imeOptions="actionDone"/>-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageViewLeadStart"-->
+<!--                    android:layout_width="24dp"-->
+<!--                    android:layout_height="24dp"-->
+<!--                    android:src="@android:drawable/ic_media_play"-->
+<!--                    android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusable="true"-->
+<!--                    android:layout_marginStart="8dp"/>-->
+<!--            </LinearLayout>-->
+
+<!--            &lt;!&ndash; 分割线 &ndash;&gt;-->
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="1dp"-->
+<!--                android:background="#F0F0F0"-->
+<!--                android:layout_marginStart="16dp"/>-->
+
+<!--            &lt;!&ndash; 领航到达 &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:paddingVertical="16dp"-->
+<!--                android:paddingStart="16dp"-->
+<!--                android:paddingEnd="16dp"-->
+<!--                android:gravity="center_vertical">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/lead_arrival"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="@android:color/black"/>-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/editTextLeadArrive"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="@string/default_lead_arrive_text"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textColor="#000000"-->
+<!--                    android:background="@null"-->
+<!--                    android:focusable="false"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusableInTouchMode="false"-->
+<!--                    android:paddingStart="4dp"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:imeOptions="actionDone"/>-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageViewLeadArrive"-->
+<!--                    android:layout_width="24dp"-->
+<!--                    android:layout_height="24dp"-->
+<!--                    android:src="@android:drawable/ic_media_play"-->
+<!--                    android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusable="true"-->
+<!--                    android:layout_marginStart="8dp"/>-->
+<!--            </LinearLayout>-->
+
+            <!-- 分割线 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0"
+                android:layout_marginStart="16dp"/>
+
+            <!-- 电量过低 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/low_battery"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:id="@+id/editTextLowPower"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/default_low_power_text"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:focusableInTouchMode="false"
+                    android:paddingStart="4dp"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"/>
+
+                <ImageView
+                    android:id="@+id/imageViewLowPower"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0"
+                android:layout_marginStart="16dp"/>
+
+            <!-- 障碍物提醒 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/obstacle_alert"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:id="@+id/editTextObstacle"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/default_obstacle_text"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:focusableInTouchMode="false"
+                    android:paddingStart="4dp"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"/>
+
+                <ImageView
+                    android:id="@+id/imageViewObstacle"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0"
+                android:layout_marginStart="16dp"/>
+
+            <!-- 任务完成 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/task"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:id="@+id/editTextTaskDone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/default_task_done_text"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:focusableInTouchMode="false"
+                    android:paddingStart="4dp"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"/>
+
+                <ImageView
+                    android:id="@+id/imageViewTaskDone"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0"
+                android:layout_marginStart="16dp"/>
+
+            <!-- 操作错误 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/operation_error_prompt"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:id="@+id/editTextOpError"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/default_op_error_text"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:focusableInTouchMode="false"
+                    android:paddingStart="4dp"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"/>
+
+                <ImageView
+                    android:id="@+id/imageViewOpError"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0"
+                android:layout_marginStart="16dp"/>
+
+            <!-- 充电完成 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/charge_complete"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:id="@+id/editTextChargeDone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/default_charge_done_text"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:focusableInTouchMode="false"
+                    android:paddingStart="4dp"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"/>
+
+                <ImageView
+                    android:id="@+id/imageViewChargeDone"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0"
+                android:layout_marginStart="16dp"/>
+
+            <!-- 返航到达 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/return_arrival"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:id="@+id/editTextReturnArrive"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/default_return_arrive_text"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:focusableInTouchMode="false"
+                    android:paddingStart="4dp"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"/>
+
+                <ImageView
+                    android:id="@+id/imageViewReturnArrive"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0"
+                android:layout_marginStart="16dp"/>
+
+            <!-- 任务终断 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/task_interrupted"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:id="@+id/editTextTaskBreak"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/default_task_break_text"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:focusableInTouchMode="false"
+                    android:paddingStart="4dp"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"/>
+
+                <ImageView
+                    android:id="@+id/imageViewTaskBreak"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0"
+                android:layout_marginStart="16dp"/>
+
+<!--            &lt;!&ndash; 领航出发 &ndash;&gt;-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:paddingVertical="16dp"-->
+<!--                android:paddingStart="16dp"-->
+<!--                android:paddingEnd="16dp"-->
+<!--                android:gravity="center_vertical">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/lead_departure"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textColor="@android:color/black"/>-->
+
+<!--                <EditText-->
+<!--                    android:id="@+id/editTextLeadGo"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="@string/default_lead_go_text"-->
+<!--                    android:textSize="18sp"-->
+<!--                    android:textColor="#000000"-->
+<!--                    android:background="@null"-->
+<!--                    android:focusable="false"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusableInTouchMode="false"-->
+<!--                    android:paddingStart="4dp"-->
+<!--                    android:singleLine="true"-->
+<!--                    android:imeOptions="actionDone"/>-->
+
+<!--                <ImageView-->
+<!--                    android:id="@+id/imageViewLeadGo"-->
+<!--                    android:layout_width="24dp"-->
+<!--                    android:layout_height="24dp"-->
+<!--                    android:src="@android:drawable/ic_media_play"-->
+<!--                    android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--                    android:clickable="true"-->
+<!--                    android:focusable="true"-->
+<!--                    android:layout_marginStart="8dp"/>-->
+<!--            </LinearLayout>-->
+
+            <!-- 分割线 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0"
+                android:layout_marginStart="16dp"/>
+
+            <!-- 巡航出发 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cruise_departure"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:id="@+id/editTextCruiseGo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/default_cruise_go_text"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:focusableInTouchMode="false"
+                    android:paddingStart="4dp"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"/>
+
+                <ImageView
+                    android:id="@+id/imageViewCruiseGo"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0"
+                android:layout_marginStart="16dp"/>
+
+            <!-- 巡航到达 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cruise_arrival"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:id="@+id/editTextCruiseArrive"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/default_cruise_arrive_text"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:focusableInTouchMode="false"
+                    android:paddingStart="4dp"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"/>
+
+                <ImageView
+                    android:id="@+id/imageViewCruiseArrive"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0"
+                android:layout_marginStart="16dp"/>
+
+            <!-- 行人防撞 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pedestrian_alert"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:id="@+id/editTextPedestrian"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/default_pedestrian_text"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:focusableInTouchMode="false"
+                    android:paddingStart="4dp"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"/>
+
+                <ImageView
+                    android:id="@+id/imageViewPedestrian"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+
+            <!-- 分割线 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0"
+                android:layout_marginStart="16dp"/>
+
+            <!-- 前往充电 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/go_charging"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:id="@+id/editTextGoCharge"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/default_go_charge_text"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:focusableInTouchMode="false"
+                    android:paddingStart="4dp"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"/>
+
+                <ImageView
+                    android:id="@+id/imageViewGoCharge"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+            <!-- 分割线 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0"
+                android:layout_marginStart="16dp"/>
+
+            <!-- 急停报警 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0"
+                android:layout_marginStart="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/emergency_stop1"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:id="@+id/editTextEmergencyStop"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/default_emergency_stop_text"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:focusableInTouchMode="false"
+                    android:paddingStart="4dp"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"/>
+
+                <ImageView
+                    android:id="@+id/imageViewEmergencyStop"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+            <!-- 分割线 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0"
+                android:layout_marginStart="16dp"/>
+
+            <!-- 碰撞报警 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0"
+                android:layout_marginStart="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/collision_alert"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:id="@+id/editTextCollisionAlert"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/default_collision_alert_text"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:focusableInTouchMode="false"
+                    android:paddingStart="4dp"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"/>
+
+                <ImageView
+                    android:id="@+id/imageViewCollisionAlert"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+            <!-- 分割线 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0"
+                android:layout_marginStart="16dp"/>
+
+            <!-- 导航错误 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#F0F0F0"
+                android:layout_marginStart="16dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingVertical="16dp"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/navigation_error"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/black"/>
+
+                <EditText
+                    android:id="@+id/editTextNavigationError"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/default_navigation_error_text"
+                    android:textSize="18sp"
+                    android:textColor="#000000"
+                    android:background="@null"
+                    android:focusable="false"
+                    android:clickable="true"
+                    android:focusableInTouchMode="false"
+                    android:paddingStart="4dp"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"/>
+
+                <ImageView
+                    android:id="@+id/imageViewNavigationError"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@android:drawable/ic_media_play"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+        </LinearLayout>  <!-- 关闭ScrollView内部的LinearLayout -->
+    </ScrollView>  <!-- 关闭ScrollView -->
+
+    <!-- 固定在底部的按钮区域 (移到ScrollView外部) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:layout_marginTop="16dp">
+
+        <!-- 恢复默认按钮 -->
+        <LinearLayout
+            android:id="@+id/resetToDefaultBtn"
+            android:layout_width="0dp"
+            android:layout_height="74dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingVertical="16dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_rounded_container"
+            android:layout_marginEnd="4dp"
+            android:elevation="2dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:backgroundTint="#6633cc"
+            android:stateListAnimator="@null"
+            android:alpha="1.0">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/ic_setting_restore"
+                        android:layout_marginEnd="8dp"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/reset_default_settings"
+                        android:textSize="22sp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/white"
+                        android:gravity="center"
+                        android:padding="4dp"/>
+                </LinearLayout>
+
+        <!-- 保存语音按钮 -->
+        <LinearLayout
+            android:id="@+id/saveBtn"
+            android:layout_width="0dp"
+            android:layout_height="74dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:paddingVertical="16dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_rounded_container"
+            android:layout_marginStart="4dp"
+            android:elevation="2dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:backgroundTint="#FF4081"
+            android:stateListAnimator="@null"
+            android:alpha="1.0">
+
+                    <ImageView
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:src="@drawable/ic_storage"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginEnd="8dp"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/save_settings"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:gravity="center"
+                android:padding="4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

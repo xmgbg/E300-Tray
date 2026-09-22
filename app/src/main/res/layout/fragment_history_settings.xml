@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="6dp"
+    android:padding="16dp">
+
+    <!-- 顶部筛选条件行 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingBottom="16dp">
+
+        <!-- 时间范围选择 -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/startDateInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginEnd="8dp"
+            app:endIconMode="dropdown_menu">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/etStartDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="6dp"
+                android:inputType="none"
+                android:focusable="false"
+                android:clickable="true"
+                android:hint="@string/label_start_time"/> <!-- 更新提示文本 -->
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- 日期选择 -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/endDateInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginEnd="8dp"
+            app:endIconMode="dropdown_menu">
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/etEndDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="6dp"
+                android:inputType="none"
+                android:focusable="false"
+                android:clickable="true"
+                android:hint="@string/label_end_time"/> <!-- 更新提示文本 -->
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 任务类型 -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/typeInputLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginEnd="8dp"
+            app:endIconMode="dropdown_menu"> <!-- 右侧添加间距 -->
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/spType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="6dp"
+                android:hint="@string/label_task_type"
+                android:inputType="none"
+                android:focusable="false"
+                android:clickable="true"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- 查询按钮 -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:text="@string/action_query"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="2dp"
+            style="@style/NoCapsMaterialButton"/>
+
+        <!-- 清空记录按钮 -->
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/btnClear"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="删除记录"-->
+<!--            android:textStyle="bold"-->
+<!--            android:textSize="18dp"-->
+<!--            style="@style/NoCapsMaterialButton"/>-->
+    </LinearLayout>
+
+    <!-- 空数据提示 -->
+<!--    <TextView-->
+<!--        android:id="@+id/tvEmpty"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:gravity="center"-->
+<!--        android:text="没有任务记录"-->
+<!--        android:visibility="gone"-->
+<!--        android:textSize="18sp"/>-->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- 历史记录列表 -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"/>
+        <!-- 背景图片容器 - 限制大小和位置 -->
+        <LinearLayout
+            android:id="@+id/noDataContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:gravity="center_horizontal">
+            <ImageView
+                android:id="@+id/ivNoDataBackground1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_nodata"
+                android:scaleType="centerInside"
+                android:adjustViewBounds="true"
+                android:layout_gravity="center"
+                android:maxWidth="200dp"
+                android:maxHeight="200dp" />
+            <TextView
+                android:id="@+id/tvNoData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_data"
+                android:textStyle="italic"
+                android:textSize="22dp"
+                android:layout_marginTop="8dp"
+                android:textColor="#9DDAFF"/>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

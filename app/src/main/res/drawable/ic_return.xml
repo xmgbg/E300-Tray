@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="80dp"
+    android:height="45dp"
+    android:viewportWidth="80"
+    android:viewportHeight="40">
+
+  <!-- 胶囊背景（精确内缩1.5px以预留外部边框空间） -->
+  <path
+      android:fillColor="@color/app_background_color"
+      android:pathData="M21.5,3
+            h37
+            a16.5 17 0 0 1 16.5 17
+            a16.5 17 0 0 1 -16.5 17
+            h-37
+            a16.5 17 0 0 1 -16.5 -17
+            a16.5 17 0 0 1 16.5 -17
+            z"/>
+
+  <!-- 外围3px白框（整体尺寸与原始设计一致） -->
+  <path
+      android:fillColor="@android:color/transparent"
+      android:strokeColor="#FFFFFF"
+      android:strokeWidth="3"
+      android:pathData="M20,3
+            h40
+            a17 17 0 0 1 17 17
+            a17 17 0 0 1 -17 17
+            h-40
+            a17 17 0 0 1 -17 -17
+            a17 17 0 0 1 17 -17
+            z"/>
+
+  <!-- 精确居中向左箭头（保持不变） -->
+  <path
+      android:strokeColor="#FFFFFF"
+      android:strokeWidth="1.5"
+      android:strokeLineCap="square"
+      android:strokeLineJoin="miter"
+      android:pathData="M40,15 L35,20 M40,25 L35,20"/>
+</vector>

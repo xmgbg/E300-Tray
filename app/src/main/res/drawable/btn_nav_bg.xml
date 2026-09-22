@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 在drawable目录创建btn_nav_bg.xml -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <layer-list>
+            <!-- 紫色边框背景 -->
+            <item>
+                <shape android:shape="rectangle">
+                    <solid android:color="@color/purple_50"/>
+                    <stroke
+                        android:width="2dp"
+                        android:color="@color/app_background_color"/>
+                    <corners android:radius="8dp"/>
+                </shape>
+            </item>
+            <!-- 白色底色 -->
+            <item android:bottom="2dp" android:top="2dp"
+                android:left="2dp" android:right="2dp">
+                <shape android:shape="rectangle">
+                    <solid android:color="@android:color/white"/>
+                    <corners android:radius="6dp"/>
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/white"/>
+            <stroke
+                android:width="1dp"
+                android:color="#EEEEEE"/>
+            <corners android:radius="8dp"/>
+        </shape>
+    </item>
+</selector>

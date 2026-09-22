@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <!-- 渐变背景（更柔和的蓝灰色调） -->
+    <gradient
+        android:startColor="#B0BEC5"
+    android:centerColor="#78909C"
+    android:endColor="#546E7A"
+    android:angle="90"
+    android:type="linear" />      <!-- 线性渐变 -->
+
+    <!-- 圆角 -->
+    <corners android:radius="16dp" />
+
+    <!-- 边框（增强立体感） -->
+    <stroke
+        android:width="1dp"
+        android:color="#37474F" />     <!-- 深色边框 -->
+
+    <!-- 内边距（避免内容紧贴边缘） -->
+    <padding
+        android:left="12dp"
+        android:top="12dp"
+        android:right="12dp"
+        android:bottom="12dp" />
+
+    <!-- 阴影（可选，增强立体感） -->
+    <!-- 如果要在代码中设置阴影，建议用 elevation 或 MaterialCardView -->
+</shape>

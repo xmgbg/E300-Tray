@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 按下状态（深绿色，增加凹陷感） -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <solid android:color="#388E3C" /> <!-- 比主色深20% -->
+            <corners android:radius="16dp" />
+            <stroke
+                android:width="1dp"
+                android:color="#2E7D32" /> <!-- 深色边框增强立体感 -->
+            <padding
+                android:left="12dp"
+                android:top="12dp"
+                android:right="12dp"
+                android:bottom="12dp" />
+        </shape>
+    </item>
+
+    <!-- 默认状态（渐变+阴影效果，更饱满） -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:startColor="#4CAF50"
+                android:endColor="#388E3C"
+                android:angle="270" /> <!-- 从上到下的渐变 -->
+            <corners android:radius="16dp" />
+            <stroke
+                android:width="1dp"
+                android:color="#4CAF50" /> <!-- 边框增强立体感 -->
+            <padding
+                android:left="12dp"
+                android:top="12dp"
+                android:right="12dp"
+                android:bottom="12dp" />
+        </shape>
+    </item>
+</selector>
